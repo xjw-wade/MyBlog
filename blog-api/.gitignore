@@ -1,6 +1,5 @@
 HELP.md
 target/
-blog-view/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
