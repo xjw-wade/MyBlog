@@ -13,14 +13,14 @@ const routes = [
   {
     path: '/',
     component: () => import('@/views/Index'),
-		redirect: '/home',
+	redirect: '/home',
     children: [
-      {
-				path: '/home',
-				name: 'home',
-				component: () => import('@/views/home/Home'),
-				meta: {title: '首页'}
-			},
+        {
+			path: '/home',
+			name: 'home',
+			component: () => import('@/views/home/Home'),
+			meta: {title: '首页'}
+		},
     ]
   },
  
