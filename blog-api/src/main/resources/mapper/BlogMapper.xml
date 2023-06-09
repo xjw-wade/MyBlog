@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.wade.mapper.BlogMapper">
+    <resultMap id="blog" type="top.wade.entity.Blog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="content" column="content"/>
+        <result property="description" column="description"/>
+        <result property="published" column="is_published"/>
+        <result property="recommend" column="is_recommend"/>
+        <result property="appreciation" column="is_appreciation"/>
+        <result property="commentEnabled" column="is_comment_enabled"/>
+        <result property="top" column="is_top"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="views" column="views"/>
+        <result property="words" column="words"/>
+        <result property="readTime" column="read_time"/>
+        <result property="password" column="password"/>
+        <association property="user" javaType="top.wade.entity.User">
+            <id property="id" column="user_id"/>
+            <result property="username" column="username"/>
+            <result property="nickname" column="nickname"/>
+            <result property="avatar" column="avatar"/>
+            <result property="email" column="email"/>
+            <result property="createTime" column="user_create_time"/>
+            <result property="updateTime" column="user_update_time"/>
+            <result property="role" column="role"/>
+        </association>
+        <association property="category" javaType="top.wade.entity.Category">
+            <id property="id" column="category_id"/>
+            <result property="name" column="category_name"/>
+        </association>
+        <collection property="tags" javaType="top.wade.entity.Tag">
+            <id property="id" column="tag_id"/>
+            <result property="name" column="tag_name"/>
+            <result property="color" column="color"/>
+        </collection>
+
+    </resultMap>
+
+    <!--按标题和分类查询博客List-->
+    <select id="getListByTitleAndCategoryId" resultMap="blog">
+        <bind name="titlePattern" value="'%' + title + '%'"/>
+        select b.id, b.title, b.first_picture, b.create_time, b.update_time, b.is_published, b.is_recommend, b.is_appreciation,
+        b.is_comment_enabled, b.is_top, b.password,
+        c.id as category_id, c.category_name
+        from blog as b left join category as c on b.category_id=c.id
+        <where>
+            <if test="title!=null and title!=''">
+                b.title like #{titlePattern}
+            </if>
+            <if test="categoryId!=null">
+                and b.category_id=#{categoryId}
+            </if>
+        </where>
+    </select>
+    
+    <resultMap id="searchBlog" type="top.wade.model.vo.SearchBlog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+    </resultMap>
+
+    <!--按关键字根据文章内容搜索公开且无密码保护的博客文章-->
+    <select id="getSearchBlogListByQueryAndIsPublished" resultMap="searchBlog">
+        <bind name="queryPattern" value="'%' + query + '%'"/>
+        select id, title, content
+        from blog
+        where is_published = true and password = '' and content like #{queryPattern}
+    </select>
+    
+    <resultMap id="blogIdAndTitle" type="top.wade.model.vo.BlogIdAndTitle">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+    </resultMap>
+
+    <!--查询所有博客id和title-->
+    <select id="getIdAndTitleList"  resultMap="blogIdAndTitle">
+        select id, title
+        from blog
+        order by create_time desc
+    </select>
+
+
+
+
+
+
+
+
+</mapper>
