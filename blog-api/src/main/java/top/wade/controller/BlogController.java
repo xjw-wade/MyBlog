@@ -1,6 +1,15 @@
 package top.wade.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import top.wade.annotation.VisitLogger;
+import top.wade.enums.VisitBehavior;
+import top.wade.model.vo.BlogInfo;
+import top.wade.model.vo.PageResult;
+import top.wade.model.vo.Result;
+import top.wade.service.BlogService;
 
 /**
  * @Author xjw
@@ -9,4 +18,20 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class BlogController {
+    @Autowired
+    BlogService blogService;
+
+    /**
+     * 按置顶、创建时间排序 分页查询博客简要信息列表
+     *
+     * @param pageNum 页码
+     * @return
+     */
+    @VisitLogger(VisitBehavior.INDEX)
+    @GetMapping("/blogs")
+    public Result blogs(@RequestParam(defaultValue = "1") Integer pageNum) {
+        PageResult<BlogInfo> pageResult = blogService.getBlogInfoListByIsPublished(pageNum);
+        return Result.ok("请求成功", pageResult);
+    }
+
 }

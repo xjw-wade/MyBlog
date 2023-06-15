@@ -1,0 +1,18 @@
+package top.wade.service;
+
+import top.wade.model.vo.BlogInfo;
+import top.wade.model.vo.PageResult;
+
+/**
+ * @Author xjw
+ * @Date 2023/6/9 20:27
+ * @Description:
+ */
+public interface RedisService {
+    PageResult<BlogInfo> getBlogInfoPageResultByHash(String hash, Integer pageNum);
+
+    Object getValueByHashKey(String hash, Object key);
+
+    void saveKVToHash(String hash, Object key, Object value);
+
+}

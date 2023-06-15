@@ -4,6 +4,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import top.wade.entity.Blog;
 import top.wade.model.vo.BlogIdAndTitle;
+import top.wade.model.vo.BlogInfo;
+import top.wade.model.vo.NewBlog;
 import top.wade.model.vo.SearchBlog;
 
 import java.util.List;
@@ -21,6 +23,10 @@ public interface BlogMapper {
     List<SearchBlog> getSearchBlogListByQueryAndIsPublished(String query);
 
     List<BlogIdAndTitle> getIdAndTitleList();
+
+    List<BlogInfo> getBlogInfoListByIsPublished();
+
+    List<NewBlog> getNewBlogListByIsPublished();
 
 
 
