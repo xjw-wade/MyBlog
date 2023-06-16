@@ -67,7 +67,6 @@ public class VisitLogAspect {
         Result result = (Result) joinPoint.proceed();    //用于执行连接点（JoinPoint）的处理，并将其返回值转换为一个指定的类型Result
         int times = (int) (System.currentTimeMillis() - currentTime.get());
         currentTime.remove();
-//        System.out.println("xjw");
         //获取请求对象
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         //校验访客标识码
