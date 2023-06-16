@@ -83,6 +83,42 @@
         order by create_time desc
     </select>
 
+    <resultMap id="blogInfo" type="top.wade.model.vo.BlogInfo">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="description" column="description"/>
+        <result property="createTime" column="create_time"/>
+        <result property="views" column="views"/>
+        <result property="words" column="words"/>
+        <result property="readTime" column="read_time"/>
+        <result property="top" column="is_top"/>
+        <result property="password" column="password"/>
+        <association property="category" javaType="top.wade.entity.Category">
+            <result property="name" column="category_name"/>
+        </association>
+    </resultMap>
+
+    <!--查询公开博客的简要信息-->
+    <select id="getBlogInfoListByIsPublished" resultMap="blogInfo">
+        select b.id, b.title, b.description, b.is_top, b.create_time, b.views, b.words, b.read_time, b.password, c.category_name
+        from blog as b left join category as c on b.category_id=c.id
+        where b.is_published=true
+    </select>
+
+    <resultMap id="newBlog" type="top.wade.model.vo.NewBlog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <!--查询最新公开博客-->
+    <select id="getNewBlogListByIsPublished" resultMap="newBlog">
+        select id, title, password
+        from blog
+        where is_published = true
+        order by create_time desc
+    </select>
+
 
 
 
