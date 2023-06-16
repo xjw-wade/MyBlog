@@ -38,4 +38,14 @@ public class RedisServiceImpl implements RedisService {
     public void saveKVToHash(String hash, Object key, Object value) {
         jsonRedisTemplate.opsForHash().put(hash, key, value);
     }
+
+    @Override
+    public boolean hasValueInSet(String key, Object value) {
+        return jsonRedisTemplate.opsForSet().isMember(key, value);
+    }
+
+    @Override
+    public void saveValueToSet(String key, Object value) {
+        jsonRedisTemplate.opsForSet().add(key, value);
+    }
 }

@@ -49,12 +49,14 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public PageResult<BlogInfo> getBlogInfoListByIsPublished(Integer pageNum) {
         String redisKey = RedisKeyConstants.HOME_BLOG_INFO_LIST;
+        System.out.println("xjw233");
         //redis已有当前页缓存
         PageResult<BlogInfo> pageResultFromRedis = redisService.getBlogInfoPageResultByHash(redisKey, pageNum);
         if (pageResultFromRedis != null) {
             setBlogViewsFromRedisToPageResult(pageResultFromRedis);
             return pageResultFromRedis;
         }
+        System.out.println("xjw233");
         //redis没有缓存，从数据库查询，并添加缓存
         PageHelper.startPage(pageNum, pageSize, orderBy);
         List<BlogInfo> blogInfos = processBlogInfosPassword(blogMapper.getBlogInfoListByIsPublished());

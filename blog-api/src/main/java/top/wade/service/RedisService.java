@@ -15,4 +15,8 @@ public interface RedisService {
 
     void saveKVToHash(String hash, Object key, Object value);
 
+    boolean hasValueInSet(String key, Object value);
+
+    void saveValueToSet(String key, Object value);
+
 }
