@@ -1,6 +1,7 @@
 HELP.md
 target/
-blog-api/
+node_modules
+/dist
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -34,7 +35,3 @@ build/
 .vscode/
 
 .DS_Store
-/blog-cms-tmp
-=======
-blog-view/ 
->>>>>>> backend_branch
