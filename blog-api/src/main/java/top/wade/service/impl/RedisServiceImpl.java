@@ -8,6 +8,8 @@ import top.wade.model.vo.PageResult;
 import top.wade.service.RedisService;
 import top.wade.util.JacksonUtils;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Author xjw 读写Redis相关操作
  * @Date 2023/6/9 20:28
@@ -47,5 +49,25 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public void saveValueToSet(String key, Object value) {
         jsonRedisTemplate.opsForSet().add(key, value);
+    }
+
+    @Override
+    public <T> T getObjectByValue(String key, Class t) {
+        Object redisResult = jsonRedisTemplate.opsForValue().get(key);
+        T object = (T) JacksonUtils.convertValue(redisResult, t);
+        return object;
+    }
+
+    @Override
+    public void incrementByKey(String key, int increment) {
+        if (increment < 0) {
+            throw new RuntimeException("递增因子必须大于0");
+        }
+        jsonRedisTemplate.opsForValue().increment(key, increment);
+    }
+
+    @Override
+    public void expire(String key, long time) {
+        jsonRedisTemplate.expire(key, time, TimeUnit.SECONDS);
     }
 }

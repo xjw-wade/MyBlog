@@ -19,4 +19,10 @@ public interface RedisService {
 
     void saveValueToSet(String key, Object value);
 
+    <T> T getObjectByValue(String key, Class t);
+
+    void incrementByKey(String key, int increment);
+
+    void expire(String key, long time);
+
 }
