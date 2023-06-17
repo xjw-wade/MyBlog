@@ -8,7 +8,9 @@ import top.wade.constant.RedisKeyConstants;
 import top.wade.entity.Blog;
 import top.wade.mapper.BlogMapper;
 import top.wade.model.vo.BlogInfo;
+import top.wade.model.vo.NewBlog;
 import top.wade.model.vo.PageResult;
+import top.wade.model.vo.RandomBlog;
 import top.wade.service.BlogService;
 import top.wade.service.RedisService;
 import top.wade.service.TagService;
@@ -49,14 +51,12 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public PageResult<BlogInfo> getBlogInfoListByIsPublished(Integer pageNum) {
         String redisKey = RedisKeyConstants.HOME_BLOG_INFO_LIST;
-        System.out.println("xjw233");
         //redis已有当前页缓存
         PageResult<BlogInfo> pageResultFromRedis = redisService.getBlogInfoPageResultByHash(redisKey, pageNum);
         if (pageResultFromRedis != null) {
             setBlogViewsFromRedisToPageResult(pageResultFromRedis);
             return pageResultFromRedis;
         }
-        System.out.println("xjw233");
         //redis没有缓存，从数据库查询，并添加缓存
         PageHelper.startPage(pageNum, pageSize, orderBy);
         List<BlogInfo> blogInfos = processBlogInfosPassword(blogMapper.getBlogInfoListByIsPublished());
@@ -66,6 +66,41 @@ public class BlogServiceImpl implements BlogService {
         //添加首页缓存
         redisService.saveKVToHash(redisKey, pageNum, pageResult);
         return pageResult;
+    }
+
+    @Override
+    public List<NewBlog> getNewBlogListByIsPublished() {
+        String redisKey = RedisKeyConstants.NEW_BLOG_LIST;
+        List<NewBlog> newBlogListFromRedis = redisService.getListByValue(redisKey);
+        if (newBlogListFromRedis != null) {
+            return newBlogListFromRedis;
+        }
+        PageHelper.startPage(1, newBlogPageSize);
+        List<NewBlog> newBlogList = blogMapper.getNewBlogListByIsPublished();
+        for (NewBlog newBlog : newBlogList) {
+            if (!"".equals(newBlog.getPassword())) {
+                newBlog.setPrivacy(true);
+                newBlog.setPassword("");
+            } else {
+                newBlog.setPrivacy(false);
+            }
+        }
+        redisService.saveListToValue(redisKey, newBlogList);
+        return newBlogList;
+    }
+
+    @Override
+    public List<RandomBlog> getRandomBlogListByLimitNumAndIsPublishedAndIsRecommend() {
+        List<RandomBlog> randomBlogs = blogMapper.getRandomBlogListByLimitNumAndIsPublishedAndIsRecommend(randomBlogLimitNum);
+        for (RandomBlog randomBlog : randomBlogs) {
+            if (!"".equals(randomBlog.getPassword())) {
+                randomBlog.setPrivacy(true);
+                randomBlog.setPassword("");
+            } else {
+                randomBlog.setPrivacy(false);
+            }
+        }
+        return randomBlogs;
     }
 
     /**

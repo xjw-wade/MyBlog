@@ -1,7 +1,11 @@
 package top.wade.service;
 
 import top.wade.model.vo.BlogInfo;
+import top.wade.model.vo.NewBlog;
 import top.wade.model.vo.PageResult;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Author xjw
@@ -24,5 +28,13 @@ public interface RedisService {
     void incrementByKey(String key, int increment);
 
     void expire(String key, long time);
+
+    <T> Map<String, T> getMapByValue(String key);
+
+    <T> void saveMapToValue(String key, Map<String, T> map);
+
+    <T> List<T> getListByValue(String key);
+
+    <T> void saveListToValue(String key, List<T> list);
 
 }

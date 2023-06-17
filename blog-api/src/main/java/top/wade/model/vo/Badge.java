@@ -5,18 +5,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+
 /**
  * @Author xjw
- * @Date 2023/6/15 11:49
- * @Description: 最新推荐博客
+ * @Date 2023/6/17 17:16
+ * @Description:  GitHub徽标
  */
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class NewBlog {
-    private Long id;
+public class Badge {
     private String title;
-    private String password;
-    private Boolean privacy;
+    private String url;
+    private String subject;
+    private String value;
+    private String color;
+
 }

@@ -3,10 +3,7 @@ package top.wade.mapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import top.wade.entity.Blog;
-import top.wade.model.vo.BlogIdAndTitle;
-import top.wade.model.vo.BlogInfo;
-import top.wade.model.vo.NewBlog;
-import top.wade.model.vo.SearchBlog;
+import top.wade.model.vo.*;
 
 import java.util.List;
 
@@ -27,6 +24,8 @@ public interface BlogMapper {
     List<BlogInfo> getBlogInfoListByIsPublished();
 
     List<NewBlog> getNewBlogListByIsPublished();
+
+    List<RandomBlog> getRandomBlogListByLimitNumAndIsPublishedAndIsRecommend(Integer limitNum);
 
 
 
