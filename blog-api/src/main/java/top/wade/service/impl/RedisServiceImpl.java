@@ -8,6 +8,8 @@ import top.wade.model.vo.PageResult;
 import top.wade.service.RedisService;
 import top.wade.util.JacksonUtils;
 
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -69,5 +71,27 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public void expire(String key, long time) {
         jsonRedisTemplate.expire(key, time, TimeUnit.SECONDS);
+    }
+
+    @Override
+    public <T> Map<String, T> getMapByValue(String key) {
+        Map<String, T> redisResult = (Map<String, T>) jsonRedisTemplate.opsForValue().get(key);
+        return redisResult;
+    }
+
+    @Override
+    public <T> void saveMapToValue(String key, Map<String, T> map) {
+        jsonRedisTemplate.opsForValue().set(key, map);
+    }
+
+    @Override
+    public <T> List<T> getListByValue(String key) {
+        List<T> redisResult = (List<T>) jsonRedisTemplate.opsForValue().get(key);
+        return  redisResult;
+    }
+
+    @Override
+    public <T> void saveListToValue(String key, List<T> list) {
+        jsonRedisTemplate.opsForValue().set(key, list);
     }
 }

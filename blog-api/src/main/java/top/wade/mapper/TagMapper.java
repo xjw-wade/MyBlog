@@ -15,4 +15,6 @@ import java.util.List;
 @Repository
 public interface TagMapper {
     List<Tag> getTagListByBlogId(Long blogId);
+
+    List<Tag> getTagListNotId();
 }
