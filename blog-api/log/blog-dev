@@ -1,39 +1,45 @@
-2023-06-16 19:53:22.272  INFO 19408 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 19408 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
-2023-06-16 19:53:22.275 DEBUG 19408 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
-2023-06-16 19:53:22.275  INFO 19408 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
-2023-06-16 19:53:22.331  INFO 19408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-06-16 19:53:22.332  INFO 19408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-06-16 19:53:22.951  INFO 19408 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-06-16 19:53:22.952  INFO 19408 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-06-16 19:53:22.977  INFO 19408 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
-2023-06-16 19:53:23.579  INFO 19408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2023-06-16 19:53:23.586  INFO 19408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-16 19:53:23.586  INFO 19408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2023-06-16 19:53:23.661  INFO 19408 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-16 19:53:23.661  INFO 19408 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1329 ms
-2023-06-16 19:53:24.016  INFO 19408 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-06-16 19:53:24.018  INFO 19408 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
-2023-06-16 19:53:24.018  INFO 19408 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
-2023-06-16 19:53:24.018  INFO 19408 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
-2023-06-16 19:53:24.019  INFO 19408 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
-2023-06-16 19:53:24.019  INFO 19408 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
-2023-06-16 19:53:24.019  INFO 19408 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
-2023-06-16 19:53:24.019  INFO 19408 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-06-16 19:53:24.145  INFO 19408 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  122 ms using expression: classpath*:UserAgents/**/*.yaml
-2023-06-16 19:53:25.095  INFO 19408 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
-2023-06-16 19:53:25.538  INFO 19408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-06-16 19:53:25.795  INFO 19408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-06-16 19:53:25.838  INFO 19408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2023-06-16 19:53:25.840  INFO 19408 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 3.938 seconds (JVM running for 5.095)
-2023-06-16 19:53:35.060  INFO 19408 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-06-16 19:53:35.061  INFO 19408 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-06-16 19:53:35.066  INFO 19408 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2023-06-16 19:53:35.207  INFO 19408 --- [http-nio-8090-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2023-06-16 19:53:35.208  INFO 19408 --- [http-nio-8090-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2023-06-16 19:53:35.980  INFO 19408 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-06-16 19:53:36.076  INFO 19408 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-06-16 19:53:36.081  INFO 19408 --- [http-nio-8090-exec-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
-2023-06-16 19:53:37.365  INFO 19408 --- [http-nio-8090-exec-1] n.b.p.u.a.UserAgentStringMatchMaker      : Built in 1282 msec : Hashmap 192397, Ranges map:2904
-2023-06-16 19:53:37.427 DEBUG 19408 --- [http-nio-8090-exec-1] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2023-06-16 19:53:37.449 DEBUG 19408 --- [http-nio-8090-exec-1] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 154ae385-6168-3b82-adf0-d59c3f0eb636(String), /blogs(String), GET(String), {"pageNum":1}(String), 访问页面(String), 首页(String), 第1页(String), 192.168.100.76(String), 内网IP|内网IP(String), Cloud ??(String), PostmanRuntime 7.32.2(String), 870(Integer), 2023-06-16 19:53:35.975(Timestamp), PostmanRuntime/7.32.2(String)
-2023-06-16 19:53:37.451 DEBUG 19408 --- [http-nio-8090-exec-1] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1
+2023-06-17 16:12:14.629  INFO 16540 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 16540 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
+2023-06-17 16:12:14.637 DEBUG 16540 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2023-06-17 16:12:14.637  INFO 16540 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
+2023-06-17 16:12:14.702  INFO 16540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-17 16:12:14.703  INFO 16540 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-17 16:12:15.340  INFO 16540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-06-17 16:12:15.341  INFO 16540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-17 16:12:15.369  INFO 16540 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-06-17 16:12:15.950  INFO 16540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-06-17 16:12:15.956  INFO 16540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-17 16:12:15.957  INFO 16540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2023-06-17 16:12:16.019  INFO 16540 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-17 16:12:16.019  INFO 16540 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1316 ms
+2023-06-17 16:12:16.342  INFO 16540 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-06-17 16:12:16.343  INFO 16540 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
+2023-06-17 16:12:16.343  INFO 16540 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
+2023-06-17 16:12:16.344  INFO 16540 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
+2023-06-17 16:12:16.344  INFO 16540 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
+2023-06-17 16:12:16.344  INFO 16540 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
+2023-06-17 16:12:16.344  INFO 16540 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
+2023-06-17 16:12:16.344  INFO 16540 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-06-17 16:12:16.463  INFO 16540 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  115 ms using expression: classpath*:UserAgents/**/*.yaml
+2023-06-17 16:12:17.519  INFO 16540 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
+2023-06-17 16:12:18.304  INFO 16540 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-06-17 16:12:18.586  INFO 16540 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-17 16:12:18.627  INFO 16540 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2023-06-17 16:12:18.630  INFO 16540 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 4.393 seconds (JVM running for 5.499)
+2023-06-17 16:12:37.309  INFO 16540 --- [http-nio-8090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-17 16:12:37.310  INFO 16540 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-17 16:12:37.317  INFO 16540 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-06-17 16:12:37.528  INFO 16540 --- [http-nio-8090-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2023-06-17 16:12:37.530  INFO 16540 --- [http-nio-8090-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2023-06-17 16:12:38.610  INFO 16540 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-17 16:12:38.840  INFO 16540 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-17 16:12:38.848  INFO 16540 --- [http-nio-8090-exec-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
+2023-06-17 16:12:40.135  INFO 16540 --- [http-nio-8090-exec-1] n.b.p.u.a.UserAgentStringMatchMaker      : Built in 1285 msec : Hashmap 192397, Ranges map:2904
+2023-06-17 16:12:40.202 DEBUG 16540 --- [http-nio-8090-exec-1] t.wade.mapper.VisitorMapper.saveVisitor  : ==>  Preparing: insert into visitor (uuid, ip, ip_source, os, browser, create_time, last_time, pv, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-06-17 16:12:40.222 DEBUG 16540 --- [http-nio-8090-exec-1] t.wade.mapper.VisitorMapper.saveVisitor  : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 110(String), 2023-06-17 16:12:38.607(Timestamp), 2023-06-17 16:12:38.607(Timestamp), 0(Integer), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36(String)
+2023-06-17 16:12:40.244 DEBUG 16540 --- [http-nio-8090-exec-1] t.wade.mapper.VisitorMapper.saveVisitor  : <==    Updates: 1
+2023-06-17 16:12:40.268 DEBUG 16540 --- [http-nio-8090-exec-1] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-06-17 16:12:40.269 DEBUG 16540 --- [http-nio-8090-exec-1] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /blogs(String), GET(String), {"pageNum":1}(String), 访问页面(String), 首页(String), 第1页(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 110(String), 1086(Integer), 2023-06-17 16:12:40.264(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36(String)
+2023-06-17 16:12:40.276 DEBUG 16540 --- [http-nio-8090-exec-1] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1
+2023-06-17 16:14:22.298 DEBUG 16540 --- [http-nio-8090-exec-7] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-06-17 16:14:22.299 DEBUG 16540 --- [http-nio-8090-exec-7] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /blogs(String), GET(String), {"pageNum":1}(String), 访问页面(String), 首页(String), 第1页(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 110(String), 111(Integer), 2023-06-17 16:14:22.296(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36(String)
+2023-06-17 16:14:22.301 DEBUG 16540 --- [http-nio-8090-exec-7] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1

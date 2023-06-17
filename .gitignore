@@ -1,5 +1,6 @@
 HELP.md
 target/
+blog-api/log/
 node_modules
 /dist
 !.mvn/wrapper/maven-wrapper.jar
