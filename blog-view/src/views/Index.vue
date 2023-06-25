@@ -83,6 +83,7 @@
 			}
 		},
 		computed: {
+			//将 Vuex store 的 state 对象中所对应的 module 的 focusMode 属性，映射为当前 Vue 实例中的 computed 对象的 focusMode 属性
 			...mapState(['focusMode'])
 		},
 		watch: {
@@ -95,9 +96,11 @@
 			this.getSite()
 			this.getHitokoto()
 			//从localStorage恢复之前的评论信息
+			//当这个 mutation 被提交时，store 对象中定义的相应方法会被执行，store 中的状态会相应地改变，从而达到更新页面显示的效果。具体的 mutation 实现需要在 Vuex store 的 mutation 部分中进行定义，以实现特定的业务逻辑。
 			this.$store.commit(RESTORE_COMMENT_FORM)
 		},
 		mounted() {
+			//通过在 mounted() 函数中监听浏览器窗口大小变化，避免了复杂的自行设计隐藏的 resize 事件监听器，从而实现了客户端窗口大小随窗口大小变化而更改的目的。这是一个常见的前端技术应用场景。
 			//保存可视窗口大小
 			this.$store.commit(SAVE_CLIENT_SIZE, {clientHeight: document.body.clientHeight, clientWidth: document.body.clientWidth})
 			window.onresize = () => {

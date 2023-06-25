@@ -35,7 +35,7 @@
                 <template v-slot:suffix>
 				<i class="search icon el-input__icon"></i>
                 </template>
-				<template v-slot="{ item }">
+				<template slot-scope="{ item }">
 					<div class="title">{{ item.title }}</div>
 					<span class="content">{{ item.content }}</span>
 				</template>
@@ -130,7 +130,7 @@
 						if (this.queryResult.length === 0) {
 							this.queryResult.push({title: '无相关搜索结果'})
 						}
-						callback(this.queryResult)
+						callback(this.queryResult) //如果不使用 callback 参数，虽然可以完成异步查询操作，但无法将查询结果传递给调用者，从而导致查询结果无法在视图中进行展示。因此，这个参数是必需的，并且是用于完成基于回调函数的异步查询操作的标准做法
 					}
 				}).catch(() => {
 					this.msgError("请求失败")
