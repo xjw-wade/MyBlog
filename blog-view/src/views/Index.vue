@@ -52,7 +52,7 @@
 <script>
 	import {getHitokoto, getSite} from '@/api/index'
 	import Nav from "@/components/index/Nav";
-	// import Header from "@/components/index/Header";
+	import Header from "@/components/index/Header";
 	// import Footer from "@/components/index/Footer";
 	// import Introduction from "@/components/sidebar/Introduction";
 	// import Tags from "@/components/sidebar/Tags";
@@ -65,6 +65,7 @@
 	export default {
 		name: "Index",
 		// components: {Header, BlogPasswordDialog, Tocbot, RandomBlog, Tags, Nav, Footer, Introduction},
+		components: {Nav},
 		data() {
 			return {
 				siteInfo: {
