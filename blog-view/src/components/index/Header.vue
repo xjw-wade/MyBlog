@@ -50,16 +50,16 @@
 			this.setHeaderHeight()
 			let startingPoint
 			const header = this.$refs.header
-			header.addEventListener('mouseenter', (e) => {
+			header.addEventListener('mouseenter', (e) => {         //当鼠标指针进入该元素区域时，触发事件流程并执行回调函数
 				startingPoint = e.clientX
 			})
 			header.addEventListener('mouseout', (e) => {
 				header.classList.remove('moving')
-				header.style.setProperty('--percentage', 0.5)
+				header.style.setProperty('--percentage', 0.5)    //--percentage 是 CSS 的自定义属性（Custom Property），也叫 CSS 变量。它可以在 CSS 中声明，以 -- 开头并紧跟自定义属性名
 			})
 			header.addEventListener('mousemove', (e) => {
 				let percentage = (e.clientX - startingPoint) / window.outerWidth + 0.5
-				header.style.setProperty('--percentage', percentage)
+				header.style.setProperty('--percentage', percentage)  
 				header.classList.add('moving')
 			})
 		},
@@ -90,7 +90,7 @@
 		left: 0;
 		display: flex;
 		justify-content: center;
-		transform: translatex(calc(var(--percentage) * 100px));
+		transform: translatex(calc(var(--percentage) * 100px));   
 	}
 
 	.view div {

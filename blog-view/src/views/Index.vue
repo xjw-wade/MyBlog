@@ -3,9 +3,9 @@
 		<!--顶部导航-->
 		<Nav :blogName="siteInfo.blogName" :categoryList="categoryList"/>
 		<!--首页大图 只在首页且pc端时显示-->
-		<!-- <div class="m-mobile-hide">
+		<div class="m-mobile-hide">
 			<Header v-if="$route.name==='home'"/>
-		</div> -->
+		</div>
         
 		<div class="main">
 			<div class="m-padded-tb-big">
@@ -65,7 +65,7 @@
 	export default {
 		name: "Index",
 		// components: {Header, BlogPasswordDialog, Tocbot, RandomBlog, Tags, Nav, Footer, Introduction},
-		components: {Nav},
+		components: {Nav, Header},
 		data() {
 			return {
 				siteInfo: {
