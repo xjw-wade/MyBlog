@@ -21,4 +21,7 @@ public interface BlogService {
     List<NewBlog> getNewBlogListByIsPublished();
 
     List<RandomBlog> getRandomBlogListByLimitNumAndIsPublishedAndIsRecommend();
+
+    PageResult<BlogInfo> getBlogInfoListByCategoryNameAndIsPublished(String categoryName, Integer pageNum);
+
 }

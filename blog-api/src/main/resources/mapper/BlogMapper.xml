@@ -135,6 +135,13 @@
         order by rand() limit #{limitNum}
     </select>
 
+    <!--根据分类name查询公开博客List-->
+    <select id="getBlogInfoListByCategoryNameAndIsPublished" resultMap="blogInfo">
+        select b.id, b.title, b.description, b.is_top, b.create_time, b.views, b.words, b.read_time, b.password, c.category_name
+        from category as c left join blog as b on b.category_id=c.id
+        where c.category_name=#{categoryName} and b.is_published
+    </select>
+
 
 
 

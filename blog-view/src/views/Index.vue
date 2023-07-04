@@ -12,9 +12,9 @@
 				<div class="ui container">
 					<div class="ui stackable grid">
 						<!--左侧-->
-						<!-- <div class="three wide column m-mobile-hide">
+						<div class="three wide column m-mobile-hide">
 							<Introduction :class="{'m-display-none':focusMode}"/>
-						</div> -->
+						</div>
 						<!--中间-->
 						<div class="ten wide column">
 							<keep-alive include="Home">
@@ -23,10 +23,10 @@
 						</div>
 						<!--右侧-->
 						<div class="three wide column m-mobile-hide">
-							<!-- <RandomBlog :randomBlogList="randomBlogList" :class="{'m-display-none':focusMode}"/>
-							<Tags :tagList="tagList" :class="{'m-display-none':focusMode}"/> -->
+							<RandomBlog :randomBlogList="randomBlogList" :class="{'m-display-none':focusMode}"/>
+							<Tags :tagList="tagList" :class="{'m-display-none':focusMode}"/>
 							<!--只在文章页面显示目录-->
-							<!-- <Tocbot v-if="$route.name==='blog'"/> -->
+							<Tocbot v-if="$route.name==='blog'"/>
 						</div>
 					</div>
 				</div>
@@ -34,7 +34,7 @@
 		</div>
 
 		<!--私密文章密码对话框-->
-		<!-- <BlogPasswordDialog/> -->
+		<BlogPasswordDialog/>
 
 		<!--APlayer-->
 		<div class="m-mobile-hide">
@@ -53,19 +53,19 @@
 	import {getHitokoto, getSite} from '@/api/index'
 	import Nav from "@/components/index/Nav";
 	import Header from "@/components/index/Header";
-	// import Footer from "@/components/index/Footer";
-	// import Introduction from "@/components/sidebar/Introduction";
-	// import Tags from "@/components/sidebar/Tags";
-	// import RandomBlog from "@/components/sidebar/RandomBlog";
-	// import Tocbot from "@/components/sidebar/Tocbot";
-	// import BlogPasswordDialog from "@/components/index/BlogPasswordDialog";
+	import Footer from "@/components/index/Footer";
+	import Introduction from "@/components/sidebar/Introduction";
+	import Tags from "@/components/sidebar/Tags";
+	import RandomBlog from "@/components/sidebar/RandomBlog";
+	import Tocbot from "@/components/sidebar/Tocbot";
+	import BlogPasswordDialog from "@/components/index/BlogPasswordDialog";
 	import {mapState} from 'vuex'
 	import {SAVE_CLIENT_SIZE, SAVE_INTRODUCTION, SAVE_SITE_INFO, RESTORE_COMMENT_FORM} from "@/store/mutations-types";
 
 	export default {
 		name: "Index",
 		// components: {Header, BlogPasswordDialog, Tocbot, RandomBlog, Tags, Nav, Footer, Introduction},
-		components: {Nav, Header},
+		components: {Nav, Header, Footer, Introduction, Tags, RandomBlog, Tocbot, BlogPasswordDialog},
 		data() {
 			return {
 				siteInfo: {

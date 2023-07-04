@@ -27,6 +27,8 @@ public interface BlogMapper {
 
     List<RandomBlog> getRandomBlogListByLimitNumAndIsPublishedAndIsRecommend(Integer limitNum);
 
+    List<BlogInfo> getBlogInfoListByCategoryNameAndIsPublished(String categoryName);
+
 
 
 
