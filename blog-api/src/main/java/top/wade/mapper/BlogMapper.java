@@ -29,8 +29,10 @@ public interface BlogMapper {
 
     List<BlogInfo> getBlogInfoListByCategoryNameAndIsPublished(String categoryName);
 
+    List<String> getGroupYearMonthByIsPublished();
 
+    List<ArchiveBlog> getArchiveBlogListByYearMonthAndIsPublished(String yearMonth);
 
-
+    int countBlogByIsPublished();
 
 }

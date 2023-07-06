@@ -7,6 +7,7 @@ import top.wade.model.vo.PageResult;
 import top.wade.model.vo.RandomBlog;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author xjw
@@ -23,5 +24,9 @@ public interface BlogService {
     List<RandomBlog> getRandomBlogListByLimitNumAndIsPublishedAndIsRecommend();
 
     PageResult<BlogInfo> getBlogInfoListByCategoryNameAndIsPublished(String categoryName, Integer pageNum);
+
+    Map<String, Object> getArchiveBlogAndCountByIsPublished();
+
+    int countBlogByIsPublished();
 
 }

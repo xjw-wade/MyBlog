@@ -7,17 +7,17 @@ import org.springframework.stereotype.Service;
 import top.wade.constant.RedisKeyConstants;
 import top.wade.entity.Blog;
 import top.wade.mapper.BlogMapper;
-import top.wade.model.vo.BlogInfo;
-import top.wade.model.vo.NewBlog;
-import top.wade.model.vo.PageResult;
-import top.wade.model.vo.RandomBlog;
+import top.wade.model.vo.*;
 import top.wade.service.BlogService;
 import top.wade.service.RedisService;
 import top.wade.service.TagService;
 import top.wade.util.JacksonUtils;
 import top.wade.util.markdown.MarkdownUtils;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author xjw
@@ -113,34 +113,67 @@ public class BlogServiceImpl implements BlogService {
         return pageResult;
     }
 
+    @Override
+    public Map<String, Object> getArchiveBlogAndCountByIsPublished() {
+        String redisKey = RedisKeyConstants.ARCHIVE_BLOG_MAP;
+        Map<String, Object> mapFromRedis = redisService.getMapByValue(redisKey);
+        if (mapFromRedis != null) {
+            return mapFromRedis;
+        }
+        List<String> groupYearMonth = blogMapper.getGroupYearMonthByIsPublished();
+        Map<String, List<ArchiveBlog>> archiveBlogMap = new LinkedHashMap<>();
+        for (String s: groupYearMonth) {
+            List<ArchiveBlog> archiveBlogs = blogMapper.getArchiveBlogListByYearMonthAndIsPublished(s);
+            for (ArchiveBlog archiveBlog: archiveBlogs) {
+                if (!"".equals(archiveBlog.getPassword())) {
+                    archiveBlog.setPrivacy(true);
+                    archiveBlog.setPassword("");
+                } else {
+                    archiveBlog.setPrivacy(false);
+                }
+            }
+            archiveBlogMap.put(s, archiveBlogs);
+        }
+        Integer count = countBlogByIsPublished();
+        Map<String, Object> map = new HashMap<>(4);
+        map.put("blogMap", archiveBlogMap);
+        map.put("count", count);
+        redisService.saveMapToValue(redisKey, map);
+        return map;
+    }
+
+    @Override
+    public int countBlogByIsPublished() {
+        return blogMapper.countBlogByIsPublished();
+    }
+
     /**
      * 将pageResult中博客对象的浏览量设置为Redis中的最新值
      *
      * @param pageResult
      */
     private void setBlogViewsFromRedisToPageResult(PageResult<BlogInfo> pageResult) {
-
-//        String redisKey = RedisKeyConstants.BLOG_VIEWS_MAP;
-//        List<BlogInfo> blogInfos = pageResult.getList();
-//        for (int i = 0; i < blogInfos.size(); i++) {
-//            BlogInfo blogInfo = JacksonUtils.convertValue(blogInfos.get(i), BlogInfo.class);
-//            Long blogId = blogInfo.getId();
-//            /**
-//             * 这里如果出现异常，通常是手动修改过 MySQL 而没有通过后台管理，导致 Redis 和 MySQL 不同步
-//             * 从 Redis 中查出了 null，强转 int 时出现 NullPointerException
-//             * 直接抛出异常比带着 bug 继续跑要好得多
-//             *
-//             * 解决步骤：
-//             * 1.结束程序
-//             * 2.删除 Redis DB 中 blogViewsMap 这个 key（或者直接清空对应的整个 DB）
-//             * 3.重新启动程序
-//             *
-//             * 具体请查看: https://github.com/Naccl/NBlog/issues/58
-//             */
-//            int view = (int) redisService.getValueByHashKey(redisKey, blogId);
-//            blogInfo.setViews(view);
-//            blogInfos.set(i, blogInfo);
-//        }
+        String redisKey = RedisKeyConstants.BLOG_VIEWS_MAP;
+        List<BlogInfo> blogInfos = pageResult.getList();
+        for (int i = 0; i < blogInfos.size(); i++) {
+            BlogInfo blogInfo = JacksonUtils.convertValue(blogInfos.get(i), BlogInfo.class);
+            Long blogId = blogInfo.getId();
+            /**
+             * 这里如果出现异常，通常是手动修改过 MySQL 而没有通过后台管理，导致 Redis 和 MySQL 不同步
+             * 从 Redis 中查出了 null，强转 int 时出现 NullPointerException
+             * 直接抛出异常比带着 bug 继续跑要好得多
+             *
+             * 解决步骤：
+             * 1.结束程序
+             * 2.删除 Redis DB 中 blogViewsMap 这个 key（或者直接清空对应的整个 DB）
+             * 3.重新启动程序
+             *
+             * 具体请查看: https://github.com/Naccl/NBlog/issues/58
+             */
+            int view = (int) redisService.getValueByHashKey(redisKey, blogId);
+            blogInfo.setViews(view);
+            blogInfos.set(i, blogInfo);
+        }
     }
 
     private List<BlogInfo> processBlogInfosPassword(List<BlogInfo> blogInfos) {

@@ -51,8 +51,8 @@ public class VisitLogAspect {
      * 配置切入点
      */
     @Pointcut("@annotation(visitLogger)")
-    public void logPointcut(VisitLogger visitLogger) {
-    }
+    public void logPointcut(VisitLogger visitLogger) {}
+
 
     /**
      * 配置环绕通知
@@ -64,7 +64,7 @@ public class VisitLogAspect {
     @Around("logPointcut(visitLogger)")
     public Object logAround(ProceedingJoinPoint joinPoint, VisitLogger visitLogger) throws Throwable {
         currentTime.set(System.currentTimeMillis());
-        Result result = (Result) joinPoint.proceed();    //用于执行连接点（JoinPoint）的处理，并将其返回值转换为一个指定的类型Result
+        Result result = (Result) joinPoint.proceed(); //用于执行连接点（JoinPoint）的处理，并将其返回值转换为一个指定的类型Result
         int times = (int) (System.currentTimeMillis() - currentTime.get());
         currentTime.remove();
         //获取请求对象
@@ -162,7 +162,7 @@ public class VisitLogAspect {
         VisitLogRemark visitLogRemark = judgeBehavior(visitLogger.value(), requestParams, result);
         VisitLog log = new VisitLog(identification, uri, method, visitLogger.value().getBehavior(),
                 visitLogRemark.getContent(), visitLogRemark.getRemark(), ip, times, userAgent);
-        log.setParam(StringUtils.substring(JacksonUtils.writeValueAsString(requestParams), 0, 2000));
+        log.setParam(StringUtils.substring(JacksonUtils.writeValueAsString(requestParams), 0, 200));
         return log;
     }
 

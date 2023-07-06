@@ -27,6 +27,12 @@ const routes = [
 			component: () => import('@/views/category/Category'),
 			meta: {title: '分类'}
 		},
+		{
+			path: '/archives',
+			name: 'archives',
+			component: () => import('@/views/archives/Archives'),
+			meta: {title: '归档'}
+		},
     ]
   },
  
