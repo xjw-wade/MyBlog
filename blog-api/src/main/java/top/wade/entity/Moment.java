@@ -1,5 +1,10 @@
 package top.wade.entity;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.util.Date;
 
 /**
@@ -7,6 +12,10 @@ import java.util.Date;
  * @Date 2023/6/7 17:04
  * @Description: 博客动态
  */
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Moment {
     private Long id;
     private String content;//动态内容

@@ -17,7 +17,7 @@
 						</div>
 						<!--中间-->
 						<div class="ten wide column">
-							<keep-alive include="Home">
+							<keep-alive include="Home">    
 								<router-view/>
 							</keep-alive>
 						</div>

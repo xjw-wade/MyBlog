@@ -33,6 +33,12 @@ const routes = [
 			component: () => import('@/views/archives/Archives'),
 			meta: {title: '归档'}
 		},
+		{
+			path: '/moments',
+			name: 'moments',
+			component: () => import('@/views/moments/Moments'),
+			meta: {title: '动态'}
+		},
     ]
   },
  

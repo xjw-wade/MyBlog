@@ -18,6 +18,7 @@ public class JacksonUtils {
     public static String writeValueAsString(Object value) {
         try {
             return objectMapper.writeValueAsString(value);
+
         } catch (JsonProcessingException e) {
             e.printStackTrace();
             return "";
