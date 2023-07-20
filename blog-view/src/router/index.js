@@ -45,6 +45,12 @@ const routes = [
 			component: () => import('@/views/friends/Friends'),
 			meta: {title: '友人帐'}
 		},
+		{
+			path: '/about',
+			name: 'about',
+			component: () => import('@/views/about/About'),
+			meta: {title: '关于我'}
+		}
     ]
   },
  
