@@ -94,4 +94,9 @@ public class RedisServiceImpl implements RedisService {
     public <T> void saveListToValue(String key, List<T> list) {
         jsonRedisTemplate.opsForValue().set(key, list);
     }
+
+    @Override
+    public void saveObjectToValue(String key, Object object) {
+        jsonRedisTemplate.opsForValue().set(key, object);
+    }
 }

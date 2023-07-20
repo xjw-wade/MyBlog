@@ -6,4 +6,9 @@
         select * from site_setting
     </select>
 
+    <!--查询友链页面信息-->
+    <select id="getFriendInfo" resultType="top.wade.entity.SiteSetting">
+        select * from site_setting where type=4
+    </select>
+
 </mapper>

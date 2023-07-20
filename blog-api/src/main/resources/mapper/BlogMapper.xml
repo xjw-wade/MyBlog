@@ -171,6 +171,26 @@
         select count(*) from blog where is_published=true
     </select>
 
+    <!--查询博客是否启用评论-->
+    <select id="getCommentEnabledByBlogId" resultType="java.lang.Boolean">
+        select is_comment_enabled from blog where id = #{blogId}
+    </select>
+
+    <!--查询博客是否公开-->
+    <select id="getPublishedByBlogId" resultType="java.lang.Boolean">
+        select is_published from blog where id = #{blogId}
+    </select>
+
+    <!--查询受密码保护文章密码-->
+    <select id="getBlogPassword" resultType="java.lang.String">
+        select password from blog where id = #{blogId}
+    </select>
+
+    <!--按id查询博客标题-->
+    <select id="getTitleByBlogId" resultType="java.lang.String">
+        select title from blog where id = #{blogId}
+    </select>
+
 
 
 

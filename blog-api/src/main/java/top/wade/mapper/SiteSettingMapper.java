@@ -15,4 +15,6 @@ import java.util.List;
 @Repository
 public interface SiteSettingMapper {
     List<SiteSetting> getList();
+
+    List<SiteSetting> getFriendInfo();
 }

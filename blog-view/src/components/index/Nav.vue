@@ -32,9 +32,7 @@
 			<el-autocomplete v-model="queryString" :fetch-suggestions="debounceQuery" placeholder="Search..."
 			                 class="right item m-search" :class="{'m-mobile-hide': mobileHide}"
 			                 popper-class="m-search-item" @select="handleSelect">
-                <template v-slot:suffix>
-				<i class="search icon el-input__icon"></i>
-                </template>
+				<i class="search icon el-input__icon" slot="suffix"></i>
 				<template slot-scope="{ item }">
 					<div class="title">{{ item.title }}</div>
 					<span class="content">{{ item.content }}</span>

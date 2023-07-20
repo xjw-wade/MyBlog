@@ -147,6 +147,26 @@ public class BlogServiceImpl implements BlogService {
         return blogMapper.countBlogByIsPublished();
     }
 
+    @Override
+    public Boolean getCommentEnabledByBlogId(Long blogId) {
+        return blogMapper.getCommentEnabledByBlogId(blogId);
+    }
+
+    @Override
+    public Boolean getPublishedByBlogId(Long blogId) {
+        return blogMapper.getPublishedByBlogId(blogId);
+    }
+
+    @Override
+    public String getBlogPassword(Long blogId) {
+        return blogMapper.getBlogPassword(blogId);
+    }
+
+    @Override
+    public String getTitleByBlogId(Long blogId) {
+        return blogMapper.getTitleByBlogId(blogId);
+    }
+
     /**
      * 将pageResult中博客对象的浏览量设置为Redis中的最新值
      *
@@ -190,6 +210,8 @@ public class BlogServiceImpl implements BlogService {
         }
         return blogInfos;
     }
+
+
 
 
 

@@ -37,4 +37,6 @@ public interface RedisService {
 
     <T> void saveListToValue(String key, List<T> list);
 
+    void saveObjectToValue(String key, Object object);
+
 }

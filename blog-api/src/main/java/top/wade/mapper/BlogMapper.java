@@ -35,4 +35,12 @@ public interface BlogMapper {
 
     int countBlogByIsPublished();
 
+    Boolean getCommentEnabledByBlogId(Long blogId);
+
+    Boolean getPublishedByBlogId(Long blogId);
+
+    String getBlogPassword(Long blogId);
+
+    String getTitleByBlogId(Long blogId);
+
 }

@@ -39,6 +39,12 @@ const routes = [
 			component: () => import('@/views/moments/Moments'),
 			meta: {title: '动态'}
 		},
+		{
+			path: '/friends',
+			name: 'friends',
+			component: () => import('@/views/friends/Friends'),
+			meta: {title: '友人帐'}
+		},
     ]
   },
  
