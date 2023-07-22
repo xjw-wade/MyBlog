@@ -2,7 +2,11 @@ package top.wade.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import java.util.Date;
 
 /**
  * @Author xjw
@@ -13,6 +17,16 @@ import org.springframework.stereotype.Component;
 public class JwtUtils {
     private static long expireTime;
     private static String secretKey;
+
+    @Value("${token.secretKey}")
+    public void setSecretKey(String secretKey) {
+        JwtUtils.secretKey = secretKey;
+    }
+
+    @Value("${token.expireTime}")
+    public void setExpireTime(long expireTime) {
+        JwtUtils.expireTime = expireTime;
+    }
 
     /**
      * 判断token是否存在
@@ -33,6 +47,22 @@ public class JwtUtils {
     public static Claims getTokenBody(String token) {
         Claims claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token.replace("Bearer", "")).getBody();
         return claims;
+    }
+
+    /**
+     * 生成token
+     *
+     * @param subject
+     * @return
+     */
+    public static String generateToken(String subject) {
+        String jwt = Jwts.builder()
+                        .setSubject(subject)
+                        .setExpiration(new Date(System.currentTimeMillis() + expireTime))
+                        .signWith(SignatureAlgorithm.HS512, secretKey)
+                        .compact();
+        return jwt;
+
     }
 
 }

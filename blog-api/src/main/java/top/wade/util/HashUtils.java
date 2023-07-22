@@ -18,4 +18,10 @@ public class HashUtils {
         return num;
     }
 
+    public static boolean matchBC(CharSequence rawPassword, String encoderPassword) {
+        return bCryptPasswordEncoder.matches(rawPassword, encoderPassword);
+    }
+
+
+
 }
