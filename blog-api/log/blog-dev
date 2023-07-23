@@ -1,106 +1,28 @@
-2023-07-22 22:20:47.681  INFO 3652 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 3652 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
-2023-07-22 22:20:47.687 DEBUG 3652 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
-2023-07-22 22:20:47.688  INFO 3652 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
-2023-07-22 22:20:47.749  INFO 3652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-22 22:20:47.750  INFO 3652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-22 22:20:48.552  INFO 3652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-07-22 22:20:48.555  INFO 3652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-07-22 22:20:48.593  INFO 3652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
-2023-07-22 22:20:49.381  INFO 3652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2023-07-22 22:20:49.392  INFO 3652 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-22 22:20:49.392  INFO 3652 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2023-07-22 22:20:49.475  INFO 3652 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-22 22:20:49.476  INFO 3652 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1726 ms
-2023-07-22 22:20:49.902  INFO 3652 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-22 22:20:49.904  INFO 3652 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
-2023-07-22 22:20:49.904  INFO 3652 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
-2023-07-22 22:20:49.905  INFO 3652 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
-2023-07-22 22:20:49.905  INFO 3652 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
-2023-07-22 22:20:49.905  INFO 3652 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
-2023-07-22 22:20:49.905  INFO 3652 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
-2023-07-22 22:20:49.905  INFO 3652 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-22 22:20:50.049  INFO 3652 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  141 ms using expression: classpath*:UserAgents/**/*.yaml
-2023-07-22 22:20:51.003  INFO 3652 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
-2023-07-22 22:20:51.671  INFO 3652 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-07-22 22:20:52.048  INFO 3652 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67d6338a, org.springframework.security.web.context.SecurityContextPersistenceFilter@284759e4, org.springframework.security.web.header.HeaderWriterFilter@5b3e7034, org.springframework.web.filter.CorsFilter@cbd36df, org.springframework.security.web.authentication.logout.LogoutFilter@37a9445f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79b2fa8e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ab8a101, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5228ab2, org.springframework.security.web.session.SessionManagementFilter@58be32d9, org.springframework.security.web.access.ExceptionTranslationFilter@64518ded]
-2023-07-22 22:20:52.095  INFO 3652 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-22 22:20:52.141  INFO 3652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2023-07-22 22:20:52.143  INFO 3652 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 4.964 seconds (JVM running for 6.333)
-2023-07-22 22:21:07.944  INFO 3652 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-22 22:21:07.944  INFO 3652 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-22 22:21:07.953  INFO 3652 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2023-07-22 22:21:08.161  INFO 3652 --- [http-nio-8090-exec-5] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2023-07-22 22:21:08.162  INFO 3652 --- [http-nio-8090-exec-5] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2023-07-22 22:21:09.022  INFO 3652 --- [http-nio-8090-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-22 22:21:09.194  INFO 3652 --- [http-nio-8090-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-22 22:21:09.211 DEBUG 3652 --- [http-nio-8090-exec-5] stByLimitNumAndIsPublishedAndIsRecommend : ==>  Preparing: select id, title, password, create_time, first_picture from blog where is_published=true and is_recommend=true order by rand() limit ?
-2023-07-22 22:21:09.223  INFO 3652 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
-2023-07-22 22:21:09.256 DEBUG 3652 --- [http-nio-8090-exec-5] stByLimitNumAndIsPublishedAndIsRecommend : ==> Parameters: 5(Integer)
-2023-07-22 22:21:09.568 DEBUG 3652 --- [http-nio-8090-exec-5] stByLimitNumAndIsPublishedAndIsRecommend : <==      Total: 0
-2023-07-22 22:21:11.079  INFO 3652 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Built in 1856 msec : Hashmap 192397, Ranges map:2904
-2023-07-22 22:21:11.144 DEBUG 3652 --- [task-1] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2023-07-22 22:21:11.147 DEBUG 3652 --- [task-1] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /blogs(String), GET(String), {"pageNum":1}(String), 访问页面(String), 首页(String), 第1页(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), 996(Integer), 2023-07-22 22:21:09.04(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
-2023-07-22 22:21:11.159 DEBUG 3652 --- [task-1] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1
-2023-07-22 22:21:20.978 DEBUG 3652 --- [task-2] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2023-07-22 22:21:20.979 DEBUG 3652 --- [task-2] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /archives(String), GET(String), {}(String), 访问页面(String), 归档(String), (String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), 6(Integer), 2023-07-22 22:21:20.975(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
-2023-07-22 22:21:20.982 DEBUG 3652 --- [task-2] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1
-2023-07-22 22:21:21.969 DEBUG 3652 --- [task-3] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2023-07-22 22:21:21.970 DEBUG 3652 --- [task-3] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /blogs(String), GET(String), {"pageNum":1}(String), 访问页面(String), 首页(String), 第1页(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), 4(Integer), 2023-07-22 22:21:21.968(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
-2023-07-22 22:21:21.972 DEBUG 3652 --- [task-3] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1
-2023-07-22 22:21:24.569 DEBUG 3652 --- [task-4] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-2023-07-22 22:21:24.571 DEBUG 3652 --- [task-4] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /about(String), GET(String), {}(String), 访问页面(String), 关于我(String), (String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), 3(Integer), 2023-07-22 22:21:24.567(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
-2023-07-22 22:21:24.572 DEBUG 3652 --- [task-4] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1
-2023-07-22 22:21:24.735 DEBUG 3652 --- [http-nio-8090-exec-3] t.w.m.C.countByPageAndIsPublished        : ==>  Preparing: select count(*) from comment where page = ?
-2023-07-22 22:21:24.735 DEBUG 3652 --- [http-nio-8090-exec-3] t.w.m.C.countByPageAndIsPublished        : ==> Parameters: 1(Integer)
-2023-07-22 22:21:24.741 DEBUG 3652 --- [http-nio-8090-exec-3] t.w.m.C.countByPageAndIsPublished        : <==      Total: 1
-2023-07-22 22:21:24.743 DEBUG 3652 --- [http-nio-8090-exec-3] t.w.m.C.countByPageAndIsPublished        : ==>  Preparing: select count(*) from comment where page = ? and is_published = ?
-2023-07-22 22:21:24.743 DEBUG 3652 --- [http-nio-8090-exec-3] t.w.m.C.countByPageAndIsPublished        : ==> Parameters: 1(Integer), true(Boolean)
-2023-07-22 22:21:24.744 DEBUG 3652 --- [http-nio-8090-exec-3] t.w.m.C.countByPageAndIsPublished        : <==      Total: 1
-2023-07-22 22:21:24.777 DEBUG 3652 --- [http-nio-8090-exec-3] ommentListByPageAndParentCommentId_COUNT : ==>  Preparing: SELECT count(0) FROM comment AS c1 LEFT JOIN comment AS c2 ON c1.parent_comment_id = c2.id WHERE c1.page = ? AND c1.parent_comment_id = ? AND c1.is_published = true
-2023-07-22 22:21:24.777 DEBUG 3652 --- [http-nio-8090-exec-3] ommentListByPageAndParentCommentId_COUNT : ==> Parameters: 1(Integer), -1(Long)
-2023-07-22 22:21:24.779 DEBUG 3652 --- [http-nio-8090-exec-3] ommentListByPageAndParentCommentId_COUNT : <==      Total: 1
-2023-07-22 22:23:06.607  INFO 15836 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 15836 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
-2023-07-22 22:23:06.610 DEBUG 15836 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
-2023-07-22 22:23:06.610  INFO 15836 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
-2023-07-22 22:23:06.667  INFO 15836 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-22 22:23:06.668  INFO 15836 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-22 22:23:07.344  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-07-22 22:23:07.345  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-07-22 22:23:07.375  INFO 15836 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
-2023-07-22 22:23:08.029  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2023-07-22 22:23:08.036  INFO 15836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-22 22:23:08.036  INFO 15836 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2023-07-22 22:23:08.114  INFO 15836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-22 22:23:08.114  INFO 15836 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1446 ms
-2023-07-22 22:23:08.533  INFO 15836 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-22 22:23:08.535  INFO 15836 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
-2023-07-22 22:23:08.535  INFO 15836 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
-2023-07-22 22:23:08.535  INFO 15836 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
-2023-07-22 22:23:08.536  INFO 15836 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
-2023-07-22 22:23:08.536  INFO 15836 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
-2023-07-22 22:23:08.536  INFO 15836 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
-2023-07-22 22:23:08.536  INFO 15836 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-22 22:23:08.665  INFO 15836 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  125 ms using expression: classpath*:UserAgents/**/*.yaml
-2023-07-22 22:23:09.574  INFO 15836 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
-2023-07-22 22:23:10.134  INFO 15836 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-07-22 22:23:10.447  INFO 15836 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24c790e3, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b3ac9bf, org.springframework.security.web.header.HeaderWriterFilter@2f1016b9, org.springframework.web.filter.CorsFilter@74aace30, org.springframework.security.web.authentication.logout.LogoutFilter@6bbf4a0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7939b7b6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cc295ae, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@390ab9de, org.springframework.security.web.session.SessionManagementFilter@4f1d7dac, org.springframework.security.web.access.ExceptionTranslationFilter@2886a1b4]
-2023-07-22 22:23:10.494  INFO 15836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-22 22:23:10.538  INFO 15836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2023-07-22 22:23:10.542  INFO 15836 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 4.327 seconds (JVM running for 5.433)
-2023-07-22 22:23:14.699  INFO 15836 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-22 22:23:14.699  INFO 15836 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-22 22:23:14.708  INFO 15836 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2023-07-22 22:23:14.806  INFO 15836 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-22 22:23:14.915  INFO 15836 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-22 22:23:14.921 DEBUG 15836 --- [http-nio-8090-exec-1] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
-2023-07-22 22:23:14.939 DEBUG 15836 --- [http-nio-8090-exec-1] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: Wade(String)
-2023-07-22 22:23:14.961 DEBUG 15836 --- [http-nio-8090-exec-1] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 0
-2023-07-22 22:24:06.169 DEBUG 15836 --- [http-nio-8090-exec-2] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
-2023-07-22 22:24:06.169 DEBUG 15836 --- [http-nio-8090-exec-2] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: Wade(String)
-2023-07-22 22:24:06.170 DEBUG 15836 --- [http-nio-8090-exec-2] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 0
-2023-07-22 22:24:15.875 DEBUG 15836 --- [http-nio-8090-exec-3] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
-2023-07-22 22:24:15.875 DEBUG 15836 --- [http-nio-8090-exec-3] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: 18890099801(String)
-2023-07-22 22:24:15.876 DEBUG 15836 --- [http-nio-8090-exec-3] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 0
-2023-07-22 22:24:32.636 DEBUG 15836 --- [http-nio-8090-exec-4] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
-2023-07-22 22:24:32.637 DEBUG 15836 --- [http-nio-8090-exec-4] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: 18890099801(String)
-2023-07-22 22:24:32.637 DEBUG 15836 --- [http-nio-8090-exec-4] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 0
+2023-07-23 18:13:36.999  INFO 13216 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 13216 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
+2023-07-23 18:13:37.005 DEBUG 13216 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2023-07-23 18:13:37.006  INFO 13216 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
+2023-07-23 18:13:37.076  INFO 13216 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-23 18:13:37.077  INFO 13216 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-23 18:13:37.961  INFO 13216 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-23 18:13:37.964  INFO 13216 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-23 18:13:38.004  INFO 13216 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2023-07-23 18:13:39.038  INFO 13216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-07-23 18:13:39.048  INFO 13216 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-23 18:13:39.048  INFO 13216 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2023-07-23 18:13:39.159  INFO 13216 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-23 18:13:39.159  INFO 13216 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2082 ms
+2023-07-23 18:13:39.706  INFO 13216 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-07-23 18:13:39.709  INFO 13216 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
+2023-07-23 18:13:39.709  INFO 13216 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
+2023-07-23 18:13:39.709  INFO 13216 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
+2023-07-23 18:13:39.709  INFO 13216 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
+2023-07-23 18:13:39.709  INFO 13216 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
+2023-07-23 18:13:39.710  INFO 13216 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
+2023-07-23 18:13:39.710  INFO 13216 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-07-23 18:13:39.860  INFO 13216 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  145 ms using expression: classpath*:UserAgents/**/*.yaml
+2023-07-23 18:13:40.991  INFO 13216 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
+2023-07-23 18:13:41.790  INFO 13216 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-23 18:13:42.269  INFO 13216 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54aa43f0, org.springframework.security.web.context.SecurityContextPersistenceFilter@21249b45, org.springframework.security.web.header.HeaderWriterFilter@5f847c9c, org.springframework.web.filter.CorsFilter@5cc96a08, org.springframework.security.web.authentication.logout.LogoutFilter@5947e6e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19adc3fc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10f3621d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f49644a, org.springframework.security.web.session.SessionManagementFilter@4e32b177, org.springframework.security.web.access.ExceptionTranslationFilter@28a633d0]
+2023-07-23 18:13:42.347  INFO 13216 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-23 18:13:42.402  INFO 13216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2023-07-23 18:13:42.405  INFO 13216 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 5.966 seconds (JVM running for 7.343)

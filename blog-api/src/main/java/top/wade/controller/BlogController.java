@@ -9,7 +9,11 @@ import top.wade.enums.VisitBehavior;
 import top.wade.model.vo.BlogInfo;
 import top.wade.model.vo.PageResult;
 import top.wade.model.vo.Result;
+import top.wade.model.vo.SearchBlog;
 import top.wade.service.BlogService;
+import top.wade.util.StringUtils;
+
+import java.util.List;
 
 /**
  * @Author xjw
@@ -32,6 +36,24 @@ public class BlogController {
     public Result blogs(@RequestParam(defaultValue = "1") Integer pageNum) {
         PageResult<BlogInfo> pageResult = blogService.getBlogInfoListByIsPublished(pageNum);
         return Result.ok("请求成功", pageResult);
+    }
+
+    /**
+     * 按关键字根据文章内容搜索公开且无密码保护的博客文章
+     *
+     * @param query 关键字字符串
+     * @return
+     */
+    @VisitLogger(VisitBehavior.SEARCH)
+    @GetMapping("/searchBlog")
+    public Result searchBlig(@RequestParam String query) {
+        //校验关键字符串合法性
+        if (StringUtils.isEmpty(query) || StringUtils.hasSpecialChar(query) || query.trim().length() > 20) {
+            return Result.error("参数错误");
+        }
+        List<SearchBlog> searchBlogs = blogService.getSearchBlogListByQueryAndIsPublished(query.trim());
+        return Result.ok("获取成功", searchBlogs);
+
     }
 
 }

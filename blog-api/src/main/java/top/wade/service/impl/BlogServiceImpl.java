@@ -167,6 +167,21 @@ public class BlogServiceImpl implements BlogService {
         return blogMapper.getTitleByBlogId(blogId);
     }
 
+    @Override
+    public List<SearchBlog> getSearchBlogListByQueryAndIsPublished(String query) {
+        List<SearchBlog> searchBlogs = blogMapper.getSearchBlogListByQueryAndIsPublished(query);
+        for (SearchBlog searchBlog : searchBlogs) {
+            String content = searchBlog.getContent();
+            int contentLength = content.length();
+            int index = content.indexOf(query) - 10;
+            index = index < 0 ? 0 : index;
+            int end = index + 21;//以关键字字符串为中心返回21个字
+            end = end > contentLength ? contentLength : end;
+            searchBlog.setContent(content.substring(index, end));
+        }
+        return searchBlogs;
+    }
+
     /**
      * 将pageResult中博客对象的浏览量设置为Redis中的最新值
      *

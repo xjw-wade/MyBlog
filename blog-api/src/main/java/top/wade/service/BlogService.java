@@ -1,10 +1,7 @@
 package top.wade.service;
 
 import top.wade.entity.Blog;
-import top.wade.model.vo.BlogInfo;
-import top.wade.model.vo.NewBlog;
-import top.wade.model.vo.PageResult;
-import top.wade.model.vo.RandomBlog;
+import top.wade.model.vo.*;
 
 import java.util.List;
 import java.util.Map;
@@ -36,5 +33,7 @@ public interface BlogService {
     String getBlogPassword(Long blogId);
 
     String getTitleByBlogId(Long blogId);
+
+    List<SearchBlog> getSearchBlogListByQueryAndIsPublished(String query);
 
 }
