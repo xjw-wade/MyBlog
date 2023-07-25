@@ -26,3 +26,30 @@
 2023-07-23 18:13:42.347  INFO 13216 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2023-07-23 18:13:42.402  INFO 13216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
 2023-07-23 18:13:42.405  INFO 13216 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 5.966 seconds (JVM running for 7.343)
+2023-07-23 18:15:09.350  INFO 13216 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-23 18:15:09.351  INFO 13216 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-23 18:15:09.363  INFO 13216 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2023-07-23 18:15:09.574  INFO 13216 --- [http-nio-8090-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2023-07-23 18:15:09.576  INFO 13216 --- [http-nio-8090-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2023-07-23 18:15:10.490  INFO 13216 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-23 18:15:10.652  INFO 13216 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-23 18:15:10.659 DEBUG 13216 --- [http-nio-8090-exec-2] stByLimitNumAndIsPublishedAndIsRecommend : ==>  Preparing: select id, title, password, create_time, first_picture from blog where is_published=true and is_recommend=true order by rand() limit ?
+2023-07-23 18:15:10.664  INFO 13216 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
+2023-07-23 18:15:10.684 DEBUG 13216 --- [http-nio-8090-exec-2] stByLimitNumAndIsPublishedAndIsRecommend : ==> Parameters: 5(Integer)
+2023-07-23 18:15:10.935 DEBUG 13216 --- [http-nio-8090-exec-2] stByLimitNumAndIsPublishedAndIsRecommend : <==      Total: 0
+2023-07-23 18:15:11.961  INFO 13216 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Built in 1295 msec : Hashmap 192397, Ranges map:2904
+2023-07-23 18:15:12.113 DEBUG 13216 --- [task-1] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-07-23 18:15:12.114 DEBUG 13216 --- [task-1] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /blogs(String), GET(String), {"pageNum":1}(String), 访问页面(String), 首页(String), 第1页(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), 1044(Integer), 2023-07-23 18:15:10.513(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
+2023-07-23 18:15:12.122 DEBUG 13216 --- [task-1] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1
+2023-07-23 18:15:22.686 DEBUG 13216 --- [http-nio-8090-exec-6] B.getSearchBlogListByQueryAndIsPublished : ==>  Preparing: select id, title, content from blog where is_published = true and password = '' and content like ?
+2023-07-23 18:15:22.687 DEBUG 13216 --- [http-nio-8090-exec-6] B.getSearchBlogListByQueryAndIsPublished : ==> Parameters: %12%(String)
+2023-07-23 18:15:22.687 DEBUG 13216 --- [http-nio-8090-exec-6] B.getSearchBlogListByQueryAndIsPublished : <==      Total: 0
+2023-07-23 18:15:22.691 DEBUG 13216 --- [task-2] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-07-23 18:15:22.693 DEBUG 13216 --- [task-2] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /searchBlog(String), GET(String), {"query":"12"}(String), 搜索博客(String), 12(String), 搜索内容：12(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), 20(Integer), 2023-07-23 18:15:22.69(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
+2023-07-23 18:15:22.695 DEBUG 13216 --- [task-2] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1
+2023-07-23 18:17:58.216 DEBUG 13216 --- [http-nio-8090-exec-9] B.getSearchBlogListByQueryAndIsPublished : ==>  Preparing: select id, title, content from blog where is_published = true and password = '' and content like ?
+2023-07-23 18:17:58.223 DEBUG 13216 --- [http-nio-8090-exec-9] B.getSearchBlogListByQueryAndIsPublished : ==> Parameters: %12%(String)
+2023-07-23 18:17:58.234 DEBUG 13216 --- [http-nio-8090-exec-9] B.getSearchBlogListByQueryAndIsPublished : <==      Total: 0
+2023-07-23 18:17:58.258 DEBUG 13216 --- [task-3] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-07-23 18:17:58.259 DEBUG 13216 --- [task-3] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /searchBlog(String), GET(String), {"query":"12"}(String), 搜索博客(String), 12(String), 搜索内容：12(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), 37(Integer), 2023-07-23 18:17:58.254(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
+2023-07-23 18:17:58.263 DEBUG 13216 --- [task-3] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1
