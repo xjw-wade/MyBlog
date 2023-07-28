@@ -4,8 +4,10 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
 import java.util.Date;
 
 /**
@@ -63,6 +65,27 @@ public class JwtUtils {
                         .compact();
         return jwt;
 
+    }
+
+    /**
+     * 生成带角色权限的token
+     *
+     * @param subject
+     * @param authorities
+     * @return
+     */
+    public static String generateToken(String subject, Collection<? extends GrantedAuthority> authorities) {
+        StringBuilder sb = new StringBuilder();
+        for (GrantedAuthority authority : authorities) {
+            sb.append(authority.getAuthority()).append(",");
+        }
+        String jwt = Jwts.builder()
+                         .setSubject(subject)
+                         .claim("authorities", sb)
+                         .setExpiration(new Date(System.currentTimeMillis() + expireTime))
+                         .signWith(SignatureAlgorithm.HS512, secretKey)
+                         .compact();
+        return jwt;
     }
 
 }

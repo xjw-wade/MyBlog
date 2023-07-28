@@ -13,6 +13,7 @@ import top.wade.enums.CommentOpenStateEnum;
 import top.wade.enums.CommentPageEnum;
 import top.wade.model.dto.Comment;
 import top.wade.model.vo.FriendInfo;
+import top.wade.service.AboutService;
 import top.wade.service.BlogService;
 import top.wade.service.FriendService;
 import top.wade.service.RedisService;
@@ -43,6 +44,8 @@ public class CommentUtils {
     BlogProperties blogProperties;
     @Autowired
     MailUtils mailUtils;
+    @Autowired
+    AboutService aboutService;
 
     private static BlogService blogService;
     /**
@@ -79,6 +82,13 @@ public class CommentUtils {
                 String password = blogService.getBlogPassword(blogId);
                 if (!StringUtils.isEmpty(password)) {
                     return CommentOpenStateEnum.PASSWORD;
+                }
+                break;
+            case PageConstants.ABOUT:
+                //关于我页面
+                if (!aboutService.getAboutCommentEnabled()) {
+                    //页面评论已关闭
+                    return CommentOpenStateEnum.CLOSE;
                 }
                 break;
             case PageConstants.FRIEND:

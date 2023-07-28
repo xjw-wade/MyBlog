@@ -16,4 +16,6 @@ import java.util.List;
 public interface AboutMapper {
     List<About> getList();
 
+    String getAboutCommentEnabled();
+
 }

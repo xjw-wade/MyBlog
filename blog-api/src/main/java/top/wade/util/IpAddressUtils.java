@@ -78,6 +78,7 @@ public class IpAddressUtils {
         // 2、使用上述的 dbBinStr 创建一个完全基于内存的查询对象。
         searcher = new Searcher(null, null, dbBinStr);
         //二进制方式初始化 DBSearcher，需要使用基于内存的查找算法 memorySearch
+        //通过方法名字符串"search" 和参数类型String.class 来获取名为search且接受一个String类型参数的方法
         method = searcher.getClass().getMethod("search", String.class);
     }
 

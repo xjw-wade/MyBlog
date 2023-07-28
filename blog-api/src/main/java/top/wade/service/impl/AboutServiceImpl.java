@@ -44,4 +44,10 @@ public class AboutServiceImpl implements AboutService {
         redisService.saveMapToValue(redisKey, aboutInfoMap);
         return aboutInfoMap;
     }
+
+    @Override
+    public boolean getAboutCommentEnabled() {
+        String commentEnabledString = aboutMapper.getAboutCommentEnabled();
+        return Boolean.parseBoolean(commentEnabledString);
+    }
 }
