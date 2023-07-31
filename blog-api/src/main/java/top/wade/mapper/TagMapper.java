@@ -3,6 +3,7 @@ package top.wade.mapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import top.wade.entity.Tag;
+import top.wade.model.vo.TagBlogCount;
 
 import java.util.List;
 
@@ -17,4 +18,8 @@ public interface TagMapper {
     List<Tag> getTagListByBlogId(Long blogId);
 
     List<Tag> getTagListNotId();
+
+    List<TagBlogCount> getTagBlogCount();
+
+    List<Tag> getTagList();
 }

@@ -1,226 +1,387 @@
-2023-07-28 12:03:23.619  INFO 3144 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 3144 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
-2023-07-28 12:03:23.625 DEBUG 3144 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
-2023-07-28 12:03:23.625  INFO 3144 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
-2023-07-28 12:03:23.790  INFO 3144 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-28 12:03:23.791  INFO 3144 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-28 12:03:24.551  INFO 3144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-07-28 12:03:24.554  INFO 3144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-07-28 12:03:24.591  INFO 3144 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
-2023-07-28 12:03:25.333  INFO 3144 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2023-07-28 12:03:25.341  INFO 3144 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-28 12:03:25.342  INFO 3144 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2023-07-28 12:03:25.418  INFO 3144 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-28 12:03:25.418  INFO 3144 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1627 ms
-2023-07-28 12:03:25.895  INFO 3144 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-28 12:03:25.897  INFO 3144 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
-2023-07-28 12:03:25.897  INFO 3144 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
-2023-07-28 12:03:25.897  INFO 3144 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
-2023-07-28 12:03:25.897  INFO 3144 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
-2023-07-28 12:03:25.897  INFO 3144 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
-2023-07-28 12:03:25.898  INFO 3144 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
-2023-07-28 12:03:25.898  INFO 3144 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-28 12:03:26.037  INFO 3144 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  135 ms using expression: classpath*:UserAgents/**/*.yaml
-2023-07-28 12:03:26.961  INFO 3144 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
-2023-07-28 12:03:28.115  INFO 3144 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-07-28 12:03:29.290  INFO 3144 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79b737d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@248a6a63, org.springframework.security.web.header.HeaderWriterFilter@92718d0, org.springframework.web.filter.CorsFilter@165128e0, org.springframework.security.web.authentication.logout.LogoutFilter@56a8d2dc, top.wade.config.JwtLoginFilter@66f28f4b, top.wade.config.JwtFilter@3be952ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@853027e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16b26842, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ba0abbc, org.springframework.security.web.session.SessionManagementFilter@6ab6f67d, org.springframework.security.web.access.ExceptionTranslationFilter@5cc96a08, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@78d8d81f]
-2023-07-28 12:03:29.442  INFO 3144 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-28 12:03:29.526  INFO 3144 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2023-07-28 12:03:29.532  INFO 3144 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 6.663 seconds (JVM running for 8.13)
-2023-07-28 12:04:22.332  INFO 3144 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-28 12:04:22.332  INFO 3144 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-28 12:04:22.341  INFO 3144 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2023-07-28 12:04:22.386 DEBUG 3144 --- [http-nio-8090-exec-2] top.wade.config.JwtLoginFilter           : Request is to process authentication
-2023-07-28 12:04:22.578  INFO 3144 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-28 12:04:22.789  INFO 3144 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-28 12:04:22.797 DEBUG 3144 --- [http-nio-8090-exec-2] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
-2023-07-28 12:04:22.819 DEBUG 3144 --- [http-nio-8090-exec-2] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: Admin(String)
-2023-07-28 12:04:22.848 DEBUG 3144 --- [http-nio-8090-exec-2] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 1
-2023-07-28 12:04:22.860 ERROR 3144 --- [http-nio-8090-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+2023-07-31 15:26:09.271  INFO 16304 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 16304 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
+2023-07-31 15:26:09.281 DEBUG 16304 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2023-07-31 15:26:09.281  INFO 16304 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
+2023-07-31 15:26:09.417  INFO 16304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 15:26:09.417  INFO 16304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 15:26:10.328  INFO 16304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-31 15:26:10.330  INFO 16304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-31 15:26:10.374  INFO 16304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 Redis repository interfaces.
+2023-07-31 15:26:11.203  INFO 16304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-07-31 15:26:11.211  INFO 16304 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 15:26:11.211  INFO 16304 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2023-07-31 15:26:11.309  INFO 16304 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 15:26:11.309  INFO 16304 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1891 ms
+2023-07-31 15:26:11.809  INFO 16304 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-07-31 15:26:11.810  INFO 16304 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
+2023-07-31 15:26:11.810  INFO 16304 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
+2023-07-31 15:26:11.811  INFO 16304 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
+2023-07-31 15:26:11.811  INFO 16304 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
+2023-07-31 15:26:11.811  INFO 16304 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
+2023-07-31 15:26:11.811  INFO 16304 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
+2023-07-31 15:26:11.811  INFO 16304 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-07-31 15:26:11.957  INFO 16304 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  143 ms using expression: classpath*:UserAgents/**/*.yaml
+2023-07-31 15:26:13.035  INFO 16304 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
+2023-07-31 15:26:13.959  INFO 16304 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-31 15:26:14.378  INFO 16304 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@303a9660, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b0e88f6, org.springframework.security.web.header.HeaderWriterFilter@1b9999e0, org.springframework.web.filter.CorsFilter@5331fec8, org.springframework.security.web.authentication.logout.LogoutFilter@7a2a70b8, top.wade.config.JwtLoginFilter@437130bb, top.wade.config.JwtFilter@d1892e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b92a4e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d55044a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69758cbd, org.springframework.security.web.session.SessionManagementFilter@42adcccd, org.springframework.security.web.access.ExceptionTranslationFilter@45b403ea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21fe22c1]
+2023-07-31 15:26:14.438  INFO 16304 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-31 15:26:14.493  INFO 16304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2023-07-31 15:26:14.497  INFO 16304 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 5.824 seconds (JVM running for 7.145)
+2023-07-31 15:29:03.607  INFO 16304 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-31 15:29:03.608  INFO 16304 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-31 15:29:03.620  INFO 16304 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2023-07-31 15:29:35.987 DEBUG 16304 --- [http-nio-8090-exec-6] top.wade.config.JwtLoginFilter           : Request is to process authentication
+2023-07-31 15:29:36.154  INFO 16304 --- [http-nio-8090-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-31 15:29:36.410  INFO 16304 --- [http-nio-8090-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-31 15:29:36.415 DEBUG 16304 --- [http-nio-8090-exec-6] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
+2023-07-31 15:29:36.435 DEBUG 16304 --- [http-nio-8090-exec-6] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: Admin(String)
+2023-07-31 15:29:36.491 DEBUG 16304 --- [http-nio-8090-exec-6] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 1
+2023-07-31 15:29:36.617  INFO 16304 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
+2023-07-31 15:29:37.960  INFO 16304 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Built in 1342 msec : Hashmap 192397, Ranges map:2904
+2023-07-31 15:29:38.013 DEBUG 16304 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : ==>  Preparing: insert into login_log (username, ip, ip_source, os, browser, status, description, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-07-31 15:29:38.015 DEBUG 16304 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : ==> Parameters: Admin(String), 192.168.100.76(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), true(Boolean), 登录成功(String), 2023-07-31 15:29:36.6(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
+2023-07-31 15:29:38.018 DEBUG 16304 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : <==    Updates: 1
+2023-07-31 19:28:52.852  INFO 15148 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 15148 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
+2023-07-31 19:28:52.856 DEBUG 15148 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2023-07-31 19:28:52.856  INFO 15148 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
+2023-07-31 19:28:52.933  INFO 15148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 19:28:52.934  INFO 15148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 19:28:53.643  INFO 15148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-31 19:28:53.645  INFO 15148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-31 19:28:53.679  INFO 15148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2023-07-31 19:28:54.385  INFO 15148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-07-31 19:28:54.393  INFO 15148 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 19:28:54.393  INFO 15148 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2023-07-31 19:28:54.475  INFO 15148 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 19:28:54.476  INFO 15148 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1542 ms
+2023-07-31 19:28:54.903  WARN 15148 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogAspect': Unsatisfied dependency expressed through field 'visitLogService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogServiceImpl': Unsatisfied dependency expressed through field 'visitLogMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogMapper' defined in file [E:\Projects\my-blog\my-blog\blog-api\target\classes\top\wade\mapper\VisitLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+2023-07-31 19:28:54.908  INFO 15148 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 19:28:54.927  INFO 15148 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
 
-java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
-	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:250) ~[spring-security-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:198) ~[spring-security-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:90) ~[spring-security-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166) ~[spring-security-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175) ~[spring-security-core-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at top.wade.config.JwtLoginFilter.attemptAuthentication(JwtLoginFilter.java:51) ~[classes/:na]
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_211]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_211]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.34.jar:9.0.34]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 19:28:54.944 ERROR 15148 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
-2023-07-28 12:21:44.026  INFO 9976 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 9976 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
-2023-07-28 12:21:44.029 DEBUG 9976 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
-2023-07-28 12:21:44.029  INFO 9976 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
-2023-07-28 12:21:44.082  INFO 9976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-28 12:21:44.083  INFO 9976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-28 12:21:44.768  INFO 9976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-07-28 12:21:44.770  INFO 9976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-07-28 12:21:44.801  INFO 9976 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
-2023-07-28 12:21:45.434  INFO 9976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2023-07-28 12:21:45.440  INFO 9976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-28 12:21:45.441  INFO 9976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2023-07-28 12:21:45.510  INFO 9976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-28 12:21:45.510  INFO 9976 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1427 ms
-2023-07-28 12:21:45.907  INFO 9976 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-28 12:21:45.909  INFO 9976 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
-2023-07-28 12:21:45.909  INFO 9976 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
-2023-07-28 12:21:45.909  INFO 9976 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
-2023-07-28 12:21:45.909  INFO 9976 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
-2023-07-28 12:21:45.910  INFO 9976 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
-2023-07-28 12:21:45.910  INFO 9976 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
-2023-07-28 12:21:45.910  INFO 9976 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-28 12:21:46.037  INFO 9976 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  123 ms using expression: classpath*:UserAgents/**/*.yaml
-2023-07-28 12:21:47.051  INFO 9976 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
-2023-07-28 12:21:47.577  INFO 9976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-07-28 12:21:47.920  INFO 9976 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54397feb, org.springframework.security.web.context.SecurityContextPersistenceFilter@42720773, org.springframework.security.web.header.HeaderWriterFilter@7d5f5d23, org.springframework.web.filter.CorsFilter@3ca46b56, org.springframework.security.web.authentication.logout.LogoutFilter@451b4c7, top.wade.config.JwtLoginFilter@4b1a373c, top.wade.config.JwtFilter@3793d678, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ec5b451, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@722c7b63, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28ca2146, org.springframework.security.web.session.SessionManagementFilter@15f6d022, org.springframework.security.web.access.ExceptionTranslationFilter@44770ff7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6756e078]
-2023-07-28 12:21:47.969  INFO 9976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-28 12:21:48.027  INFO 9976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2023-07-28 12:21:48.030  INFO 9976 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 4.407 seconds (JVM running for 5.473)
-2023-07-28 12:21:55.506  INFO 9976 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-28 12:21:55.507  INFO 9976 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-28 12:21:55.516  INFO 9976 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2023-07-28 12:21:55.540 DEBUG 9976 --- [http-nio-8090-exec-1] top.wade.config.JwtLoginFilter           : Request is to process authentication
-2023-07-28 12:21:55.681  INFO 9976 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-28 12:21:55.777  INFO 9976 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-28 12:21:55.781 DEBUG 9976 --- [http-nio-8090-exec-1] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
-2023-07-28 12:21:55.798 DEBUG 9976 --- [http-nio-8090-exec-1] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: Admin(String)
-2023-07-28 12:21:55.818 DEBUG 9976 --- [http-nio-8090-exec-1] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 1
-2023-07-28 12:21:56.352  INFO 9976 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
-2023-07-28 12:21:57.699  INFO 9976 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Built in 1346 msec : Hashmap 192397, Ranges map:2904
-2023-07-28 12:21:57.751 DEBUG 9976 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : ==>  Preparing: insert into login_log (username, ip, ip_source, os, browser, status, description, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2023-07-28 12:21:57.754 DEBUG 9976 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : ==> Parameters: Admin(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), true(Boolean), 登录成功(String), 2023-07-28 12:21:56.335(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
-2023-07-28 12:21:57.766 DEBUG 9976 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : <==    Updates: 1
-2023-07-28 12:23:43.208  WARN 9976 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s319ms184µs100ns).
-2023-07-28 12:23:53.920  INFO 1152 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 1152 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
-2023-07-28 12:23:53.923 DEBUG 1152 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
-2023-07-28 12:23:53.923  INFO 1152 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
-2023-07-28 12:23:53.982  INFO 1152 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-28 12:23:53.983  INFO 1152 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-28 12:23:54.772  INFO 1152 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-07-28 12:23:54.774  INFO 1152 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-07-28 12:23:54.811  INFO 1152 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
-2023-07-28 12:23:55.716  INFO 1152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2023-07-28 12:23:55.725  INFO 1152 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-28 12:23:55.725  INFO 1152 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2023-07-28 12:23:55.873  INFO 1152 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-28 12:23:55.874  INFO 1152 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1891 ms
-2023-07-28 12:23:56.310  INFO 1152 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-28 12:23:56.313  INFO 1152 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
-2023-07-28 12:23:56.313  INFO 1152 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
-2023-07-28 12:23:56.313  INFO 1152 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
-2023-07-28 12:23:56.313  INFO 1152 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
-2023-07-28 12:23:56.313  INFO 1152 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
-2023-07-28 12:23:56.313  INFO 1152 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
-2023-07-28 12:23:56.314  INFO 1152 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-28 12:23:56.435  INFO 1152 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  117 ms using expression: classpath*:UserAgents/**/*.yaml
-2023-07-28 12:23:57.349  INFO 1152 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
-2023-07-28 12:23:58.029  INFO 1152 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-07-28 12:23:58.424  INFO 1152 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39a30f8f, org.springframework.security.web.context.SecurityContextPersistenceFilter@25bac067, org.springframework.security.web.header.HeaderWriterFilter@7972630f, org.springframework.web.filter.CorsFilter@62370841, org.springframework.security.web.authentication.logout.LogoutFilter@3f38649, top.wade.config.JwtLoginFilter@3a9575e0, top.wade.config.JwtFilter@21c23f37, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a62578, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c40d2c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bc93f7, org.springframework.security.web.session.SessionManagementFilter@155ad5c8, org.springframework.security.web.access.ExceptionTranslationFilter@237d83fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7318139b]
-2023-07-28 12:23:58.474  INFO 1152 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-28 12:23:58.528  INFO 1152 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2023-07-28 12:23:58.531  INFO 1152 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 5.102 seconds (JVM running for 6.424)
-2023-07-28 12:24:04.078  INFO 1152 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-28 12:24:04.078  INFO 1152 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-28 12:24:04.086  INFO 1152 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2023-07-28 12:24:04.129 DEBUG 1152 --- [http-nio-8090-exec-2] top.wade.config.JwtLoginFilter           : Request is to process authentication
-2023-07-28 12:24:04.292  INFO 1152 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-28 12:24:04.416  INFO 1152 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-28 12:24:04.421 DEBUG 1152 --- [http-nio-8090-exec-2] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
-2023-07-28 12:24:04.440 DEBUG 1152 --- [http-nio-8090-exec-2] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: Admin(String)
-2023-07-28 12:24:04.460 DEBUG 1152 --- [http-nio-8090-exec-2] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 1
-2023-07-28 12:24:05.000  INFO 1152 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
-2023-07-28 12:24:06.143  INFO 1152 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Built in 1143 msec : Hashmap 192397, Ranges map:2904
-2023-07-28 12:24:06.199 DEBUG 1152 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : ==>  Preparing: insert into login_log (username, ip, ip_source, os, browser, status, description, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2023-07-28 12:24:06.201 DEBUG 1152 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : ==> Parameters: Admin(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), true(Boolean), 登录成功(String), 2023-07-28 12:24:04.978(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
-2023-07-28 12:24:06.203 DEBUG 1152 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : <==    Updates: 1
-2023-07-28 12:24:27.298  INFO 1152 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-07-28 12:24:27.324  INFO 1152 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-28 12:24:27.334  INFO 1152 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-07-28 12:24:30.559  INFO 9460 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 9460 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
-2023-07-28 12:24:30.562 DEBUG 9460 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
-2023-07-28 12:24:30.563  INFO 9460 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
-2023-07-28 12:24:30.625  INFO 9460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-07-28 12:24:30.625  INFO 9460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-07-28 12:24:31.430  INFO 9460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-07-28 12:24:31.432  INFO 9460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-07-28 12:24:31.467  INFO 9460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
-2023-07-28 12:24:32.277  INFO 9460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2023-07-28 12:24:32.285  INFO 9460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-07-28 12:24:32.285  INFO 9460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2023-07-28 12:24:32.429  INFO 9460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-07-28 12:24:32.429  INFO 9460 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1804 ms
-2023-07-28 12:24:32.904  INFO 9460 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-28 12:24:32.906  INFO 9460 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
-2023-07-28 12:24:32.906  INFO 9460 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
-2023-07-28 12:24:32.906  INFO 9460 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
-2023-07-28 12:24:32.906  INFO 9460 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
-2023-07-28 12:24:32.906  INFO 9460 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
-2023-07-28 12:24:32.906  INFO 9460 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
-2023-07-28 12:24:32.906  INFO 9460 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-07-28 12:24:33.044  INFO 9460 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  134 ms using expression: classpath*:UserAgents/**/*.yaml
-2023-07-28 12:24:33.982  INFO 9460 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
-2023-07-28 12:24:34.761  INFO 9460 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-07-28 12:24:35.325  INFO 9460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6061ad67, org.springframework.security.web.context.SecurityContextPersistenceFilter@3de37db6, org.springframework.security.web.header.HeaderWriterFilter@1d658942, org.springframework.web.filter.CorsFilter@42f68881, org.springframework.security.web.authentication.logout.LogoutFilter@4f1baacc, top.wade.config.JwtLoginFilter@111b9108, top.wade.config.JwtFilter@743a3229, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@445d7d16, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40534e83, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@195db35c, org.springframework.security.web.session.SessionManagementFilter@486b2f2b, org.springframework.security.web.access.ExceptionTranslationFilter@54facf6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f03a958]
-2023-07-28 12:24:35.396  INFO 9460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-07-28 12:24:35.456  INFO 9460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2023-07-28 12:24:35.461  INFO 9460 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 5.407 seconds (JVM running for 6.856)
-2023-07-28 12:24:37.119  INFO 9460 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-28 12:24:37.119  INFO 9460 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-28 12:24:37.128  INFO 9460 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2023-07-28 12:24:37.163 DEBUG 9460 --- [http-nio-8090-exec-1] top.wade.config.JwtLoginFilter           : Request is to process authentication
-2023-07-28 12:29:59.517  INFO 9460 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-07-28 12:29:59.941  INFO 9460 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-07-28 12:29:59.988 DEBUG 9460 --- [http-nio-8090-exec-1] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
-2023-07-28 12:30:00.223 DEBUG 9460 --- [http-nio-8090-exec-1] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: Admin(String)
-2023-07-28 12:30:00.406 DEBUG 9460 --- [http-nio-8090-exec-1] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 1
-2023-07-28 12:32:08.484  INFO 9460 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
-2023-07-28 12:32:41.273  INFO 9460 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2023-07-28 12:32:41.298  INFO 9460 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-28 12:32:41.313  INFO 9460 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogAspect': Unsatisfied dependency expressed through field 'visitLogService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogServiceImpl': Unsatisfied dependency expressed through field 'visitLogMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogMapper' defined in file [E:\Projects\my-blog\my-blog\blog-api\target\classes\top\wade\mapper\VisitLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at top.wade.BlogApiApplication.main(BlogApiApplication.java:9) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_211]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogServiceImpl': Unsatisfied dependency expressed through field 'visitLogMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogMapper' defined in file [E:\Projects\my-blog\my-blog\blog-api\target\classes\top\wade\mapper\VisitLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogMapper' defined in file [E:\Projects\my-blog\my-blog\blog-api\target\classes\top\wade\mapper\VisitLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 61 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:612) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:490) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:632) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180) ~[mybatis-spring-boot-autoconfigure-2.1.3.jar:2.1.3]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bec2eeb9.CGLIB$sqlSessionFactory$0(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.3.jar:2.1.3]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bec2eeb9$$FastClassBySpringCGLIB$$1dd39197.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.3.jar:2.1.3]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bec2eeb9.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.3.jar:2.1.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_211]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:610) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	... 75 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:992) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:948) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:746) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:297) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:113) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121) ~[mybatis-3.5.5.jar:3.5.5]
+	... 77 common frames omitted
+
+2023-07-31 19:32:08.362  INFO 10860 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 10860 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
+2023-07-31 19:32:08.364 DEBUG 10860 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2023-07-31 19:32:08.365  INFO 10860 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
+2023-07-31 19:32:08.427  INFO 10860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 19:32:08.428  INFO 10860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 19:32:09.078  INFO 10860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-31 19:32:09.079  INFO 10860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-31 19:32:09.112  INFO 10860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2023-07-31 19:32:09.758  INFO 10860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-07-31 19:32:09.766  INFO 10860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 19:32:09.766  INFO 10860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2023-07-31 19:32:09.839  INFO 10860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 19:32:09.839  INFO 10860 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1411 ms
+2023-07-31 19:32:10.211  WARN 10860 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogAspect': Unsatisfied dependency expressed through field 'visitLogService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogServiceImpl': Unsatisfied dependency expressed through field 'visitLogMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogMapper' defined in file [E:\Projects\my-blog\my-blog\blog-api\target\classes\top\wade\mapper\VisitLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+2023-07-31 19:32:10.213  INFO 10860 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-31 19:32:10.223  INFO 10860 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-31 19:32:10.234 ERROR 10860 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogAspect': Unsatisfied dependency expressed through field 'visitLogService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogServiceImpl': Unsatisfied dependency expressed through field 'visitLogMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogMapper' defined in file [E:\Projects\my-blog\my-blog\blog-api\target\classes\top\wade\mapper\VisitLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+	at top.wade.BlogApiApplication.main(BlogApiApplication.java:9) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_211]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.7.RELEASE.jar:2.2.7.RELEASE]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogServiceImpl': Unsatisfied dependency expressed through field 'visitLogMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogMapper' defined in file [E:\Projects\my-blog\my-blog\blog-api\target\classes\top\wade\mapper\VisitLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'visitLogMapper' defined in file [E:\Projects\my-blog\my-blog\blog-api\target\classes\top\wade\mapper\VisitLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 61 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:612) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:490) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:632) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180) ~[mybatis-spring-boot-autoconfigure-2.1.3.jar:2.1.3]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f64e4ce1.CGLIB$sqlSessionFactory$1(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.3.jar:2.1.3]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f64e4ce1$$FastClassBySpringCGLIB$$b998004a.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.3.jar:2.1.3]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f64e4ce1.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.1.3.jar:2.1.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_211]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]'. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:610) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	... 75 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for top.wade.mapper.CommentMapper.countComment. please check file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml] and file [E:\Projects\my-blog\my-blog\blog-api\target\classes\mapper\CommentMapper.xml]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:992) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:948) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:746) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:297) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:113) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121) ~[mybatis-3.5.5.jar:3.5.5]
+	... 77 common frames omitted
+
+2023-07-31 19:34:36.615  INFO 11220 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 11220 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
+2023-07-31 19:34:36.617 DEBUG 11220 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2023-07-31 19:34:36.617  INFO 11220 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
+2023-07-31 19:34:36.674  INFO 11220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-31 19:34:36.674  INFO 11220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-31 19:34:37.337  INFO 11220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-31 19:34:37.338  INFO 11220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-31 19:34:37.372  INFO 11220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2023-07-31 19:34:38.026  INFO 11220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-07-31 19:34:38.036  INFO 11220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-31 19:34:38.036  INFO 11220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2023-07-31 19:34:38.109  INFO 11220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-31 19:34:38.109  INFO 11220 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1435 ms
+2023-07-31 19:34:38.538  INFO 11220 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-07-31 19:34:38.540  INFO 11220 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
+2023-07-31 19:34:38.540  INFO 11220 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
+2023-07-31 19:34:38.540  INFO 11220 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
+2023-07-31 19:34:38.540  INFO 11220 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
+2023-07-31 19:34:38.540  INFO 11220 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
+2023-07-31 19:34:38.541  INFO 11220 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
+2023-07-31 19:34:38.541  INFO 11220 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-07-31 19:34:38.679  INFO 11220 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  135 ms using expression: classpath*:UserAgents/**/*.yaml
+2023-07-31 19:34:39.594  INFO 11220 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
+2023-07-31 19:34:40.161  INFO 11220 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-07-31 19:34:40.533  INFO 11220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2990a433, org.springframework.security.web.context.SecurityContextPersistenceFilter@441181d1, org.springframework.security.web.header.HeaderWriterFilter@54196741, org.springframework.web.filter.CorsFilter@770de431, org.springframework.security.web.authentication.logout.LogoutFilter@1bb4c5af, top.wade.config.JwtLoginFilter@3267af61, top.wade.config.JwtFilter@2dcab7a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53102e43, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43d698db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1572f14, org.springframework.security.web.session.SessionManagementFilter@4789876c, org.springframework.security.web.access.ExceptionTranslationFilter@c02eb80, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@75811e3f]
+2023-07-31 19:34:40.583  INFO 11220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-31 19:34:40.630  INFO 11220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2023-07-31 19:34:40.632  INFO 11220 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 4.423 seconds (JVM running for 5.519)
+2023-07-31 19:35:06.421  INFO 11220 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-31 19:35:06.421  INFO 11220 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-31 19:35:06.428  INFO 11220 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-07-31 19:35:06.941  INFO 11220 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-31 19:35:07.035  INFO 11220 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-31 19:35:07.040 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.V.countVisitLogByToday             : ==>  Preparing: select count(*) from visit_log where date(create_time) = curdate()
+2023-07-31 19:35:07.056 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.V.countVisitLogByToday             : ==> Parameters: 
+2023-07-31 19:35:07.092 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.V.countVisitLogByToday             : <==      Total: 1
+2023-07-31 19:35:07.195  INFO 11220 --- [http-nio-8090-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2023-07-31 19:35:07.196  INFO 11220 --- [http-nio-8090-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2023-07-31 19:35:08.053 DEBUG 11220 --- [http-nio-8090-exec-2] top.wade.mapper.BlogMapper.countBlog     : ==>  Preparing: select count(*) from blog
+2023-07-31 19:35:08.054 DEBUG 11220 --- [http-nio-8090-exec-2] top.wade.mapper.BlogMapper.countBlog     : ==> Parameters: 
+2023-07-31 19:35:08.064 DEBUG 11220 --- [http-nio-8090-exec-2] top.wade.mapper.BlogMapper.countBlog     : <==      Total: 1
+2023-07-31 19:35:08.065 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.mapper.CommentMapper.countComment    : ==>  Preparing: select count(*) from comment
+2023-07-31 19:35:08.065 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.mapper.CommentMapper.countComment    : ==> Parameters: 
+2023-07-31 19:35:08.070 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.mapper.CommentMapper.countComment    : <==      Total: 1
+2023-07-31 19:35:08.071 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.B.getCategoryBlogCountList         : ==>  Preparing: select category_id, count(category_id) as blog_count from blog group by category_id
+2023-07-31 19:35:08.072 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.B.getCategoryBlogCountList         : ==> Parameters: 
+2023-07-31 19:35:08.072 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.B.getCategoryBlogCountList         : <==      Total: 0
+2023-07-31 19:35:08.073 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-07-31 19:35:08.073 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-07-31 19:35:08.074 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 0
+2023-07-31 19:35:08.075 DEBUG 11220 --- [http-nio-8090-exec-2] t.wade.mapper.TagMapper.getTagBlogCount  : ==>  Preparing: select tag_id, count(tag_id) as blog_count from blog_tag group by tag_id
+2023-07-31 19:35:08.075 DEBUG 11220 --- [http-nio-8090-exec-2] t.wade.mapper.TagMapper.getTagBlogCount  : ==> Parameters: 
+2023-07-31 19:35:08.080 DEBUG 11220 --- [http-nio-8090-exec-2] t.wade.mapper.TagMapper.getTagBlogCount  : <==      Total: 0
+2023-07-31 19:35:08.080 DEBUG 11220 --- [http-nio-8090-exec-2] top.wade.mapper.TagMapper.getTagList     : ==>  Preparing: select id, tag_name, color from tag order by id desc
+2023-07-31 19:35:08.080 DEBUG 11220 --- [http-nio-8090-exec-2] top.wade.mapper.TagMapper.getTagList     : ==> Parameters: 
+2023-07-31 19:35:08.106 DEBUG 11220 --- [http-nio-8090-exec-2] top.wade.mapper.TagMapper.getTagList     : <==      Total: 0
+2023-07-31 19:35:08.108 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.V.getVisitRecordListByLimit        : ==>  Preparing: select pv, uv, date from visit_record order by id desc limit ?
+2023-07-31 19:35:08.109 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.V.getVisitRecordListByLimit        : ==> Parameters: 30(Integer)
+2023-07-31 19:35:08.113 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.V.getVisitRecordListByLimit        : <==      Total: 0
+2023-07-31 19:35:08.113 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.C.getCityVisitorList               : ==>  Preparing: select city, uv from city_visitor order by uv desc
+2023-07-31 19:35:08.114 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.C.getCityVisitorList               : ==> Parameters: 
+2023-07-31 19:35:08.118 DEBUG 11220 --- [http-nio-8090-exec-2] t.w.m.C.getCityVisitorList               : <==      Total: 0
+2023-07-31 19:40:36.813 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.V.countVisitLogByToday             : ==>  Preparing: select count(*) from visit_log where date(create_time) = curdate()
+2023-07-31 19:40:36.813 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.V.countVisitLogByToday             : ==> Parameters: 
+2023-07-31 19:40:36.815 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.V.countVisitLogByToday             : <==      Total: 1
+2023-07-31 19:40:36.817 DEBUG 11220 --- [http-nio-8090-exec-4] top.wade.mapper.BlogMapper.countBlog     : ==>  Preparing: select count(*) from blog
+2023-07-31 19:40:36.817 DEBUG 11220 --- [http-nio-8090-exec-4] top.wade.mapper.BlogMapper.countBlog     : ==> Parameters: 
+2023-07-31 19:40:36.819 DEBUG 11220 --- [http-nio-8090-exec-4] top.wade.mapper.BlogMapper.countBlog     : <==      Total: 1
+2023-07-31 19:40:36.820 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.mapper.CommentMapper.countComment    : ==>  Preparing: select count(*) from comment
+2023-07-31 19:40:36.820 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.mapper.CommentMapper.countComment    : ==> Parameters: 
+2023-07-31 19:40:36.821 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.mapper.CommentMapper.countComment    : <==      Total: 1
+2023-07-31 19:40:36.822 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.B.getCategoryBlogCountList         : ==>  Preparing: select category_id, count(category_id) as blog_count from blog group by category_id
+2023-07-31 19:40:36.822 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.B.getCategoryBlogCountList         : ==> Parameters: 
+2023-07-31 19:40:36.823 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.B.getCategoryBlogCountList         : <==      Total: 0
+2023-07-31 19:40:36.824 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-07-31 19:40:36.825 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-07-31 19:40:36.826 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 0
+2023-07-31 19:40:36.827 DEBUG 11220 --- [http-nio-8090-exec-4] t.wade.mapper.TagMapper.getTagBlogCount  : ==>  Preparing: select tag_id, count(tag_id) as blog_count from blog_tag group by tag_id
+2023-07-31 19:40:36.827 DEBUG 11220 --- [http-nio-8090-exec-4] t.wade.mapper.TagMapper.getTagBlogCount  : ==> Parameters: 
+2023-07-31 19:40:36.828 DEBUG 11220 --- [http-nio-8090-exec-4] t.wade.mapper.TagMapper.getTagBlogCount  : <==      Total: 0
+2023-07-31 19:40:36.828 DEBUG 11220 --- [http-nio-8090-exec-4] top.wade.mapper.TagMapper.getTagList     : ==>  Preparing: select id, tag_name, color from tag order by id desc
+2023-07-31 19:40:36.829 DEBUG 11220 --- [http-nio-8090-exec-4] top.wade.mapper.TagMapper.getTagList     : ==> Parameters: 
+2023-07-31 19:40:36.830 DEBUG 11220 --- [http-nio-8090-exec-4] top.wade.mapper.TagMapper.getTagList     : <==      Total: 0
+2023-07-31 19:40:36.831 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.V.getVisitRecordListByLimit        : ==>  Preparing: select pv, uv, date from visit_record order by id desc limit ?
+2023-07-31 19:40:36.831 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.V.getVisitRecordListByLimit        : ==> Parameters: 30(Integer)
+2023-07-31 19:40:36.832 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.V.getVisitRecordListByLimit        : <==      Total: 0
+2023-07-31 19:40:36.833 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.C.getCityVisitorList               : ==>  Preparing: select city, uv from city_visitor order by uv desc
+2023-07-31 19:40:36.833 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.C.getCityVisitorList               : ==> Parameters: 
+2023-07-31 19:40:36.833 DEBUG 11220 --- [http-nio-8090-exec-4] t.w.m.C.getCityVisitorList               : <==      Total: 0

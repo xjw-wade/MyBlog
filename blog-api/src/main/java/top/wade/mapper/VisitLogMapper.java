@@ -14,4 +14,6 @@ import top.wade.entity.VisitLog;
 public interface VisitLogMapper {
     int saveVisitLog(VisitLog log);
 
+    int countVisitLogByToday();
+
 }

@@ -43,4 +43,8 @@ public interface BlogMapper {
 
     String getTitleByBlogId(Long blogId);
 
+    int countBlog();
+
+    List<CategoryBlogCount> getCategoryBlogCountList();
+
 }

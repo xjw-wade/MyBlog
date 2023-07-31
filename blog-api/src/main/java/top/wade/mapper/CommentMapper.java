@@ -24,4 +24,6 @@ public interface CommentMapper {
     Comment getCommentById(Long id);
 
     int saveComment(top.wade.model.dto.Comment comment);
+
+    int countComment();
 }

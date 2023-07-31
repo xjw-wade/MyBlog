@@ -99,4 +99,9 @@ public class RedisServiceImpl implements RedisService {
     public void saveObjectToValue(String key, Object object) {
         jsonRedisTemplate.opsForValue().set(key, object);
     }
+
+    @Override
+    public int countBySet(String key) {
+        return jsonRedisTemplate.opsForSet().size(key).intValue();
+    }
 }

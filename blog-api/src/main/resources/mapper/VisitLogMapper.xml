@@ -25,4 +25,9 @@
         values (#{uuid}, #{uri}, #{method}, #{param}, #{behavior}, #{content}, #{remark}, #{ip}, #{ipSource}, #{os}, #{browser}, #{times}, #{createTime}, #{userAgent})
     </insert>
 
+    <!--查询今日访问量-->
+    <select id="countVisitLogByToday" resultType="java.lang.Integer">
+        select count(*) from visit_log where date(create_time) = curdate()
+    </select>
+
 </mapper>

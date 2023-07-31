@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import getPageTitle from '@/util/get-page-title'
+import Layout from '@/layout'
 
 Vue.use(VueRouter)
 
@@ -19,10 +19,18 @@ const routes = [
 		hidden: true
 	},
   {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
+		path: '/',
+		component: Layout,
+		redirect: '/dashboard',
+		children: [
+			{
+				path: 'dashboard',
+				name: 'Dashboard',
+				component: () => import('@/views/dashboard'),
+				meta: {title: 'Dashboard', icon: 'dashboard'}
+			}
+		]
+	},
   {
     path: '/about',
     name: 'About',

@@ -11,4 +11,9 @@
         select category_name from category order by id desc
     </select>
 
+    <!--获取所有分类List-->
+    <select id="getCategoryList" resultMap="category">
+        select id, category_name from category order by id desc
+    </select>
+
 </mapper>

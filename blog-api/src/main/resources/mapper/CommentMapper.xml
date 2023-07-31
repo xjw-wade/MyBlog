@@ -72,8 +72,6 @@
         order by c1.create_time desc
     </select>
 
-    
-
     <!--按页面查询评论数量-->
     <select id="countByPageAndIsPublished" resultType="java.lang.Integer">
         select count(*) from comment

@@ -39,4 +39,6 @@ public interface RedisService {
 
     void saveObjectToValue(String key, Object object);
 
+    int countBySet(String key);
+
 }

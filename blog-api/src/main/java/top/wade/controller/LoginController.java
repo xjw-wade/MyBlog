@@ -32,7 +32,6 @@ public class LoginController {
      */
     @PostMapping(value = "/login")
     public Result login(@RequestBody LoginInfo loginInfo) {
-        System.out.println("xjw");
         User user = userService.findUserByUsernameAndPassword(loginInfo.getUsername(), loginInfo.getPassword());
         if (!"ROLE_admin".equals(user.getRole())) {
             return Result.create(403, "无权限");

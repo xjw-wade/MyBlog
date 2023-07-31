@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.wade.mapper.CityVisitorMapper">
+    <resultMap id="cityVisitor" type="top.wade.entity.CityVisitor">
+        <result property="city" column="city"/>
+        <result property="uv" column="uv"/>
+    </resultMap>
+
+    <!--查询城市访客数-->
+    <select id="getCityVisitorList" resultMap="cityVisitor">
+        select city, uv from city_visitor order by uv desc
+    </select>
+
+</mapper>

@@ -15,4 +15,6 @@ import java.util.List;
 @Repository
 public interface CategoryMapper {
     List<Category> getCategoryNameList();
+
+    List<Category> getCategoryList();
 }
