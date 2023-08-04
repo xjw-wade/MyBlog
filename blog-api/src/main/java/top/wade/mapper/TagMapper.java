@@ -22,4 +22,10 @@ public interface TagMapper {
     List<TagBlogCount> getTagBlogCount();
 
     List<Tag> getTagList();
+
+    Tag getTagById(Long id);
+
+    Tag getTagByName(String name);
+
+    int saveTag(Tag tag);
 }

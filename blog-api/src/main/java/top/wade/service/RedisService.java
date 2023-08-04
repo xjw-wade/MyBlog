@@ -41,4 +41,6 @@ public interface RedisService {
 
     int countBySet(String key);
 
+    void deleteCacheByKey(String key);
+
 }

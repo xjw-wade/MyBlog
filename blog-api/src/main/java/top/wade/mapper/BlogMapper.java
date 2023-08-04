@@ -47,4 +47,15 @@ public interface BlogMapper {
 
     List<CategoryBlogCount> getCategoryBlogCountList();
 
+    int saveBlog(top.wade.model.dto.Blog blog);
+
+    int saveBlogTag(Long blogId, Long tagId);
+
+    int updateBlog(top.wade.model.dto.Blog blog);
+
+    int deleteBlogTagByBlogId(Long blogId);
+
+    Blog getBlogById(Long id);
+
+
 }

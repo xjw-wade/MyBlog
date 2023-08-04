@@ -17,4 +17,10 @@ public interface CategoryMapper {
     List<Category> getCategoryNameList();
 
     List<Category> getCategoryList();
+
+    Category getCategoryById(Long id);
+
+    Category getCategoryByName(String name);
+
+    int saveCategory(Category category);
 }

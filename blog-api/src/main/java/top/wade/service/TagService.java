@@ -14,4 +14,12 @@ public interface TagService {
 
     List<Tag> getTagListNotId();
 
+    List<Tag> getTagList();
+
+    Tag getTagById(Long id);
+
+    Tag getTagByName(String name);
+
+    void saveTag(Tag tag);
+
 }

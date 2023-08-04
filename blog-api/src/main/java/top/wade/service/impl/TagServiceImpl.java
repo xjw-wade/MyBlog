@@ -1,9 +1,12 @@
 package top.wade.service.impl;
 
+import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import top.wade.constant.RedisKeyConstants;
 import top.wade.entity.Tag;
+import top.wade.exception.NotFoundException;
 import top.wade.mapper.TagMapper;
 import top.wade.service.RedisService;
 import top.wade.service.TagService;
@@ -37,5 +40,33 @@ public class TagServiceImpl implements TagService {
         List<Tag> tagList = tagMapper.getTagListNotId();
         redisService.saveListToValue(redisKey, tagList);
         return tagList;
+    }
+
+    @Override
+    public List<Tag> getTagList() {
+        return tagMapper.getTagList();
+    }
+
+    @Override
+    public Tag getTagById(Long id) {
+        Tag tag = tagMapper.getTagById(id);
+        if (tag == null) {
+            throw new NotFoundException("标签不存在");
+        }
+        return tag;
+    }
+
+    @Override
+    public Tag getTagByName(String name) {
+        return tagMapper.getTagByName(name);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void saveTag(Tag tag) {
+        if (tagMapper.saveTag(tag) != 1) {
+            throw new PersistenceException("标签添加失败");
+        }
+        redisService.deleteCacheByKey(RedisKeyConstants.TAG_CLOUD_LIST);
     }
 }

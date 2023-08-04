@@ -2,10 +2,13 @@ package top.wade.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import top.wade.constant.RedisKeyConstants;
 import top.wade.entity.Blog;
+import top.wade.exception.NotFoundException;
 import top.wade.mapper.BlogMapper;
 import top.wade.model.vo.*;
 import top.wade.service.BlogService;
@@ -180,6 +183,63 @@ public class BlogServiceImpl implements BlogService {
             searchBlog.setContent(content.substring(index, end));
         }
         return searchBlogs;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void saveBlog(top.wade.model.dto.Blog blog) {
+        if (blogMapper.saveBlog(blog) != 1) {
+            throw new PersistenceException("添加博客失败");
+        }
+        redisService.saveKVToHash(RedisKeyConstants.BLOG_VIEWS_MAP, blog.getId(), 0);
+        deleteBlogRedisCache();
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void saveBlogTag(Long blogId, Long tagId) {
+        if (blogMapper.saveBlogTag(blogId, tagId) != 1) {
+            throw new PersistenceException("维护博客标签关联表失败");
+        }
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateBlog(top.wade.model.dto.Blog blog) {
+        if (blogMapper.updateBlog(blog) != 1) {
+            throw new PersistenceException("更新博客失败");
+        }
+        deleteBlogRedisCache();
+        redisService.saveKVToHash(RedisKeyConstants.BLOG_VIEWS_MAP, blog.getId(), blog.getViews());
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void deleteBlogTagByBlogId(Long blogId) {
+        if (blogMapper.deleteBlogTagByBlogId(blogId) == 0) {
+            throw new PersistenceException("维护博客标签关联表失败");
+        }
+    }
+
+    @Override
+    public Blog getBlogById(Long id) {
+        Blog blog = blogMapper.getBlogById(id);
+        if (blog == null) {
+            throw new NotFoundException("博客不存在");
+        }
+
+        int view = (int) redisService.getValueByHashKey(RedisKeyConstants.BLOG_VIEWS_MAP, blog.getId());
+        blog.setViews(view);
+        return blog;
+    }
+
+    /**
+     * 删除首页缓存、最新推荐缓存、归档页面缓存、博客浏览量缓存
+     */
+    private void deleteBlogRedisCache() {
+        redisService.deleteCacheByKey(RedisKeyConstants.HOME_BLOG_INFO_LIST);
+        redisService.deleteCacheByKey(RedisKeyConstants.NEW_BLOG_LIST);
+        redisService.deleteCacheByKey(RedisKeyConstants.ARCHIVE_BLOG_MAP);
     }
 
     /**

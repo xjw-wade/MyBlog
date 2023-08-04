@@ -11,4 +11,12 @@ import java.util.List;
  */
 public interface CategoryService {
     List<Category> getCategoryNameList();
+
+    List<Category> getCategoryList();
+
+    Category getCategoryById(Long id);
+
+    Category getCategoryByName(String name);
+
+    void saveCategory(Category category);
 }

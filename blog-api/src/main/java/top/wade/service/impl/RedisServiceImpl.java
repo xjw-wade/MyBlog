@@ -104,4 +104,9 @@ public class RedisServiceImpl implements RedisService {
     public int countBySet(String key) {
         return jsonRedisTemplate.opsForSet().size(key).intValue();
     }
+
+    @Override
+    public void deleteCacheByKey(String key) {
+        jsonRedisTemplate.delete(key);
+    }
 }

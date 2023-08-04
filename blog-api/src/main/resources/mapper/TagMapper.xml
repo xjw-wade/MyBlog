@@ -34,5 +34,20 @@
         select id, tag_name, color from tag order by id desc
     </select>
 
+    <!--按id查询标签-->
+    <select id="getTagById" resultMap="tag">
+        select id, tag_name, color from tag where id=#{id}
+    </select>
+
+    <!--按name查询标签-->
+    <select id="getTagByName" resultMap="tag">
+        select id, tag_name, color from tag where tag_name=#{name}
+    </select>
+
+    <!--添加标签-->
+    <insert id="saveTag" parameterType="top.wade.entity.Tag" useGeneratedKeys="true" keyProperty="id">
+        insert into tag (tag_name, color) values (#{name}, #{color})
+    </insert>
+
 
 </mapper>

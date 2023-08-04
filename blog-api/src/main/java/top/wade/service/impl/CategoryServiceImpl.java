@@ -1,9 +1,12 @@
 package top.wade.service.impl;
 
+import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import top.wade.constant.RedisKeyConstants;
 import top.wade.entity.Category;
+import top.wade.exception.NotFoundException;
 import top.wade.mapper.CategoryMapper;
 import top.wade.service.CategoryService;
 import top.wade.service.RedisService;
@@ -35,5 +38,33 @@ public class CategoryServiceImpl implements CategoryService {
         List<Category> categoryList = categoryMapper.getCategoryNameList();
         redisService.saveListToValue(redisKey, categoryList);
         return categoryList;
+    }
+
+    @Override
+    public List<Category> getCategoryList() {
+        return categoryMapper.getCategoryList();
+    }
+
+    @Override
+    public Category getCategoryById(Long id) {
+        Category category = categoryMapper.getCategoryById(id);
+        if (category == null) {
+            throw new NotFoundException("分类不存在");
+        }
+        return category;
+    }
+
+    @Override
+    public Category getCategoryByName(String name) {
+        return categoryMapper.getCategoryByName(name);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void saveCategory(Category category) {
+        if (categoryMapper.saveCategory(category) != 1) {
+            throw new PersistenceException("分类添加失败");
+        }
+        redisService.deleteCacheByKey(RedisKeyConstants.CATEGORY_NAME_LIST);
     }
 }

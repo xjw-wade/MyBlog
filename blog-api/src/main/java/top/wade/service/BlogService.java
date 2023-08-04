@@ -36,4 +36,14 @@ public interface BlogService {
 
     List<SearchBlog> getSearchBlogListByQueryAndIsPublished(String query);
 
+    void saveBlog(top.wade.model.dto.Blog blog);
+
+    void saveBlogTag(Long blogId, Long tagId);
+
+    void updateBlog(top.wade.model.dto.Blog blog);
+
+    void deleteBlogTagByBlogId(Long blogId);
+
+    Blog getBlogById(Long id);
+
 }
