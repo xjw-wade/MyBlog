@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.wade.entity.Moment;
+import top.wade.exception.NotFoundException;
 import top.wade.mapper.MomentMapper;
 import top.wade.service.MomentService;
 import top.wade.util.markdown.MarkdownUtils;
@@ -48,6 +49,52 @@ public class MomentServiceImpl implements MomentService {
     public void addLikeByMomentId(Long momentId) {
         if (momentMapper.addLikeByMomentId(momentId) != 1) {
             throw new PersistenceException("操作失败");
+        }
+    }
+
+    @Override
+    public List<Moment> getMomentList() {
+        return momentMapper.getMomentList();
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateMomentPublishedById(Long momentId, Boolean published) {
+        if (momentMapper.updateMomentPublishedById(momentId, published) != 1) {
+            throw new PersistenceException("操作失败");
+        }
+    }
+
+    @Override
+    public Moment getMomentById(Long id) {
+        Moment moment = momentMapper.getMomentById(id);
+        if (moment == null) {
+            throw new NotFoundException("动态不存在");
+        }
+        return moment;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void deleteMomentById(Long id) {
+        if (momentMapper.deleteMomentById(id) != 1) {
+            throw new PersistenceException("删除失败");
+        }
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void saveMoment(Moment moment) {
+        if (momentMapper.saveMoment(moment) != 1) {
+            throw new PersistenceException("动态添加失败");
+        }
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateMoment(Moment moment) {
+        if (momentMapper.updateMoment(moment) != 1) {
+            throw new PersistenceException("动态修改失败");
         }
     }
 }

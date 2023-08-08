@@ -20,4 +20,8 @@ public interface CommentService {
     Comment getCommentById(Long id);
 
     void saveComment(top.wade.model.dto.Comment comment);
+
+    void deleteCommentById(Long commentId);
+
+    void deleteCommentsByBlogId(Long blogId);
 }

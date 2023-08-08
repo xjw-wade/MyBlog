@@ -10,6 +10,7 @@ import top.wade.constant.RedisKeyConstants;
 import top.wade.entity.Blog;
 import top.wade.exception.NotFoundException;
 import top.wade.mapper.BlogMapper;
+import top.wade.model.dto.BlogVisibility;
 import top.wade.model.vo.*;
 import top.wade.service.BlogService;
 import top.wade.service.RedisService;
@@ -48,7 +49,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public List<Blog> getListByTitleAndCategoryId(String title, Integer categoryId) {
-        return null;
+        return blogMapper.getListByTitleAndCategoryId(title, categoryId);
     }
 
     @Override
@@ -231,6 +232,45 @@ public class BlogServiceImpl implements BlogService {
         int view = (int) redisService.getValueByHashKey(RedisKeyConstants.BLOG_VIEWS_MAP, blog.getId());
         blog.setViews(view);
         return blog;
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void deleteBlogById(Long id) {
+        if (blogMapper.deleteBlogById(id) != 1) {
+            throw new NotFoundException("该博客不存在");
+        }
+        deleteBlogRedisCache();
+        redisService.deleteByHashKey(RedisKeyConstants.BLOG_VIEWS_MAP, id);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateBlogRecommendById(Long blogId, Boolean recommend) {
+        if (blogMapper.updateBlogRecommendById(blogId, recommend) != 1) {
+            throw new PersistenceException("操作失败");
+        }
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateBlogVisibilityById(Long blogId, BlogVisibility blogVisibility) {
+        if (blogMapper.updateBlogVisibilityById(blogId, blogVisibility) != 1) {
+            throw new PersistenceException("操作失败");
+        }
+        redisService.deleteCacheByKey(RedisKeyConstants.HOME_BLOG_INFO_LIST);
+        redisService.deleteCacheByKey(RedisKeyConstants.NEW_BLOG_LIST);
+        redisService.deleteCacheByKey(RedisKeyConstants.ARCHIVE_BLOG_MAP);
+
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateBlogTopById(Long blogId, Boolean top) {
+        if (blogMapper.updateBlogTopById(blogId, top) != 1) {
+            throw new PersistenceException("操作失败");
+        }
+        redisService.deleteCacheByKey(RedisKeyConstants.HOME_BLOG_INFO_LIST);
     }
 
     /**

@@ -26,4 +26,10 @@ public interface CommentMapper {
     int saveComment(top.wade.model.dto.Comment comment);
 
     int countComment();
+
+    int deleteCommentsByBlogId(Long blogId);
+
+    int deleteCommentById(Long commentId);
+
+    List<Comment> getListByParentCommentId(Long parentCommentId);
 }

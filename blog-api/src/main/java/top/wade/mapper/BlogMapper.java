@@ -3,6 +3,7 @@ package top.wade.mapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import top.wade.entity.Blog;
+import top.wade.model.dto.BlogVisibility;
 import top.wade.model.vo.*;
 
 import java.util.List;
@@ -56,6 +57,14 @@ public interface BlogMapper {
     int deleteBlogTagByBlogId(Long blogId);
 
     Blog getBlogById(Long id);
+
+    int deleteBlogById(Long id);
+
+    int updateBlogRecommendById(Long blogId, Boolean recommend);
+
+    int updateBlogVisibilityById(Long blogId, BlogVisibility bv);
+
+    int updateBlogTopById(Long blogId, Boolean top);
 
 
 }

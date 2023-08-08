@@ -1,5 +1,7 @@
 package top.wade.controller.admin;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import top.wade.annotation.OperationLogger;
@@ -7,9 +9,11 @@ import top.wade.entity.Blog;
 import top.wade.entity.Category;
 import top.wade.entity.Tag;
 import top.wade.entity.User;
+import top.wade.model.dto.BlogVisibility;
 import top.wade.model.vo.Result;
 import top.wade.service.BlogService;
 import top.wade.service.CategoryService;
+import top.wade.service.CommentService;
 import top.wade.service.TagService;
 import top.wade.util.StringUtils;
 
@@ -29,6 +33,9 @@ public class BlogAdminController {
     TagService tagService;
     @Autowired
     BlogService blogService;
+    @Autowired
+    CommentService commentService;
+
     /**
      * 获取分类列表和标签列表
      *
@@ -79,6 +86,89 @@ public class BlogAdminController {
     public Result updateBlog(@RequestBody top.wade.model.dto.Blog blog) {
         return getResult(blog, "update");
     }
+
+    /**
+     * 获取博客文章列表
+     *
+     * @param title      按标题模糊查询
+     * @param categoryId 按分类id查询
+     * @param pageNum    页码
+     * @param pageSize   每页个数
+     * @return
+     */
+    @GetMapping("/blogs")
+    public Result blogs(@RequestParam(defaultValue = "") String title,
+                        @RequestParam(defaultValue = "") Integer categoryId,
+                        @RequestParam(defaultValue = "1") Integer pageNum,
+                        @RequestParam(defaultValue = "10") Integer pageSize) {
+        String orderBy = "create_time desc";
+        PageHelper.startPage(pageNum, pageSize, orderBy);
+        PageInfo<Blog> pageInfo = new PageInfo<>(blogService.getListByTitleAndCategoryId(title, categoryId));
+        List<Category> categories = categoryService.getCategoryList();
+        Map<String, Object> map = new HashMap<>(4);
+        map.put("blogs", pageInfo);
+        map.put("categories", categories);
+        return Result.ok("请求成功", map);
+    }
+
+    /**
+     * 删除博客文章、删除博客文章下的所有评论、同时维护 blog_tag 表
+     *
+     * @param id 文章id
+     * @return
+     */
+    @OperationLogger("删除博客")
+    @DeleteMapping("/blog")
+    public Result delete(@RequestParam Long id) {
+        blogService.deleteBlogTagByBlogId(id);
+        blogService.deleteBlogById(id);
+        commentService.deleteCommentById(id);
+        return Result.ok("删除成功");
+    }
+
+    /**
+     * 更新博客置顶状态
+     *
+     * @param id  博客id
+     * @param top 是否置顶
+     * @return
+     */
+    @OperationLogger("更新博客指定状态")
+    @PutMapping("/blog/top")
+    public Result updateTop(@RequestParam Long id, @RequestParam Boolean top) {
+        blogService.updateBlogTopById(id, top);
+        return Result.ok("操作成功");
+    }
+
+    /**
+     * 更新博客推荐状态
+     *
+     * @param id        博客id
+     * @param recommend 是否推荐
+     * @return
+     */
+    @OperationLogger("更新博客推荐状态")
+    @PutMapping("/blog/recommend")
+    public Result updateRecommend(@RequestParam Long id, @RequestParam Boolean recommend) {
+        blogService.updateBlogRecommendById(id, recommend);
+        return Result.ok("操作成功");
+    }
+
+    /**
+     * 更新博客可见性状态
+     *
+     * @param id             博客id
+     * @param blogVisibility 博客可见性DTO
+     * @return
+     */
+    @OperationLogger("更新博客可见性状态")
+    @PutMapping("blog/{id}/visibility")
+    public Result updateVisibility(@PathVariable Long id, @RequestBody BlogVisibility blogVisibility) {
+        blogService.updateBlogVisibilityById(id, blogVisibility);
+        return Result.ok("操作成功");
+    }
+
+
 
 
 

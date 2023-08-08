@@ -43,4 +43,6 @@ public interface RedisService {
 
     void deleteCacheByKey(String key);
 
+    void deleteByHashKey(String hash, Object key);
+
 }

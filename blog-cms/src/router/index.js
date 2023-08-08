@@ -44,6 +44,38 @@ const routes = [
 			component: () => import('@/views/blog/blog/WriteBlog'),
 			meta: {title: '写文章', icon: 'el-icon-edit'}
 		},
+		{
+			path: 'list',
+			name: 'BlogList',
+			component: () => import('@/views/blog/blog/BlogList'),
+			meta: {title: '文章管理', icon: 'el-icon-s-order'}
+		},
+		{
+			path: 'edit/:id',
+			name: 'EditBlog',
+			component: () => import('@/views/blog/blog/WriteBlog'),
+			meta: {title: '编辑文章', icon: 'el-icon-edit'},
+			hidden: true
+		},
+		{
+			path: 'moment/write',
+			name: 'WriteMoment',
+			component: () => import('@/views/blog/moment/WriteMoment'),
+			meta: {title: '写动态', icon: 'el-icon-edit'}
+		},
+		{
+			path: 'moment/list',
+			name: 'MomentList',
+			component: () => import('@/views/blog/moment/MomentList'),
+			meta: {title: '动态管理', icon: 'el-icon-chat-dot-round'}
+		},
+		{
+			path: 'moment/edit/:id',
+			name: 'EditMoment',
+			component: () => import('@/views/blog/moment/WriteMoment'),
+			meta: {title: '编辑动态', icon: 'el-icon-edit'},
+			hidden: true
+		},
 	]
 
 

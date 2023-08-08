@@ -109,4 +109,9 @@ public class RedisServiceImpl implements RedisService {
     public void deleteCacheByKey(String key) {
         jsonRedisTemplate.delete(key);
     }
+
+    @Override
+    public void deleteByHashKey(String hash, Object key) {
+        jsonRedisTemplate.opsForHash().delete(hash, key);
+    }
 }

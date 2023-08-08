@@ -243,6 +243,28 @@
         where b.id=#{id}
     </select>
 
+    <!--按id删除博客-->
+    <delete id="deleteBlogById">
+        delete from blog where id=#{id}
+    </delete>
+
+    <!--更新博客推荐状态-->
+    <update id="updateBlogRecommendById">
+        update blog set is_recommend=#{recommend} where id=#{blogId}
+    </update>
+
+    <!--更新博客置顶状态-->
+    <update id="updateBlogTopById">
+        update blog set is_top=#{top} where id=#{blogId}
+    </update>
+
+    <!--更新博客可见性状态-->
+    <update id="updateBlogVisibilityById">
+        update blog set is_appreciation=#{bv.appreciation}, is_recommend=#{bv.recommend}, is_comment_enabled=#{bv.commentEnabled},
+        is_top=#{bv.top}, is_published=#{bv.published}, password=#{bv.password}
+        where id=#{blogId}
+    </update>
+
 
 
 

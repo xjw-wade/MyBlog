@@ -1,7 +1,6 @@
 package top.wade.service;
 
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Service;
 import top.wade.entity.LoginLog;
 
 /**

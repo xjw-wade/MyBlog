@@ -1,6 +1,7 @@
 package top.wade.service;
 
 import top.wade.entity.Blog;
+import top.wade.model.dto.BlogVisibility;
 import top.wade.model.vo.*;
 
 import java.util.List;
@@ -45,5 +46,13 @@ public interface BlogService {
     void deleteBlogTagByBlogId(Long blogId);
 
     Blog getBlogById(Long id);
+
+    void deleteBlogById(Long id);
+
+    void updateBlogRecommendById(Long blogId, Boolean recommend);
+
+    void updateBlogVisibilityById(Long blogId, BlogVisibility blogVisibility);
+
+    void updateBlogTopById(Long blogId, Boolean top);
 
 }

@@ -70,7 +70,24 @@ public class CommentServiceImpl implements CommentService {
         if (commentMapper.saveComment(comment) != 1) {
             throw new PersistenceException("评论失败");
         }
+    }
 
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void deleteCommentById(Long commentId) {
+        List<Comment> comments = getAllReplyComments(commentId);
+        for (Comment c : comments) {
+            delete(c);
+        }
+        if (commentMapper.deleteCommentById(commentId) !=  1) {
+            throw new PersistenceException("评论删除失败");
+        }
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void deleteCommentsByBlogId(Long blogId) {
+        commentMapper.deleteCommentsByBlogId(blogId);
     }
 
     private List<PageComment> getPageCommentListByPageAndParentCommentId(Integer page, Long blogId, Long parentCommentId) {
@@ -91,6 +108,35 @@ public class CommentServiceImpl implements CommentService {
         for (PageComment c: comments) {
             tmpComments.add(c);
             getReplyComments(tmpComments, c.getReplyComments());
+        }
+    }
+
+    /**
+     * 按id递归查询子评论
+     *
+     * @param parentCommentId 需要查询子评论的父评论id
+     * @return
+     */
+    private List<Comment> getAllReplyComments(Long parentCommentId) {
+        List<Comment> comments = commentMapper.getListByParentCommentId(parentCommentId);
+        for (Comment c : comments) {
+            List<Comment> replyComments = getAllReplyComments(c.getId());
+            c.setReplyComments(replyComments);
+        }
+        return comments;
+    }
+
+    /**
+     * 递归删除子评论
+     *
+     * @param comment 需要删除子评论的父评论
+     */
+    private void delete(Comment comment) {
+        for (Comment c : comment.getReplyComments()) {
+            delete(c);
+        }
+        if (commentMapper.deleteCommentById(comment.getId()) != 1) {
+            throw new PersistenceException("评论删除失败");
         }
     }
 

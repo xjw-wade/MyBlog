@@ -96,4 +96,22 @@
         #{page}, #{notice}, #{parentCommentId}, #{blogId}, #{qq})
     </insert>
 
+    <!--按id删除评论-->
+    <delete id="deleteCommentById">
+        delete from comment where id=#{commentId}
+    </delete>
+
+    <!--按博客id删除博客下所有评论-->
+    <delete id="deleteCommentsByBlogId">
+        delete from comment where blog_id=#{blogId}
+    </delete>
+
+    <!--按父评论id查询评论List-->
+    <select id="getListByParentCommentId" resultMap="comment">
+        select c.id, c.nickname, c.email, c.content, c.avatar, c.create_time, c.ip, c.is_published, c.is_admin_comment, c.page,
+               c.is_notice, c.parent_comment_id, c.website, c.qq, c.blog_id, b.title
+        from comment as c left join blog as b on c.blog_id=b.id
+        where c.parent_comment_id=#{parentCommentId}
+    </select>
+
 </mapper>
