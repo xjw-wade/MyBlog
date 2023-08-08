@@ -94,10 +94,35 @@ const routes = [
 			component: () => import('@/views/blog/comment/CommentList'),
 			meta: {title: '评论管理', icon: 'el-icon-s-comment'}
 		},
+	]	
+  },
+  {
+	path: '/page',
+	name: 'Page',
+	redirect: '/page/site',
+	component: Layout,
+	meta: {title: '页面管理', icon: 'el-icon-document-copy'},
+	children: [
+		{
+			path: 'site',
+			name: 'SiteSetting',
+			component: () => import('@/views/page/SiteSetting'),
+			meta: {title: '站点设置', icon: 'bianjizhandian'}
+		},
+		{
+			path: 'friend',
+			name: 'FriendList',
+			component: () => import('@/views/page/FriendList'),
+			meta: {title: '友链管理', icon: 'friend'}
+		},
+		{
+			path: 'about',
+			name: 'About',
+			component: () => import('@/views/page/About'),
+			meta: {title: '关于我', icon: 'el-icon-tickets'}
+		},
 	]
-
-
-  }
+},
 ]
 
 const router = new VueRouter({

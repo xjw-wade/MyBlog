@@ -1,7 +1,9 @@
 package top.wade.service.impl;
 
+import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import top.wade.constant.RedisKeyConstants;
 import top.wade.entity.About;
 import top.wade.mapper.AboutMapper;
@@ -12,6 +14,7 @@ import top.wade.util.markdown.MarkdownUtils;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @Author xjw
@@ -49,5 +52,38 @@ public class AboutServiceImpl implements AboutService {
     public boolean getAboutCommentEnabled() {
         String commentEnabledString = aboutMapper.getAboutCommentEnabled();
         return Boolean.parseBoolean(commentEnabledString);
+    }
+
+    @Override
+    public Map<String, String> getAboutSetting() {
+        List<About> abouts = aboutMapper.getList();
+        Map<String, String> map = new HashMap<>(16);
+        for (About about : abouts) {
+            map.put(about.getNameEn(), about.getValue());
+        }
+        return map;
+    }
+
+    @Override
+    public void updateAbout(Map<String, String> map) {
+        Set<String> keySet = map.keySet();
+        for (String key: keySet) {
+            updateOneAbout(key, map.get(key));
+        }
+        deleteAboutRedisCache();
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public void updateOneAbout(String nameEn, String value) {
+        if (aboutMapper.updateAbout(nameEn, value) != 1) {
+            throw new PersistenceException("修改失败");
+        }
+    }
+
+    /**
+     * 删除关于我页面缓存
+     */
+    private void deleteAboutRedisCache() {
+        redisService.deleteCacheByKey(RedisKeyConstants.ABOUT_INFO_MAP);
     }
 }

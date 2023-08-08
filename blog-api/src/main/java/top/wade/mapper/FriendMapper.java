@@ -28,5 +28,4 @@ public interface FriendMapper {
 
     int updateViewsByNickname(String nickname);
 
-
 }

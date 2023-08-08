@@ -1,7 +1,9 @@
 package top.wade.service.impl;
 
+import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import top.wade.constant.RedisKeyConstants;
 import top.wade.constant.SiteSettingConstants;
 import top.wade.entity.SiteSetting;
@@ -14,10 +16,7 @@ import top.wade.service.RedisService;
 import top.wade.service.SiteSettingService;
 import top.wade.util.JacksonUtils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -114,5 +113,83 @@ public class SiteSettingServiceImpl implements SiteSettingService {
         map.put("badges", badges);
         redisService.saveMapToValue(redisKey, map);
         return map;
+    }
+
+    @Override
+    public Map<String, List<SiteSetting>> getList() {
+        List<SiteSetting> siteSettings = siteSettingMapper.getList();
+        List<SiteSetting> type1 = new ArrayList<>();
+        List<SiteSetting> type2 = new ArrayList<>();
+        List<SiteSetting> type3 = new ArrayList<>();
+        for (SiteSetting s : siteSettings) {
+            switch (s.getType()) {
+                case 1:
+                    type1.add(s);
+                    break;
+                case 2:
+                    type2.add(s);
+                    break;
+                case 3:
+                    type3.add(s);
+                    break;
+                default:
+                    break;
+            }
+        }
+        Map<String, List<SiteSetting>> map = new HashMap<>(8);
+        map.put("type1", type1);
+        map.put("type2", type2);
+        map.put("type3", type3);
+        return map;
+    }
+
+    @Override
+    public String getWebTitleSuffix() {
+        return siteSettingMapper.getWebTitleSuffix();
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateSiteSetting(List<LinkedHashMap> siteSettings, List<Integer> deleteIds) {
+        for (Integer id : deleteIds) {
+            //删除
+            deleteOneSiteSettingById(id);
+        }
+        for (LinkedHashMap s : siteSettings) {
+            SiteSetting siteSetting = JacksonUtils.convertValue(s, SiteSetting.class);
+            if (siteSetting.getId() != null) {
+                //修改
+                updateOneSiteSetting(siteSetting);
+            } else {
+                //添加
+                saveOneSiteSetting(siteSetting);
+            }
+        }
+        deleteSiteInfoRedisCache();
+    }
+
+    public void deleteOneSiteSettingById(Integer id) {
+        if (siteSettingMapper.deleteSiteSettingById(id) != 1) {
+            throw new PersistenceException("配置删除失败");
+        }
+    }
+
+    public void saveOneSiteSetting(SiteSetting siteSetting) {
+        if (siteSettingMapper.saveSiteSetting(siteSetting) != 1) {
+            throw new PersistenceException("配置添加失败");
+        }
+    }
+
+    public void updateOneSiteSetting(SiteSetting siteSetting) {
+        if (siteSettingMapper.updateSiteSetting(siteSetting) != 1) {
+            throw new PersistenceException("配置修改失败");
+        }
+    }
+
+    /**
+     * 删除站点信息缓存
+     */
+    private void deleteSiteInfoRedisCache() {
+        redisService.deleteCacheByKey(RedisKeyConstants.SITE_INFO_MAP);
     }
 }

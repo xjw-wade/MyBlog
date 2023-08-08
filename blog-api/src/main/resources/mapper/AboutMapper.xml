@@ -11,4 +11,9 @@
         select value from about where name_en="commentEnabled"
     </select>
 
+    <!--更新关于我设置-->
+    <update id="updateAbout">
+        update about set value=#{value} where name_en=#{nameEn}
+    </update>
+
 </mapper>

@@ -11,4 +11,8 @@ public interface AboutService {
     Map<String, String> getAboutInfo();
 
     boolean getAboutCommentEnabled();
+
+    Map<String, String> getAboutSetting();
+
+    void updateAbout(Map<String, String> map);
 }

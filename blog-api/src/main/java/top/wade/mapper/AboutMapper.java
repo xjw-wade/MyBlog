@@ -18,4 +18,6 @@ public interface AboutMapper {
 
     String getAboutCommentEnabled();
 
+    int updateAbout(String nameEn, String value);
+
 }
