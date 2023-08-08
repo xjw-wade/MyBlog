@@ -20,7 +20,7 @@ public interface BlogMapper {
 
     List<SearchBlog> getSearchBlogListByQueryAndIsPublished(String query);
 
-    List<BlogIdAndTitle> getIdAndTitleList();
+    List<Blog> getIdAndTitleList();
 
     List<BlogInfo> getBlogInfoListByIsPublished();
 
@@ -69,6 +69,7 @@ public interface BlogMapper {
     int countBlogByCategoryId(Long categoryId);
 
     int countBlogByTagId(Long tagId);
+
 
 
 }

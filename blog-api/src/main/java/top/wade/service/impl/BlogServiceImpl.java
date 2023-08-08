@@ -283,6 +283,11 @@ public class BlogServiceImpl implements BlogService {
         return blogMapper.countBlogByTagId(tagId);
     }
 
+    @Override
+    public List<Blog> getIdAndTitleList() {
+        return blogMapper.getIdAndTitleList();
+    }
+
     /**
      * 删除首页缓存、最新推荐缓存、归档页面缓存、博客浏览量缓存
      */

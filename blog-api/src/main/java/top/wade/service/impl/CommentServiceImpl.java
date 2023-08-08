@@ -90,6 +90,38 @@ public class CommentServiceImpl implements CommentService {
         commentMapper.deleteCommentsByBlogId(blogId);
     }
 
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateComment(Comment comment) {
+        if (commentMapper.updateComment(comment) != 1) {
+            throw new PersistenceException("评论修改失败");
+        }
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateCommentPublishedById(Long commentId, Boolean published) {
+        //如果是隐藏评论，则所有子评论都要修改成隐藏状态
+        if (!published) {
+            List<Comment> comments = getAllReplyComments(commentId);
+            for (Comment c : comments) {
+                hideComment(c);
+            }
+        }
+
+        if (commentMapper.updateCommentPublishedById(commentId, published) != 1) {
+            throw new PersistenceException("操作失败");
+        }
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateCommentNoticeById(Long commentId, Boolean notice) {
+        if (commentMapper.updateCommentNoticeById(commentId, notice) != 1) {
+            throw new PersistenceException("操作失败");
+        }
+    }
+
     private List<PageComment> getPageCommentListByPageAndParentCommentId(Integer page, Long blogId, Long parentCommentId) {
         List<PageComment> comments = commentMapper.getPageCommentListByPageAndParentCommentId(page, blogId, parentCommentId);
         for (PageComment c: comments) {
@@ -137,6 +169,20 @@ public class CommentServiceImpl implements CommentService {
         }
         if (commentMapper.deleteCommentById(comment.getId()) != 1) {
             throw new PersistenceException("评论删除失败");
+        }
+    }
+
+    /**
+     * 递归隐藏子评论
+     *
+     * @param comment 需要隐藏子评论的父评论
+     */
+    private void hideComment(Comment comment) {
+        for (Comment c : comment.getReplyComments()) {
+            hideComment(c);
+        }
+        if (commentMapper.updateCommentPublishedById(comment.getId(), false) != 1) {
+            throw new PersistenceException("操作失败");
         }
     }
 

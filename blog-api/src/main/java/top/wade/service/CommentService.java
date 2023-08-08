@@ -24,4 +24,10 @@ public interface CommentService {
     void deleteCommentById(Long commentId);
 
     void deleteCommentsByBlogId(Long blogId);
+
+    void updateComment(Comment comment);
+
+    void updateCommentPublishedById(Long commentId, Boolean published);
+
+    void updateCommentNoticeById(Long commentId, Boolean notice);
 }

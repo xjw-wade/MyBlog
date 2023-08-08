@@ -32,4 +32,12 @@ public interface CommentMapper {
     int deleteCommentById(Long commentId);
 
     List<Comment> getListByParentCommentId(Long parentCommentId);
+
+    int updateComment(Comment comment);
+
+    int updateCommentPublishedById(Long commentId, Boolean published);
+
+    int updateCommentNoticeById(Long commentId, Boolean notice);
+
+
 }

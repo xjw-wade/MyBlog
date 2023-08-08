@@ -114,4 +114,20 @@
         where c.parent_comment_id=#{parentCommentId}
     </select>
 
+    <!--更新评论公开状态-->
+    <update id="updateCommentPublishedById">
+        update comment set is_published=#{published} where id=#{commentId}
+    </update>
+
+    <!--更新评论接收邮件提醒状态-->
+    <update id="updateCommentNoticeById">
+        update comment set is_notice=#{notice} where id=#{commentId}
+    </update>
+
+    <!--更新评论-->
+    <update id="updateComment">
+        update comment set nickname=#{nickname}, avatar=#{avatar}, email=#{email}, ip=#{ip}, content=#{content}, website=#{website}
+        where id=#{id}
+    </update>
+
 </mapper>

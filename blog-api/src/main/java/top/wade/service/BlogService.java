@@ -59,4 +59,6 @@ public interface BlogService {
 
     int countBlogByTagId(Long tagId);
 
+    List<Blog> getIdAndTitleList();
+
 }
