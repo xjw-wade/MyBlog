@@ -76,6 +76,18 @@ const routes = [
 			meta: {title: '编辑动态', icon: 'el-icon-edit'},
 			hidden: true
 		},
+		{
+			path: 'category/list',
+			name: 'CategoryList',
+			component: () => import('@/views/blog/category/CategoryList'),
+			meta: {title: '分类管理', icon: 'el-icon-s-opportunity'}
+		},
+		{
+			path: 'tag/list',
+			name: 'TagList',
+			component: () => import('@/views/blog/tag/TagList'),
+			meta: {title: '标签管理', icon: 'biaoqian'}
+		},
 	]
 
 

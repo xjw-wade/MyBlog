@@ -273,6 +273,16 @@ public class BlogServiceImpl implements BlogService {
         redisService.deleteCacheByKey(RedisKeyConstants.HOME_BLOG_INFO_LIST);
     }
 
+    @Override
+    public int countBlogByCategoryId(Long categoryId) {
+        return blogMapper.countBlogByCategoryId(categoryId);
+    }
+
+    @Override
+    public int countBlogByTagId(Long tagId) {
+        return blogMapper.countBlogByTagId(tagId);
+    }
+
     /**
      * 删除首页缓存、最新推荐缓存、归档页面缓存、博客浏览量缓存
      */

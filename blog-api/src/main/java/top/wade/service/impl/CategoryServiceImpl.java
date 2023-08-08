@@ -67,4 +67,24 @@ public class CategoryServiceImpl implements CategoryService {
         }
         redisService.deleteCacheByKey(RedisKeyConstants.CATEGORY_NAME_LIST);
     }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void deleteCategoryById(Long id) {
+        if (categoryMapper.deleteCategoryById(id) != 1) {
+            throw new PersistenceException("删除分类失败");
+        }
+        redisService.deleteCacheByKey(RedisKeyConstants.CATEGORY_NAME_LIST);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateCategory(Category category) {
+        if (categoryMapper.updateCategory(category) != 1) {
+            throw new PersistenceException("分类更新失败");
+        }
+        redisService.deleteCacheByKey(RedisKeyConstants.CATEGORY_NAME_LIST);
+        //修改了分类名，可能有首页文章关联了分类，也要更新首页缓存
+        redisService.deleteCacheByKey(RedisKeyConstants.HOME_BLOG_INFO_LIST);
+    }
 }

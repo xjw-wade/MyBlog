@@ -55,4 +55,8 @@ public interface BlogService {
 
     void updateBlogTopById(Long blogId, Boolean top);
 
+    int countBlogByCategoryId(Long categoryId);
+
+    int countBlogByTagId(Long tagId);
+
 }

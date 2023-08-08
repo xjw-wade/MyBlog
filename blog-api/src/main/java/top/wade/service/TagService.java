@@ -22,4 +22,8 @@ public interface TagService {
 
     void saveTag(Tag tag);
 
+    void deleteTagById(Long id);
+
+    void updateTag(Tag tag);
+
 }

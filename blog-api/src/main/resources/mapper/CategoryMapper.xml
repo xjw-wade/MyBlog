@@ -31,4 +31,14 @@
         insert into category (category_name) values (#{name})
     </insert>
 
+    <!--按id删除分类-->
+    <delete id="deleteCategoryById">
+        delete from category where id=#{id}
+    </delete>
+
+    <!--更新分类-->
+    <update id="updateCategory">
+        update category set category_name=#{name} where id=#{id}
+    </update>
+
 </mapper>

@@ -69,4 +69,24 @@ public class TagServiceImpl implements TagService {
         }
         redisService.deleteCacheByKey(RedisKeyConstants.TAG_CLOUD_LIST);
     }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void deleteTagById(Long id) {
+        if (tagMapper.deleteTagById(id) != 1) {
+            throw new PersistenceException("标签删除失败");
+        }
+        redisService.deleteCacheByKey(RedisKeyConstants.TAG_CLOUD_LIST);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateTag(Tag tag) {
+        if (tagMapper.updateTag(tag) != 1) {
+            throw new PersistenceException("标签更新失败");
+        }
+        redisService.deleteCacheByKey(RedisKeyConstants.TAG_CLOUD_LIST);
+        //修改了标签名或颜色，可能有首页文章关联了标签，也要更新首页缓存
+        redisService.deleteCacheByKey(RedisKeyConstants.HOME_BLOG_INFO_LIST);
+    }
 }

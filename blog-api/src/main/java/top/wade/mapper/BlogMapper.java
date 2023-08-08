@@ -66,5 +66,9 @@ public interface BlogMapper {
 
     int updateBlogTopById(Long blogId, Boolean top);
 
+    int countBlogByCategoryId(Long categoryId);
+
+    int countBlogByTagId(Long tagId);
+
 
 }

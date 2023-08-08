@@ -26,3 +26,216 @@
 2023-08-08 12:33:23.532  INFO 4840 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2023-08-08 12:33:23.580  INFO 4840 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
 2023-08-08 12:33:23.582  INFO 4840 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 5.171 seconds (JVM running for 6.69)
+2023-08-08 12:33:57.908  INFO 4840 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-08 12:33:57.908  INFO 4840 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-08 12:33:57.918  INFO 4840 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2023-08-08 12:34:05.333 DEBUG 4840 --- [http-nio-8090-exec-4] top.wade.config.JwtLoginFilter           : Request is to process authentication
+2023-08-08 12:34:05.454  INFO 4840 --- [http-nio-8090-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-08 12:34:05.584  INFO 4840 --- [http-nio-8090-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-08 12:34:05.589 DEBUG 4840 --- [http-nio-8090-exec-4] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
+2023-08-08 12:34:05.608 DEBUG 4840 --- [http-nio-8090-exec-4] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: Admin(String)
+2023-08-08 12:34:05.638 DEBUG 4840 --- [http-nio-8090-exec-4] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 1
+2023-08-08 12:34:05.758  INFO 4840 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
+2023-08-08 12:34:05.806 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.V.countVisitLogByToday             : ==>  Preparing: select count(*) from visit_log where date(create_time) = curdate()
+2023-08-08 12:34:05.806 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.V.countVisitLogByToday             : ==> Parameters: 
+2023-08-08 12:34:05.816 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.V.countVisitLogByToday             : <==      Total: 1
+2023-08-08 12:34:06.144  INFO 4840 --- [http-nio-8090-exec-8] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2023-08-08 12:34:06.147  INFO 4840 --- [http-nio-8090-exec-8] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2023-08-08 12:34:06.968 DEBUG 4840 --- [http-nio-8090-exec-8] top.wade.mapper.BlogMapper.countBlog     : ==>  Preparing: select count(*) from blog
+2023-08-08 12:34:06.968 DEBUG 4840 --- [http-nio-8090-exec-8] top.wade.mapper.BlogMapper.countBlog     : ==> Parameters: 
+2023-08-08 12:34:06.972 DEBUG 4840 --- [http-nio-8090-exec-8] top.wade.mapper.BlogMapper.countBlog     : <==      Total: 1
+2023-08-08 12:34:06.973 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.mapper.CommentMapper.countComment    : ==>  Preparing: select count(*) from comment
+2023-08-08 12:34:06.974 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.mapper.CommentMapper.countComment    : ==> Parameters: 
+2023-08-08 12:34:06.978 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.mapper.CommentMapper.countComment    : <==      Total: 1
+2023-08-08 12:34:06.979 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.B.getCategoryBlogCountList         : ==>  Preparing: select category_id, count(category_id) as blog_count from blog group by category_id
+2023-08-08 12:34:06.980 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.B.getCategoryBlogCountList         : ==> Parameters: 
+2023-08-08 12:34:06.981 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.B.getCategoryBlogCountList         : <==      Total: 1
+2023-08-08 12:34:06.982 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-08 12:34:06.983 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-08 12:34:06.986 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-08 12:34:06.987 DEBUG 4840 --- [http-nio-8090-exec-8] t.wade.mapper.TagMapper.getTagBlogCount  : ==>  Preparing: select tag_id, count(tag_id) as blog_count from blog_tag group by tag_id
+2023-08-08 12:34:06.987 DEBUG 4840 --- [http-nio-8090-exec-8] t.wade.mapper.TagMapper.getTagBlogCount  : ==> Parameters: 
+2023-08-08 12:34:06.991 DEBUG 4840 --- [http-nio-8090-exec-8] t.wade.mapper.TagMapper.getTagBlogCount  : <==      Total: 1
+2023-08-08 12:34:06.992 DEBUG 4840 --- [http-nio-8090-exec-8] top.wade.mapper.TagMapper.getTagList     : ==>  Preparing: select id, tag_name, color from tag order by id desc
+2023-08-08 12:34:06.992 DEBUG 4840 --- [http-nio-8090-exec-8] top.wade.mapper.TagMapper.getTagList     : ==> Parameters: 
+2023-08-08 12:34:06.996 DEBUG 4840 --- [http-nio-8090-exec-8] top.wade.mapper.TagMapper.getTagList     : <==      Total: 1
+2023-08-08 12:34:06.998 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.V.getVisitRecordListByLimit        : ==>  Preparing: select pv, uv, date from visit_record order by id desc limit ?
+2023-08-08 12:34:06.998 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.V.getVisitRecordListByLimit        : ==> Parameters: 30(Integer)
+2023-08-08 12:34:07.002 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.V.getVisitRecordListByLimit        : <==      Total: 0
+2023-08-08 12:34:07.003 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.C.getCityVisitorList               : ==>  Preparing: select city, uv from city_visitor order by uv desc
+2023-08-08 12:34:07.003 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.C.getCityVisitorList               : ==> Parameters: 
+2023-08-08 12:34:07.006 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.m.C.getCityVisitorList               : <==      Total: 0
+2023-08-08 12:34:07.088  INFO 4840 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Built in 1329 msec : Hashmap 192397, Ranges map:2904
+2023-08-08 12:34:07.236 DEBUG 4840 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : ==>  Preparing: insert into login_log (username, ip, ip_source, os, browser, status, description, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-08-08 12:34:07.238 DEBUG 4840 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : ==> Parameters: Admin(String), 192.168.68.185(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), true(Boolean), 登录成功(String), 2023-08-08 12:34:05.743(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
+2023-08-08 12:34:07.242 DEBUG 4840 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : <==    Updates: 1
+2023-08-08 12:34:07.673 DEBUG 4840 --- [http-nio-8090-exec-7] .w.m.B.getListByTitleAndCategoryId_COUNT : ==>  Preparing: SELECT count(0) FROM blog AS b LEFT JOIN category AS c ON b.category_id = c.id
+2023-08-08 12:34:07.673 DEBUG 4840 --- [http-nio-8090-exec-7] .w.m.B.getListByTitleAndCategoryId_COUNT : ==> Parameters: 
+2023-08-08 12:34:07.674 DEBUG 4840 --- [http-nio-8090-exec-7] .w.m.B.getListByTitleAndCategoryId_COUNT : <==      Total: 1
+2023-08-08 12:34:07.679 DEBUG 4840 --- [http-nio-8090-exec-7] t.w.m.B.getListByTitleAndCategoryId      : ==>  Preparing: SELECT b.id, b.title, b.first_picture, b.create_time, b.update_time, b.is_published, b.is_recommend, b.is_appreciation, b.is_comment_enabled, b.is_top, b.password, c.id AS category_id, c.category_name FROM blog AS b LEFT JOIN category AS c ON b.category_id = c.id order by create_time desc LIMIT ?
+2023-08-08 12:34:07.679 DEBUG 4840 --- [http-nio-8090-exec-7] t.w.m.B.getListByTitleAndCategoryId      : ==> Parameters: 10(Integer)
+2023-08-08 12:34:07.682 DEBUG 4840 --- [http-nio-8090-exec-7] t.w.m.B.getListByTitleAndCategoryId      : <==      Total: 1
+2023-08-08 12:34:07.686 DEBUG 4840 --- [http-nio-8090-exec-7] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-08 12:34:07.686 DEBUG 4840 --- [http-nio-8090-exec-7] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-08 12:34:07.687 DEBUG 4840 --- [http-nio-8090-exec-7] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-08 12:34:22.797 DEBUG 4840 --- [http-nio-8090-exec-9] top.wade.mapper.MomentMapper.saveMoment  : ==>  Preparing: insert into moment (content, create_time, likes, is_published) values (?, ?, ?, ?)
+2023-08-08 12:34:22.798 DEBUG 4840 --- [http-nio-8090-exec-9] top.wade.mapper.MomentMapper.saveMoment  : ==> Parameters: 第一条动态(String), 2023-08-08 12:34:22.793(Timestamp), 0(Integer), true(Boolean)
+2023-08-08 12:34:22.800 DEBUG 4840 --- [http-nio-8090-exec-9] top.wade.mapper.MomentMapper.saveMoment  : <==    Updates: 1
+2023-08-08 12:35:26.287 DEBUG 4840 --- [http-nio-8090-exec-3] t.w.m.MomentMapper.getMomentList_COUNT   : ==>  Preparing: SELECT count(0) FROM moment
+2023-08-08 12:35:26.287 DEBUG 4840 --- [http-nio-8090-exec-3] t.w.m.MomentMapper.getMomentList_COUNT   : ==> Parameters: 
+2023-08-08 12:35:26.289 DEBUG 4840 --- [http-nio-8090-exec-3] t.w.m.MomentMapper.getMomentList_COUNT   : <==      Total: 1
+2023-08-08 12:35:26.290 DEBUG 4840 --- [http-nio-8090-exec-3] t.w.mapper.MomentMapper.getMomentList    : ==>  Preparing: SELECT id, content, create_time, likes, is_published FROM moment order by create_time desc LIMIT ?
+2023-08-08 12:35:26.291 DEBUG 4840 --- [http-nio-8090-exec-3] t.w.mapper.MomentMapper.getMomentList    : ==> Parameters: 10(Integer)
+2023-08-08 12:35:26.293 DEBUG 4840 --- [http-nio-8090-exec-3] t.w.mapper.MomentMapper.getMomentList    : <==      Total: 1
+2023-08-08 12:35:34.775 DEBUG 4840 --- [http-nio-8090-exec-2] t.w.m.MomentMapper.getMomentList_COUNT   : ==>  Preparing: SELECT count(0) FROM moment
+2023-08-08 12:35:34.776 DEBUG 4840 --- [http-nio-8090-exec-2] t.w.m.MomentMapper.getMomentList_COUNT   : ==> Parameters: 
+2023-08-08 12:35:34.778 DEBUG 4840 --- [http-nio-8090-exec-2] t.w.m.MomentMapper.getMomentList_COUNT   : <==      Total: 1
+2023-08-08 12:35:34.780 DEBUG 4840 --- [http-nio-8090-exec-2] t.w.mapper.MomentMapper.getMomentList    : ==>  Preparing: SELECT id, content, create_time, likes, is_published FROM moment order by create_time desc LIMIT ?
+2023-08-08 12:35:34.781 DEBUG 4840 --- [http-nio-8090-exec-2] t.w.mapper.MomentMapper.getMomentList    : ==> Parameters: 10(Integer)
+2023-08-08 12:35:34.782 DEBUG 4840 --- [http-nio-8090-exec-2] t.w.mapper.MomentMapper.getMomentList    : <==      Total: 1
+2023-08-08 12:35:37.293 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.mapper.MomentMapper.getMomentById    : ==>  Preparing: select id, content, create_time, likes, is_published from moment where id=?
+2023-08-08 12:35:37.293 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.mapper.MomentMapper.getMomentById    : ==> Parameters: 1(Long)
+2023-08-08 12:35:37.295 DEBUG 4840 --- [http-nio-8090-exec-8] t.w.mapper.MomentMapper.getMomentById    : <==      Total: 1
+2023-08-08 12:35:40.690 DEBUG 4840 --- [http-nio-8090-exec-6] t.w.m.MomentMapper.getMomentList_COUNT   : ==>  Preparing: SELECT count(0) FROM moment
+2023-08-08 12:35:40.690 DEBUG 4840 --- [http-nio-8090-exec-6] t.w.m.MomentMapper.getMomentList_COUNT   : ==> Parameters: 
+2023-08-08 12:35:40.692 DEBUG 4840 --- [http-nio-8090-exec-6] t.w.m.MomentMapper.getMomentList_COUNT   : <==      Total: 1
+2023-08-08 12:35:40.692 DEBUG 4840 --- [http-nio-8090-exec-6] t.w.mapper.MomentMapper.getMomentList    : ==>  Preparing: SELECT id, content, create_time, likes, is_published FROM moment order by create_time desc LIMIT ?
+2023-08-08 12:35:40.692 DEBUG 4840 --- [http-nio-8090-exec-6] t.w.mapper.MomentMapper.getMomentList    : ==> Parameters: 10(Integer)
+2023-08-08 12:35:40.693 DEBUG 4840 --- [http-nio-8090-exec-6] t.w.mapper.MomentMapper.getMomentList    : <==      Total: 1
+2023-08-08 12:35:42.843 DEBUG 4840 --- [http-nio-8090-exec-5] t.w.m.M.updateMomentPublishedById        : ==>  Preparing: update moment set is_published=? where id=?
+2023-08-08 12:35:42.843 DEBUG 4840 --- [http-nio-8090-exec-5] t.w.m.M.updateMomentPublishedById        : ==> Parameters: false(Boolean), 1(Long)
+2023-08-08 12:35:42.844 DEBUG 4840 --- [http-nio-8090-exec-5] t.w.m.M.updateMomentPublishedById        : <==    Updates: 1
+2023-08-08 12:35:43.750 DEBUG 4840 --- [http-nio-8090-exec-10] t.w.m.M.updateMomentPublishedById        : ==>  Preparing: update moment set is_published=? where id=?
+2023-08-08 12:35:43.750 DEBUG 4840 --- [http-nio-8090-exec-10] t.w.m.M.updateMomentPublishedById        : ==> Parameters: true(Boolean), 1(Long)
+2023-08-08 12:35:43.751 DEBUG 4840 --- [http-nio-8090-exec-10] t.w.m.M.updateMomentPublishedById        : <==    Updates: 1
+2023-08-08 12:46:28.171  INFO 15276 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 15276 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
+2023-08-08 12:46:28.174 DEBUG 15276 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2023-08-08 12:46:28.174  INFO 15276 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
+2023-08-08 12:46:28.230  INFO 15276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-08 12:46:28.230  INFO 15276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-08 12:46:28.929  INFO 15276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-08 12:46:28.931  INFO 15276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-08 12:46:28.968  INFO 15276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2023-08-08 12:46:29.706  INFO 15276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-08-08 12:46:29.715  INFO 15276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-08 12:46:29.716  INFO 15276 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2023-08-08 12:46:29.799  INFO 15276 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-08 12:46:29.799  INFO 15276 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1568 ms
+2023-08-08 12:46:30.299  INFO 15276 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-08-08 12:46:30.301  INFO 15276 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
+2023-08-08 12:46:30.301  INFO 15276 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
+2023-08-08 12:46:30.301  INFO 15276 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
+2023-08-08 12:46:30.301  INFO 15276 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
+2023-08-08 12:46:30.302  INFO 15276 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
+2023-08-08 12:46:30.302  INFO 15276 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
+2023-08-08 12:46:30.302  INFO 15276 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-08-08 12:46:30.440  INFO 15276 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  135 ms using expression: classpath*:UserAgents/**/*.yaml
+2023-08-08 12:46:31.502  INFO 15276 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
+2023-08-08 12:46:32.120  INFO 15276 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-08 12:46:32.546  INFO 15276 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2be4edb6, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ffeef12, org.springframework.security.web.header.HeaderWriterFilter@59b22456, org.springframework.web.filter.CorsFilter@4fa9dc5a, org.springframework.security.web.authentication.logout.LogoutFilter@7f95097b, top.wade.config.JwtLoginFilter@31627558, top.wade.config.JwtFilter@166ac670, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4cf2742d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2234fdfa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a6f1056, org.springframework.security.web.session.SessionManagementFilter@7ffe35cf, org.springframework.security.web.access.ExceptionTranslationFilter@1c266fe3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@322fec6d]
+2023-08-08 12:46:32.596  INFO 15276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-08 12:46:32.643  INFO 15276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2023-08-08 12:46:32.645  INFO 15276 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 4.908 seconds (JVM running for 6.023)
+2023-08-08 12:46:53.760  INFO 15276 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-08 12:46:53.760  INFO 15276 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-08 12:46:53.772  INFO 15276 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2023-08-08 12:46:54.293  INFO 15276 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-08 12:46:54.388  INFO 15276 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-08 12:46:54.393 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.V.countVisitLogByToday             : ==>  Preparing: select count(*) from visit_log where date(create_time) = curdate()
+2023-08-08 12:46:54.410 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.V.countVisitLogByToday             : ==> Parameters: 
+2023-08-08 12:46:54.428 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.V.countVisitLogByToday             : <==      Total: 1
+2023-08-08 12:46:54.560  INFO 15276 --- [http-nio-8090-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2023-08-08 12:46:54.561  INFO 15276 --- [http-nio-8090-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2023-08-08 12:46:55.497 DEBUG 15276 --- [http-nio-8090-exec-1] top.wade.mapper.BlogMapper.countBlog     : ==>  Preparing: select count(*) from blog
+2023-08-08 12:46:55.497 DEBUG 15276 --- [http-nio-8090-exec-1] top.wade.mapper.BlogMapper.countBlog     : ==> Parameters: 
+2023-08-08 12:46:55.498 DEBUG 15276 --- [http-nio-8090-exec-1] top.wade.mapper.BlogMapper.countBlog     : <==      Total: 1
+2023-08-08 12:46:55.499 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.mapper.CommentMapper.countComment    : ==>  Preparing: select count(*) from comment
+2023-08-08 12:46:55.499 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.mapper.CommentMapper.countComment    : ==> Parameters: 
+2023-08-08 12:46:55.500 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.mapper.CommentMapper.countComment    : <==      Total: 1
+2023-08-08 12:46:55.501 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.B.getCategoryBlogCountList         : ==>  Preparing: select category_id, count(category_id) as blog_count from blog group by category_id
+2023-08-08 12:46:55.503 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.B.getCategoryBlogCountList         : ==> Parameters: 
+2023-08-08 12:46:55.504 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.B.getCategoryBlogCountList         : <==      Total: 1
+2023-08-08 12:46:55.505 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-08 12:46:55.505 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-08 12:46:55.506 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-08 12:46:55.507 DEBUG 15276 --- [http-nio-8090-exec-1] t.wade.mapper.TagMapper.getTagBlogCount  : ==>  Preparing: select tag_id, count(tag_id) as blog_count from blog_tag group by tag_id
+2023-08-08 12:46:55.507 DEBUG 15276 --- [http-nio-8090-exec-1] t.wade.mapper.TagMapper.getTagBlogCount  : ==> Parameters: 
+2023-08-08 12:46:55.508 DEBUG 15276 --- [http-nio-8090-exec-1] t.wade.mapper.TagMapper.getTagBlogCount  : <==      Total: 1
+2023-08-08 12:46:55.508 DEBUG 15276 --- [http-nio-8090-exec-1] top.wade.mapper.TagMapper.getTagList     : ==>  Preparing: select id, tag_name, color from tag order by id desc
+2023-08-08 12:46:55.509 DEBUG 15276 --- [http-nio-8090-exec-1] top.wade.mapper.TagMapper.getTagList     : ==> Parameters: 
+2023-08-08 12:46:55.510 DEBUG 15276 --- [http-nio-8090-exec-1] top.wade.mapper.TagMapper.getTagList     : <==      Total: 1
+2023-08-08 12:46:55.511 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.V.getVisitRecordListByLimit        : ==>  Preparing: select pv, uv, date from visit_record order by id desc limit ?
+2023-08-08 12:46:55.512 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.V.getVisitRecordListByLimit        : ==> Parameters: 30(Integer)
+2023-08-08 12:46:55.512 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.V.getVisitRecordListByLimit        : <==      Total: 0
+2023-08-08 12:46:55.513 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.C.getCityVisitorList               : ==>  Preparing: select city, uv from city_visitor order by uv desc
+2023-08-08 12:46:55.513 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.C.getCityVisitorList               : ==> Parameters: 
+2023-08-08 12:46:55.514 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.C.getCityVisitorList               : <==      Total: 0
+2023-08-08 12:46:59.331 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.m.MomentMapper.getMomentList_COUNT   : ==>  Preparing: SELECT count(0) FROM moment
+2023-08-08 12:46:59.331 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.m.MomentMapper.getMomentList_COUNT   : ==> Parameters: 
+2023-08-08 12:46:59.333 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.m.MomentMapper.getMomentList_COUNT   : <==      Total: 1
+2023-08-08 12:46:59.337 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.mapper.MomentMapper.getMomentList    : ==>  Preparing: SELECT id, content, create_time, likes, is_published FROM moment order by create_time desc LIMIT ?
+2023-08-08 12:46:59.337 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.mapper.MomentMapper.getMomentList    : ==> Parameters: 10(Integer)
+2023-08-08 12:46:59.341 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.mapper.MomentMapper.getMomentList    : <==      Total: 1
+2023-08-08 12:47:01.009 DEBUG 15276 --- [http-nio-8090-exec-9] t.w.m.C.getCategoryList_COUNT            : ==>  Preparing: SELECT count(0) FROM category
+2023-08-08 12:47:01.009 DEBUG 15276 --- [http-nio-8090-exec-9] t.w.m.C.getCategoryList_COUNT            : ==> Parameters: 
+2023-08-08 12:47:01.010 DEBUG 15276 --- [http-nio-8090-exec-9] t.w.m.C.getCategoryList_COUNT            : <==      Total: 1
+2023-08-08 12:47:01.011 DEBUG 15276 --- [http-nio-8090-exec-9] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: SELECT id, category_name FROM category order by id desc LIMIT ?
+2023-08-08 12:47:01.011 DEBUG 15276 --- [http-nio-8090-exec-9] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 10(Integer)
+2023-08-08 12:47:01.012 DEBUG 15276 --- [http-nio-8090-exec-9] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-08 12:47:03.347 DEBUG 15276 --- [http-nio-8090-exec-5] t.w.m.MomentMapper.getMomentList_COUNT   : ==>  Preparing: SELECT count(0) FROM moment
+2023-08-08 12:47:03.348 DEBUG 15276 --- [http-nio-8090-exec-5] t.w.m.MomentMapper.getMomentList_COUNT   : ==> Parameters: 
+2023-08-08 12:47:03.349 DEBUG 15276 --- [http-nio-8090-exec-5] t.w.m.MomentMapper.getMomentList_COUNT   : <==      Total: 1
+2023-08-08 12:47:03.350 DEBUG 15276 --- [http-nio-8090-exec-5] t.w.mapper.MomentMapper.getMomentList    : ==>  Preparing: SELECT id, content, create_time, likes, is_published FROM moment order by create_time desc LIMIT ?
+2023-08-08 12:47:03.350 DEBUG 15276 --- [http-nio-8090-exec-5] t.w.mapper.MomentMapper.getMomentList    : ==> Parameters: 10(Integer)
+2023-08-08 12:47:03.351 DEBUG 15276 --- [http-nio-8090-exec-5] t.w.mapper.MomentMapper.getMomentList    : <==      Total: 1
+2023-08-08 12:47:04.123 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.C.getCategoryList_COUNT            : ==>  Preparing: SELECT count(0) FROM category
+2023-08-08 12:47:04.124 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.C.getCategoryList_COUNT            : ==> Parameters: 
+2023-08-08 12:47:04.126 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.C.getCategoryList_COUNT            : <==      Total: 1
+2023-08-08 12:47:04.127 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: SELECT id, category_name FROM category order by id desc LIMIT ?
+2023-08-08 12:47:04.127 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 10(Integer)
+2023-08-08 12:47:04.128 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-08 12:47:14.714 DEBUG 15276 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.getCategoryByName   : ==>  Preparing: select id, category_name from category where category_name=?
+2023-08-08 12:47:14.714 DEBUG 15276 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.getCategoryByName   : ==> Parameters: cate_test(String)
+2023-08-08 12:47:14.714 DEBUG 15276 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.getCategoryByName   : <==      Total: 0
+2023-08-08 12:47:14.723 DEBUG 15276 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.updateCategory      : ==>  Preparing: update category set category_name=? where id=?
+2023-08-08 12:47:14.723 DEBUG 15276 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.updateCategory      : ==> Parameters: cate_test(String), 1(Long)
+2023-08-08 12:47:14.724 DEBUG 15276 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.updateCategory      : <==    Updates: 1
+2023-08-08 12:47:14.764 DEBUG 15276 --- [http-nio-8090-exec-10] t.w.m.C.getCategoryList_COUNT            : ==>  Preparing: SELECT count(0) FROM category
+2023-08-08 12:47:14.765 DEBUG 15276 --- [http-nio-8090-exec-10] t.w.m.C.getCategoryList_COUNT            : ==> Parameters: 
+2023-08-08 12:47:14.766 DEBUG 15276 --- [http-nio-8090-exec-10] t.w.m.C.getCategoryList_COUNT            : <==      Total: 1
+2023-08-08 12:47:14.766 DEBUG 15276 --- [http-nio-8090-exec-10] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: SELECT id, category_name FROM category order by id desc LIMIT ?
+2023-08-08 12:47:14.767 DEBUG 15276 --- [http-nio-8090-exec-10] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 10(Integer)
+2023-08-08 12:47:14.768 DEBUG 15276 --- [http-nio-8090-exec-10] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-08 12:47:18.992 DEBUG 15276 --- [http-nio-8090-exec-4] .w.m.B.getListByTitleAndCategoryId_COUNT : ==>  Preparing: SELECT count(0) FROM blog AS b LEFT JOIN category AS c ON b.category_id = c.id
+2023-08-08 12:47:18.992 DEBUG 15276 --- [http-nio-8090-exec-4] .w.m.B.getListByTitleAndCategoryId_COUNT : ==> Parameters: 
+2023-08-08 12:47:18.992 DEBUG 15276 --- [http-nio-8090-exec-4] .w.m.B.getListByTitleAndCategoryId_COUNT : <==      Total: 1
+2023-08-08 12:47:18.994 DEBUG 15276 --- [http-nio-8090-exec-4] t.w.m.B.getListByTitleAndCategoryId      : ==>  Preparing: SELECT b.id, b.title, b.first_picture, b.create_time, b.update_time, b.is_published, b.is_recommend, b.is_appreciation, b.is_comment_enabled, b.is_top, b.password, c.id AS category_id, c.category_name FROM blog AS b LEFT JOIN category AS c ON b.category_id = c.id order by create_time desc LIMIT ?
+2023-08-08 12:47:18.994 DEBUG 15276 --- [http-nio-8090-exec-4] t.w.m.B.getListByTitleAndCategoryId      : ==> Parameters: 10(Integer)
+2023-08-08 12:47:18.996 DEBUG 15276 --- [http-nio-8090-exec-4] t.w.m.B.getListByTitleAndCategoryId      : <==      Total: 1
+2023-08-08 12:47:18.996 DEBUG 15276 --- [http-nio-8090-exec-4] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-08 12:47:18.996 DEBUG 15276 --- [http-nio-8090-exec-4] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-08 12:47:18.997 DEBUG 15276 --- [http-nio-8090-exec-4] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-08 12:47:54.513 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.MomentMapper.getMomentList_COUNT   : ==>  Preparing: SELECT count(0) FROM moment
+2023-08-08 12:47:54.514 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.MomentMapper.getMomentList_COUNT   : ==> Parameters: 
+2023-08-08 12:47:54.515 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.m.MomentMapper.getMomentList_COUNT   : <==      Total: 1
+2023-08-08 12:47:54.516 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.mapper.MomentMapper.getMomentList    : ==>  Preparing: SELECT id, content, create_time, likes, is_published FROM moment order by create_time desc LIMIT ?
+2023-08-08 12:47:54.516 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.mapper.MomentMapper.getMomentList    : ==> Parameters: 10(Integer)
+2023-08-08 12:47:54.517 DEBUG 15276 --- [http-nio-8090-exec-1] t.w.mapper.MomentMapper.getMomentList    : <==      Total: 1
+2023-08-08 12:47:55.205 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.m.C.getCategoryList_COUNT            : ==>  Preparing: SELECT count(0) FROM category
+2023-08-08 12:47:55.206 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.m.C.getCategoryList_COUNT            : ==> Parameters: 
+2023-08-08 12:47:55.207 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.m.C.getCategoryList_COUNT            : <==      Total: 1
+2023-08-08 12:47:55.208 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: SELECT id, category_name FROM category order by id desc LIMIT ?
+2023-08-08 12:47:55.209 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 10(Integer)
+2023-08-08 12:47:55.210 DEBUG 15276 --- [http-nio-8090-exec-2] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-08 12:47:58.043 DEBUG 15276 --- [http-nio-8090-exec-3] t.w.m.C.getCategoryList_COUNT            : ==>  Preparing: SELECT count(0) FROM category
+2023-08-08 12:47:58.043 DEBUG 15276 --- [http-nio-8090-exec-3] t.w.m.C.getCategoryList_COUNT            : ==> Parameters: 
+2023-08-08 12:47:58.045 DEBUG 15276 --- [http-nio-8090-exec-3] t.w.m.C.getCategoryList_COUNT            : <==      Total: 1
+2023-08-08 12:47:58.045 DEBUG 15276 --- [http-nio-8090-exec-3] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: SELECT id, category_name FROM category order by id desc LIMIT ?
+2023-08-08 12:47:58.046 DEBUG 15276 --- [http-nio-8090-exec-3] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 10(Integer)
+2023-08-08 12:47:58.047 DEBUG 15276 --- [http-nio-8090-exec-3] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-08 15:15:11.491 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.C.getCategoryList_COUNT            : ==>  Preparing: SELECT count(0) FROM category
+2023-08-08 15:15:11.492 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.C.getCategoryList_COUNT            : ==> Parameters: 
+2023-08-08 15:15:11.495 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.C.getCategoryList_COUNT            : <==      Total: 1
+2023-08-08 15:15:11.497 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: SELECT id, category_name FROM category order by id desc LIMIT ?
+2023-08-08 15:15:11.497 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 10(Integer)
+2023-08-08 15:15:11.498 DEBUG 15276 --- [http-nio-8090-exec-6] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1

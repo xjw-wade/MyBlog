@@ -28,4 +28,8 @@ public interface TagMapper {
     Tag getTagByName(String name);
 
     int saveTag(Tag tag);
+
+    int deleteTagById(Long id);
+
+    int updateTag(Tag tag);
 }

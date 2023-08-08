@@ -49,5 +49,15 @@
         insert into tag (tag_name, color) values (#{name}, #{color})
     </insert>
 
+    <!--按id删除标签-->
+    <delete id="deleteTagById">
+        delete from tag where id=#{id}
+    </delete>
+
+    <!--更新标签-->
+    <update id="updateTag">
+        update tag set tag_name=#{name}, color=#{color} where id=#{id}
+    </update>
+
 
 </mapper>
