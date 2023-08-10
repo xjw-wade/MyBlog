@@ -123,6 +123,60 @@ const routes = [
 		},
 	]
 },
+{
+	path: '/pictureHosting',
+	name: 'PictureHosting',
+	redirect: '/pictureHosting/setting',
+	component: Layout,
+	meta: {title: '图床管理', icon: 'el-icon-picture'},
+	children: [
+		{
+			path: 'setting',
+			name: 'Setting',
+			component: () => import('@/views/pictureHosting/Setting'),
+			meta: {title: '配置', icon: 'el-icon-setting'}
+		},
+		{
+			path: 'github',
+			name: 'GithubManage',
+			component: () => import('@/views/pictureHosting/GithubManage'),
+			meta: {title: 'GitHub', icon: 'el-icon-folder-opened'}
+		},
+		// {
+		// 	path: 'upyun',
+		// 	name: 'UpyunManage',
+		// 	component: () => import('@/views/pictureHosting/UpyunManage'),
+		// 	meta: {title: '又拍云', icon: 'el-icon-folder-opened'}
+		// },
+		// {
+		// 	path: 'txyun',
+		// 	name: 'TxyunManage',
+		// 	component: () => import('@/views/pictureHosting/TxyunManage'),
+		// 	meta: {title: '腾讯云', icon: 'el-icon-folder-opened'}
+		// },
+	]
+},
+{
+	path: '/system',
+	name: 'System',
+	redirect: '/system/account',
+	component: Layout,
+	meta: {title: '系统管理', icon: 'el-icon-s-tools'},
+	children: [
+		{
+			path: 'account',
+			name: 'Account',
+			component: () => import('@/views/system/Account'),
+			meta: {title: '修改账户', icon: 'el-icon-user-solid'}
+		},
+		// {
+		// 	path: 'job',
+		// 	name: 'JobList',
+		// 	component: () => import('@/views/system/ScheduleJobList'),
+		// 	meta: {title: '定时任务', icon: 'el-icon-alarm-clock'}
+		// },
+	]
+},
 ]
 
 const router = new VueRouter({
