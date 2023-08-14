@@ -5,10 +5,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import top.wade.entity.User;
 import top.wade.mapper.UserMapper;
 import top.wade.service.UserService;
 import top.wade.util.HashUtils;
+import top.wade.util.JwtUtils;
 
 /**
  * @Author xjw
@@ -38,5 +40,17 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             throw new UsernameNotFoundException("密码错误");
         }
         return user;
+    }
+
+    @Override
+    public Boolean changeAccount(User user, String jwt) {
+        String username = JwtUtils.getTokenBody(jwt).getSubject();
+        user.setPassword(HashUtils.getBC(user.getPassword()));
+        if (userMapper.updateUserByUsername(username, user) != 1) {
+            //设置手动回滚
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            return false;
+        }
+        return true;
     }
 }

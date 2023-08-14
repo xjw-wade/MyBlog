@@ -24,6 +24,30 @@
         values (#{uuid}, #{ip}, #{ipSource}, #{os}, #{browser}, #{createTime}, #{lastTime}, #{pv}, #{userAgent})
     </insert>
 
-    
+    <!--查询访客-->
+    <select id="getVisitorListByDate" resultMap="visitor">
+        select id, uuid, ip, ip_source, os, browser, create_time, last_time, pv
+        from visitor
+        <where>
+            <if test="startDate!=null and startDate!='' and endDate!=null and endDate!=''">
+                last_time between #{startDate} and #{endDate}
+            </if>
+        </where>
+    </select>
+
+    <!--查询昨天的所有新增访客的ip来源-->
+    <select id="getNewVisitorIpSourceByYesterday" resultType="java.lang.String">
+        select ip_source from visitor where date(create_time)=date_sub(curdate(), interval 1 day)
+    </select>
+
+    <!--更新访客pv和最后访问时间-->
+    <update id="updatePVAndLastTimeByUUID">
+        update visitor set pv=pv+#{pv}, last_time=#{time} where uuid=#{uuid}
+    </update>
+
+    <!--删除访客-->
+    <delete id="deleteVisitorById">
+        delete from visitor where id=#{id}
+    </delete>
 
 </mapper>

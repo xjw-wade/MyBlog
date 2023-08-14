@@ -2,6 +2,9 @@ package top.wade.service;
 
 import org.springframework.scheduling.annotation.Async;
 import top.wade.entity.VisitLog;
+import top.wade.model.dto.VisitLogUuidTime;
+
+import java.util.List;
 
 /**
  * @Author xjw
@@ -11,4 +14,10 @@ import top.wade.entity.VisitLog;
 public interface VisitLogService {
     @Async
     void saveVisitLog(VisitLog log);
+
+    List<VisitLogUuidTime> getUUIDAndCreateTimeByYesterday();
+
+    List<VisitLog> getVisitLogListByUUIDAndDate(String uuid, String startDate, String endDate);
+
+    void deleteVisitLogById(Long id);
 }

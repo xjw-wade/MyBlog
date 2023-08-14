@@ -61,4 +61,6 @@ public interface BlogService {
 
     List<Blog> getIdAndTitleList();
 
+    void updateViews(Long blogId, Integer views);
+
 }

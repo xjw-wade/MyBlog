@@ -13,4 +13,6 @@ import top.wade.entity.User;
 @Repository
 public interface UserMapper {
     User findByUsername(String username);
+
+    int updateUserByUsername(String username, User user);
 }

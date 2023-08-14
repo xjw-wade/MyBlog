@@ -1,12 +1,12 @@
 package top.wade.service.impl;
 
-import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.wade.constant.RedisKeyConstants;
 import top.wade.constant.SiteSettingConstants;
 import top.wade.entity.SiteSetting;
+import top.wade.exception.PersistenceException;
 import top.wade.mapper.SiteSettingMapper;
 import top.wade.model.vo.Badge;
 import top.wade.model.vo.Copyright;
@@ -168,18 +168,21 @@ public class SiteSettingServiceImpl implements SiteSettingService {
         deleteSiteInfoRedisCache();
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public void deleteOneSiteSettingById(Integer id) {
         if (siteSettingMapper.deleteSiteSettingById(id) != 1) {
             throw new PersistenceException("配置删除失败");
         }
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public void saveOneSiteSetting(SiteSetting siteSetting) {
         if (siteSettingMapper.saveSiteSetting(siteSetting) != 1) {
             throw new PersistenceException("配置添加失败");
         }
     }
 
+    @Transactional(rollbackFor = Exception.class)
     public void updateOneSiteSetting(SiteSetting siteSetting) {
         if (siteSettingMapper.updateSiteSetting(siteSetting) != 1) {
             throw new PersistenceException("配置修改失败");

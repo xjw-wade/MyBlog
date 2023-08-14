@@ -1,12 +1,12 @@
 package top.wade.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.wade.entity.Moment;
 import top.wade.exception.NotFoundException;
+import top.wade.exception.PersistenceException;
 import top.wade.mapper.MomentMapper;
 import top.wade.service.MomentService;
 import top.wade.util.markdown.MarkdownUtils;

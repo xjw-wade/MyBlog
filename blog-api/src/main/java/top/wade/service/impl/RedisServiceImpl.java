@@ -114,4 +114,14 @@ public class RedisServiceImpl implements RedisService {
     public void deleteByHashKey(String hash, Object key) {
         jsonRedisTemplate.opsForHash().delete(hash, key);
     }
+
+    @Override
+    public Map getMapByHash(String hash) {
+        return jsonRedisTemplate.opsForHash().entries(hash);
+    }
+
+    @Override
+    public void deleteValueBySet(String key, Object value) {
+        jsonRedisTemplate.opsForSet().remove(key, value);
+    }
 }

@@ -2,13 +2,13 @@ package top.wade.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.wade.constant.RedisKeyConstants;
 import top.wade.entity.Blog;
 import top.wade.exception.NotFoundException;
+import top.wade.exception.PersistenceException;
 import top.wade.mapper.BlogMapper;
 import top.wade.model.dto.BlogVisibility;
 import top.wade.model.vo.*;
@@ -268,6 +268,7 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public void updateBlogTopById(Long blogId, Boolean top) {
         if (blogMapper.updateBlogTopById(blogId, top) != 1) {
+            // 默认spring事务只在发生未被捕获的 runtime exception时才回滚
             throw new PersistenceException("操作失败");
         }
         redisService.deleteCacheByKey(RedisKeyConstants.HOME_BLOG_INFO_LIST);
@@ -286,6 +287,14 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public List<Blog> getIdAndTitleList() {
         return blogMapper.getIdAndTitleList();
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updateViews(Long blogId, Integer views) {
+        if (blogMapper.updateViews(blogId, views) != 1) {
+            throw new PersistenceException("更新失败");
+        }
     }
 
     /**

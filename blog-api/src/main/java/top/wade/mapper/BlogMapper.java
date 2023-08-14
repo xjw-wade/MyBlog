@@ -70,6 +70,8 @@ public interface BlogMapper {
 
     int countBlogByTagId(Long tagId);
 
+    int updateViews(Long blogId, Integer views);
+
 
 
 }

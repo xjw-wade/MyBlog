@@ -12,5 +12,9 @@
     <select id="getVisitRecordListByLimit" resultMap="visitRecord">
         select pv, uv, date from visit_record order by id desc limit #{limit}
     </select>
+    
+    <insert id="saveVisitRecord" parameterType="top.wade.entity.VisitRecord" useGeneratedKeys="true" keyProperty="id">
+        insert into visit_record (pv, uv, date) values (#{pv}, #{uv}, #{date})
+    </insert>
 
 </mapper>

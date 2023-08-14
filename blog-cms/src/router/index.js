@@ -169,12 +169,12 @@ const routes = [
 			component: () => import('@/views/system/Account'),
 			meta: {title: '修改账户', icon: 'el-icon-user-solid'}
 		},
-		// {
-		// 	path: 'job',
-		// 	name: 'JobList',
-		// 	component: () => import('@/views/system/ScheduleJobList'),
-		// 	meta: {title: '定时任务', icon: 'el-icon-alarm-clock'}
-		// },
+		{
+			path: 'job',
+			name: 'JobList',
+			component: () => import('@/views/system/ScheduleJobList'),
+			meta: {title: '定时任务', icon: 'el-icon-alarm-clock'}
+		},
 	]
 },
 ]

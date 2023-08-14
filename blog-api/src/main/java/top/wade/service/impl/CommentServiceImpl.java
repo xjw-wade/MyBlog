@@ -1,11 +1,10 @@
 package top.wade.service.impl;
 
-import com.github.pagehelper.Page;
-import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.wade.entity.Comment;
+import top.wade.exception.PersistenceException;
 import top.wade.mapper.CommentMapper;
 import top.wade.model.vo.PageComment;
 import top.wade.service.CommentService;

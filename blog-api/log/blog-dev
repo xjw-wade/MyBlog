@@ -1,62 +1,150 @@
-2023-08-10 15:05:42.887  INFO 16772 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 16772 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
-2023-08-10 15:05:42.894 DEBUG 16772 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
-2023-08-10 15:05:42.895  INFO 16772 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
-2023-08-10 15:05:42.998  INFO 16772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-08-10 15:05:42.998  INFO 16772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-08-10 15:05:43.896  INFO 16772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2023-08-10 15:05:43.898  INFO 16772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-08-10 15:05:43.941  INFO 16772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 0 Redis repository interfaces.
-2023-08-10 15:05:44.867  INFO 16772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2023-08-10 15:05:44.880  INFO 16772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-10 15:05:44.880  INFO 16772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
-2023-08-10 15:05:44.978  INFO 16772 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-10 15:05:44.978  INFO 16772 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1979 ms
-2023-08-10 15:05:45.891  INFO 16772 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-08-10 15:05:45.893  INFO 16772 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
-2023-08-10 15:05:45.893  INFO 16772 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
-2023-08-10 15:05:45.893  INFO 16772 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
-2023-08-10 15:05:45.893  INFO 16772 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
-2023-08-10 15:05:45.893  INFO 16772 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
-2023-08-10 15:05:45.894  INFO 16772 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
-2023-08-10 15:05:45.894  INFO 16772 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
-2023-08-10 15:05:46.063  INFO 16772 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  165 ms using expression: classpath*:UserAgents/**/*.yaml
-2023-08-10 15:05:47.096  INFO 16772 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
-2023-08-10 15:05:47.915  INFO 16772 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2023-08-10 15:05:48.319  INFO 16772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cfd7c80, org.springframework.security.web.context.SecurityContextPersistenceFilter@322fec6d, org.springframework.security.web.header.HeaderWriterFilter@46c6c97a, org.springframework.web.filter.CorsFilter@4b098177, org.springframework.security.web.authentication.logout.LogoutFilter@2f725ef1, top.wade.config.JwtLoginFilter@42534b57, top.wade.config.JwtFilter@2e25bbb3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@da9db80, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b05e59d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29bbdb8b, org.springframework.security.web.session.SessionManagementFilter@d101c7e, org.springframework.security.web.access.ExceptionTranslationFilter@42fb5a71, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@758f6774]
-2023-08-10 15:05:48.371  INFO 16772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-08-10 15:05:48.415  INFO 16772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
-2023-08-10 15:05:48.417  INFO 16772 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 6.235 seconds (JVM running for 7.949)
-2023-08-10 15:06:15.304  INFO 16772 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-08-10 15:06:15.305  INFO 16772 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-08-10 15:06:15.317  INFO 16772 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2023-08-10 15:06:16.036  INFO 16772 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-08-10 15:06:16.280  INFO 16772 --- [http-nio-8090-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-08-10 15:06:16.287 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.V.countVisitLogByToday             : ==>  Preparing: select count(*) from visit_log where date(create_time) = curdate()
-2023-08-10 15:06:16.308 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.V.countVisitLogByToday             : ==> Parameters: 
-2023-08-10 15:06:16.338 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.V.countVisitLogByToday             : <==      Total: 1
-2023-08-10 15:06:16.465  INFO 16772 --- [http-nio-8090-exec-3] io.lettuce.core.EpollProvider            : Starting without optional epoll library
-2023-08-10 15:06:16.467  INFO 16772 --- [http-nio-8090-exec-3] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
-2023-08-10 15:06:17.450 DEBUG 16772 --- [http-nio-8090-exec-3] top.wade.mapper.BlogMapper.countBlog     : ==>  Preparing: select count(*) from blog
-2023-08-10 15:06:17.450 DEBUG 16772 --- [http-nio-8090-exec-3] top.wade.mapper.BlogMapper.countBlog     : ==> Parameters: 
-2023-08-10 15:06:17.455 DEBUG 16772 --- [http-nio-8090-exec-3] top.wade.mapper.BlogMapper.countBlog     : <==      Total: 1
-2023-08-10 15:06:17.455 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.mapper.CommentMapper.countComment    : ==>  Preparing: select count(*) from comment
-2023-08-10 15:06:17.456 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.mapper.CommentMapper.countComment    : ==> Parameters: 
-2023-08-10 15:06:17.461 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.mapper.CommentMapper.countComment    : <==      Total: 1
-2023-08-10 15:06:17.462 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.B.getCategoryBlogCountList         : ==>  Preparing: select category_id, count(category_id) as blog_count from blog group by category_id
-2023-08-10 15:06:17.462 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.B.getCategoryBlogCountList         : ==> Parameters: 
-2023-08-10 15:06:17.463 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.B.getCategoryBlogCountList         : <==      Total: 1
-2023-08-10 15:06:17.464 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
-2023-08-10 15:06:17.464 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
-2023-08-10 15:06:17.467 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
-2023-08-10 15:06:17.468 DEBUG 16772 --- [http-nio-8090-exec-3] t.wade.mapper.TagMapper.getTagBlogCount  : ==>  Preparing: select tag_id, count(tag_id) as blog_count from blog_tag group by tag_id
-2023-08-10 15:06:17.468 DEBUG 16772 --- [http-nio-8090-exec-3] t.wade.mapper.TagMapper.getTagBlogCount  : ==> Parameters: 
-2023-08-10 15:06:17.472 DEBUG 16772 --- [http-nio-8090-exec-3] t.wade.mapper.TagMapper.getTagBlogCount  : <==      Total: 1
-2023-08-10 15:06:17.472 DEBUG 16772 --- [http-nio-8090-exec-3] top.wade.mapper.TagMapper.getTagList     : ==>  Preparing: select id, tag_name, color from tag order by id desc
-2023-08-10 15:06:17.473 DEBUG 16772 --- [http-nio-8090-exec-3] top.wade.mapper.TagMapper.getTagList     : ==> Parameters: 
-2023-08-10 15:06:17.478 DEBUG 16772 --- [http-nio-8090-exec-3] top.wade.mapper.TagMapper.getTagList     : <==      Total: 1
-2023-08-10 15:06:17.482 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.V.getVisitRecordListByLimit        : ==>  Preparing: select pv, uv, date from visit_record order by id desc limit ?
-2023-08-10 15:06:17.482 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.V.getVisitRecordListByLimit        : ==> Parameters: 30(Integer)
-2023-08-10 15:06:17.486 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.V.getVisitRecordListByLimit        : <==      Total: 0
-2023-08-10 15:06:17.486 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.C.getCityVisitorList               : ==>  Preparing: select city, uv from city_visitor order by uv desc
-2023-08-10 15:06:17.487 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.C.getCityVisitorList               : ==> Parameters: 
-2023-08-10 15:06:17.490 DEBUG 16772 --- [http-nio-8090-exec-3] t.w.m.C.getCityVisitorList               : <==      Total: 0
+2023-08-14 15:55:46.055  INFO 7124 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 7124 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
+2023-08-14 15:55:46.063 DEBUG 7124 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2023-08-14 15:55:46.063  INFO 7124 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
+2023-08-14 15:55:46.134  INFO 7124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-14 15:55:46.134  INFO 7124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-14 15:55:47.297  INFO 7124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-14 15:55:47.300  INFO 7124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-14 15:55:47.343  INFO 7124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2023-08-14 15:55:48.160  INFO 7124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-08-14 15:55:48.167  INFO 7124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-14 15:55:48.168  INFO 7124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2023-08-14 15:55:48.258  INFO 7124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-14 15:55:48.259  INFO 7124 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2124 ms
+2023-08-14 15:55:48.780  INFO 7124 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-08-14 15:55:48.782  INFO 7124 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
+2023-08-14 15:55:48.782  INFO 7124 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
+2023-08-14 15:55:48.782  INFO 7124 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
+2023-08-14 15:55:48.783  INFO 7124 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
+2023-08-14 15:55:48.783  INFO 7124 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
+2023-08-14 15:55:48.783  INFO 7124 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
+2023-08-14 15:55:48.783  INFO 7124 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-08-14 15:55:48.931  INFO 7124 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  144 ms using expression: classpath*:UserAgents/**/*.yaml
+2023-08-14 15:55:49.961  INFO 7124 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
+2023-08-14 15:55:50.785  INFO 7124 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-08-14 15:55:50.799  INFO 7124 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-08-14 15:55:50.799  INFO 7124 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-08-14 15:55:50.800  INFO 7124 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-08-14 15:55:50.801  INFO 7124 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-08-14 15:55:50.801  INFO 7124 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-08-14 15:55:50.801  INFO 7124 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-08-14 15:55:50.801  INFO 7124 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@59add0d7
+2023-08-14 15:55:50.836  INFO 7124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-14 15:55:51.082  INFO 7124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-14 15:55:51.090 DEBUG 7124 --- [restartedMain] t.w.mapper.ScheduleJobMapper.getJobList  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job
+2023-08-14 15:55:51.113 DEBUG 7124 --- [restartedMain] t.w.mapper.ScheduleJobMapper.getJobList  : ==> Parameters: 
+2023-08-14 15:55:51.140 DEBUG 7124 --- [restartedMain] t.w.mapper.ScheduleJobMapper.getJobList  : <==      Total: 2
+2023-08-14 15:55:51.388  INFO 7124 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-14 15:55:51.871  INFO 7124 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a1a805e, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e288170, org.springframework.security.web.header.HeaderWriterFilter@7787c88f, org.springframework.web.filter.CorsFilter@5d967133, org.springframework.security.web.authentication.logout.LogoutFilter@2644e2d7, top.wade.config.JwtLoginFilter@33df069, top.wade.config.JwtFilter@5f252d97, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69588be8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7328abf9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31d35e5d, org.springframework.security.web.session.SessionManagementFilter@5ab89e4c, org.springframework.security.web.access.ExceptionTranslationFilter@539dfbb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41dbc143]
+2023-08-14 15:55:51.925  INFO 7124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-14 15:55:51.942  INFO 7124 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-08-14 15:55:51.942  INFO 7124 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-08-14 15:55:51.972  INFO 7124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2023-08-14 15:55:51.975  INFO 7124 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 6.456 seconds (JVM running for 7.778)
+2023-08-14 15:56:32.694  INFO 7124 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-14 15:56:32.694  INFO 7124 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-14 15:56:32.705  INFO 7124 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2023-08-14 15:56:42.677 DEBUG 7124 --- [http-nio-8090-exec-4] top.wade.config.JwtLoginFilter           : Request is to process authentication
+2023-08-14 15:56:42.783 DEBUG 7124 --- [http-nio-8090-exec-4] t.wade.mapper.UserMapper.findByUsername  : ==>  Preparing: select * from user where username=? limit 1
+2023-08-14 15:56:42.783 DEBUG 7124 --- [http-nio-8090-exec-4] t.wade.mapper.UserMapper.findByUsername  : ==> Parameters: Admin(String)
+2023-08-14 15:56:42.789 DEBUG 7124 --- [http-nio-8090-exec-4] t.wade.mapper.UserMapper.findByUsername  : <==      Total: 1
+2023-08-14 15:56:42.913  INFO 7124 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
+2023-08-14 15:56:43.157 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.V.countVisitLogByToday             : ==>  Preparing: select count(*) from visit_log where date(create_time) = curdate()
+2023-08-14 15:56:43.157 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.V.countVisitLogByToday             : ==> Parameters: 
+2023-08-14 15:56:43.167 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.V.countVisitLogByToday             : <==      Total: 1
+2023-08-14 15:56:43.277  INFO 7124 --- [http-nio-8090-exec-5] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2023-08-14 15:56:43.279  INFO 7124 --- [http-nio-8090-exec-5] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2023-08-14 15:56:44.134 DEBUG 7124 --- [http-nio-8090-exec-5] top.wade.mapper.BlogMapper.countBlog     : ==>  Preparing: select count(*) from blog
+2023-08-14 15:56:44.135 DEBUG 7124 --- [http-nio-8090-exec-5] top.wade.mapper.BlogMapper.countBlog     : ==> Parameters: 
+2023-08-14 15:56:44.140 DEBUG 7124 --- [http-nio-8090-exec-5] top.wade.mapper.BlogMapper.countBlog     : <==      Total: 1
+2023-08-14 15:56:44.141 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.mapper.CommentMapper.countComment    : ==>  Preparing: select count(*) from comment
+2023-08-14 15:56:44.142 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.mapper.CommentMapper.countComment    : ==> Parameters: 
+2023-08-14 15:56:44.147 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.mapper.CommentMapper.countComment    : <==      Total: 1
+2023-08-14 15:56:44.147 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.B.getCategoryBlogCountList         : ==>  Preparing: select category_id, count(category_id) as blog_count from blog group by category_id
+2023-08-14 15:56:44.148 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.B.getCategoryBlogCountList         : ==> Parameters: 
+2023-08-14 15:56:44.148 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.B.getCategoryBlogCountList         : <==      Total: 1
+2023-08-14 15:56:44.149 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-14 15:56:44.149 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-14 15:56:44.153 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-14 15:56:44.154 DEBUG 7124 --- [http-nio-8090-exec-5] t.wade.mapper.TagMapper.getTagBlogCount  : ==>  Preparing: select tag_id, count(tag_id) as blog_count from blog_tag group by tag_id
+2023-08-14 15:56:44.154 DEBUG 7124 --- [http-nio-8090-exec-5] t.wade.mapper.TagMapper.getTagBlogCount  : ==> Parameters: 
+2023-08-14 15:56:44.158 DEBUG 7124 --- [http-nio-8090-exec-5] t.wade.mapper.TagMapper.getTagBlogCount  : <==      Total: 1
+2023-08-14 15:56:44.159 DEBUG 7124 --- [http-nio-8090-exec-5] top.wade.mapper.TagMapper.getTagList     : ==>  Preparing: select id, tag_name, color from tag order by id desc
+2023-08-14 15:56:44.159 DEBUG 7124 --- [http-nio-8090-exec-5] top.wade.mapper.TagMapper.getTagList     : ==> Parameters: 
+2023-08-14 15:56:44.163 DEBUG 7124 --- [http-nio-8090-exec-5] top.wade.mapper.TagMapper.getTagList     : <==      Total: 1
+2023-08-14 15:56:44.164 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.V.getVisitRecordListByLimit        : ==>  Preparing: select pv, uv, date from visit_record order by id desc limit ?
+2023-08-14 15:56:44.164 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.V.getVisitRecordListByLimit        : ==> Parameters: 30(Integer)
+2023-08-14 15:56:44.167 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.V.getVisitRecordListByLimit        : <==      Total: 0
+2023-08-14 15:56:44.168 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.C.getCityVisitorList               : ==>  Preparing: select city, uv from city_visitor order by uv desc
+2023-08-14 15:56:44.168 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.C.getCityVisitorList               : ==> Parameters: 
+2023-08-14 15:56:44.171 DEBUG 7124 --- [http-nio-8090-exec-5] t.w.m.C.getCityVisitorList               : <==      Total: 0
+2023-08-14 15:56:44.291  INFO 7124 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Built in 1376 msec : Hashmap 192397, Ranges map:2904
+2023-08-14 15:56:44.364 DEBUG 7124 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : ==>  Preparing: insert into login_log (username, ip, ip_source, os, browser, status, description, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-08-14 15:56:44.366 DEBUG 7124 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : ==> Parameters: Admin(String), 192.168.100.76(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), true(Boolean), 登录成功(String), 2023-08-14 15:56:42.899(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
+2023-08-14 15:56:44.371 DEBUG 7124 --- [task-1] t.w.mapper.LoginLogMapper.saveLoginLog   : <==    Updates: 1
+2023-08-14 15:56:51.139 DEBUG 7124 --- [http-nio-8090-exec-7] t.w.m.S.getJobList_COUNT                 : ==>  Preparing: SELECT count(0) FROM schedule_job
+2023-08-14 15:56:51.139 DEBUG 7124 --- [http-nio-8090-exec-7] t.w.m.S.getJobList_COUNT                 : ==> Parameters: 
+2023-08-14 15:56:51.142 DEBUG 7124 --- [http-nio-8090-exec-7] t.w.m.S.getJobList_COUNT                 : <==      Total: 1
+2023-08-14 15:56:51.145 DEBUG 7124 --- [http-nio-8090-exec-7] t.w.mapper.ScheduleJobMapper.getJobList  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job LIMIT ?
+2023-08-14 15:56:51.145 DEBUG 7124 --- [http-nio-8090-exec-7] t.w.mapper.ScheduleJobMapper.getJobList  : ==> Parameters: 10(Integer)
+2023-08-14 15:56:51.147 DEBUG 7124 --- [http-nio-8090-exec-7] t.w.mapper.ScheduleJobMapper.getJobList  : <==      Total: 2
+2023-08-14 15:56:56.951 DEBUG 7124 --- [http-nio-8090-exec-9] t.w.mapper.ScheduleJobMapper.getJobById  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job where job_id=?
+2023-08-14 15:56:56.951 DEBUG 7124 --- [http-nio-8090-exec-9] t.w.mapper.ScheduleJobMapper.getJobById  : ==> Parameters: 1(Long)
+2023-08-14 15:56:56.952 DEBUG 7124 --- [http-nio-8090-exec-9] t.w.mapper.ScheduleJobMapper.getJobById  : <==      Total: 1
+2023-08-14 15:56:56.969  INFO 7124 --- [quartzScheduler_Worker-1] top.wade.util.quartz.ScheduleJob         : 任务准备执行，任务ID:1
+2023-08-14 15:56:56.974 ERROR 7124 --- [quartzScheduler_Worker-1] top.wade.util.quartz.ScheduleJob         : 任务执行失败，任务ID: 1
+
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'redisSyncScheduleTask' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:814) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1282) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at top.wade.util.common.SpringContextUtils.getBean(SpringContextUtils.java:23) ~[classes/:na]
+	at top.wade.util.quartz.ScheduleRunnable.<init>(ScheduleRunnable.java:20) ~[classes/:na]
+	at top.wade.util.quartz.ScheduleJob.executeInternal(ScheduleJob.java:42) ~[classes/:na]
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75) [spring-context-support-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) [quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) [quartz-2.3.2.jar:na]
+
+2023-08-14 15:56:56.975 DEBUG 7124 --- [quartzScheduler_Worker-1] t.w.m.ScheduleJobLogMapper.saveJobLog    : ==>  Preparing: insert into schedule_job_log (job_id, bean_name, method_name, params, status, error, times, create_time) values (?, ?, ?, ?, ?, ?, ?, ?)
+2023-08-14 15:56:56.976 DEBUG 7124 --- [quartzScheduler_Worker-1] t.w.m.ScheduleJobLogMapper.saveJobLog    : ==> Parameters: 1(Long), redisSyncScheduleTask(String), syncBlogViewsToDatabase(String), (String), false(Boolean), org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'redisSyncScheduleTask' available(String), 1(Integer), 2023-08-14 15:56:56.969(Timestamp)
+2023-08-14 15:56:56.983 DEBUG 7124 --- [quartzScheduler_Worker-1] t.w.m.ScheduleJobLogMapper.saveJobLog    : <==    Updates: 1
+2023-08-14 15:57:47.845 DEBUG 7124 --- [http-nio-8090-exec-1] t.w.mapper.ScheduleJobMapper.updateJob   : ==>  Preparing: update schedule_job set bean_name=?, method_name=?, params=?, cron=?, status=?, remark=? where job_id=?
+2023-08-14 15:57:47.846 DEBUG 7124 --- [http-nio-8090-exec-1] t.w.mapper.ScheduleJobMapper.updateJob   : ==> Parameters: RedisSyncScheduleTask(String), syncBlogViewsToDatabase(String), (String), 0 0 1 * * ?(String), false(Boolean), 每天凌晨一点，从Redis将博客浏览量同步到数据库(String), 1(Long)
+2023-08-14 15:57:47.847 DEBUG 7124 --- [http-nio-8090-exec-1] t.w.mapper.ScheduleJobMapper.updateJob   : <==    Updates: 1
+2023-08-14 15:57:47.878 DEBUG 7124 --- [http-nio-8090-exec-2] t.w.m.S.getJobList_COUNT                 : ==>  Preparing: SELECT count(0) FROM schedule_job
+2023-08-14 15:57:47.879 DEBUG 7124 --- [http-nio-8090-exec-2] t.w.m.S.getJobList_COUNT                 : ==> Parameters: 
+2023-08-14 15:57:47.881 DEBUG 7124 --- [http-nio-8090-exec-2] t.w.m.S.getJobList_COUNT                 : <==      Total: 1
+2023-08-14 15:57:47.882 DEBUG 7124 --- [http-nio-8090-exec-2] t.w.mapper.ScheduleJobMapper.getJobList  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job LIMIT ?
+2023-08-14 15:57:47.882 DEBUG 7124 --- [http-nio-8090-exec-2] t.w.mapper.ScheduleJobMapper.getJobList  : ==> Parameters: 10(Integer)
+2023-08-14 15:57:47.884 DEBUG 7124 --- [http-nio-8090-exec-2] t.w.mapper.ScheduleJobMapper.getJobList  : <==      Total: 2
+2023-08-14 15:57:52.845 DEBUG 7124 --- [http-nio-8090-exec-3] t.w.mapper.ScheduleJobMapper.getJobById  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job where job_id=?
+2023-08-14 15:57:52.845 DEBUG 7124 --- [http-nio-8090-exec-3] t.w.mapper.ScheduleJobMapper.getJobById  : ==> Parameters: 1(Long)
+2023-08-14 15:57:52.847 DEBUG 7124 --- [http-nio-8090-exec-3] t.w.mapper.ScheduleJobMapper.getJobById  : <==      Total: 1
+2023-08-14 15:57:52.849  INFO 7124 --- [quartzScheduler_Worker-2] top.wade.util.quartz.ScheduleJob         : 任务准备执行，任务ID:1
+2023-08-14 15:57:52.851 ERROR 7124 --- [quartzScheduler_Worker-2] top.wade.util.quartz.ScheduleJob         : 任务执行失败，任务ID: 1
+
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'RedisSyncScheduleTask' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:814) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1282) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at top.wade.util.common.SpringContextUtils.getBean(SpringContextUtils.java:23) ~[classes/:na]
+	at top.wade.util.quartz.ScheduleRunnable.<init>(ScheduleRunnable.java:20) ~[classes/:na]
+	at top.wade.util.quartz.ScheduleJob.executeInternal(ScheduleJob.java:42) ~[classes/:na]
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75) [spring-context-support-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202) [quartz-2.3.2.jar:na]
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573) [quartz-2.3.2.jar:na]
+
+2023-08-14 15:57:52.852 DEBUG 7124 --- [quartzScheduler_Worker-2] t.w.m.ScheduleJobLogMapper.saveJobLog    : ==>  Preparing: insert into schedule_job_log (job_id, bean_name, method_name, params, status, error, times, create_time) values (?, ?, ?, ?, ?, ?, ?, ?)
+2023-08-14 15:57:52.852 DEBUG 7124 --- [quartzScheduler_Worker-2] t.w.m.ScheduleJobLogMapper.saveJobLog    : ==> Parameters: 1(Long), RedisSyncScheduleTask(String), syncBlogViewsToDatabase(String), (String), false(Boolean), org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'RedisSyncScheduleTask' available(String), 1(Integer), 2023-08-14 15:57:52.849(Timestamp)
+2023-08-14 15:57:52.853 DEBUG 7124 --- [quartzScheduler_Worker-2] t.w.m.ScheduleJobLogMapper.saveJobLog    : <==    Updates: 1

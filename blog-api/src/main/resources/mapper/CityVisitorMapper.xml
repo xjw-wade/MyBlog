@@ -11,4 +11,11 @@
         select city, uv from city_visitor order by uv desc
     </select>
 
+    <!--添加访问记录-->
+    <insert id="saveCityVisitor" parameterType="top.wade.entity.CityVisitor">
+        insert into city_visitor (city, uv) values (#{city}, #{uv})
+        on duplicate key update
+        uv = uv + #{uv}
+    </insert>
+
 </mapper>

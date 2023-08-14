@@ -16,4 +16,5 @@ import java.util.List;
 public interface CityVisitorMapper {
     List<CityVisitor> getCityVisitorList();
 
+    int saveCityVisitor(CityVisitor cityVisitor);
 }

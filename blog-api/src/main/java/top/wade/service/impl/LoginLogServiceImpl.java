@@ -1,10 +1,10 @@
 package top.wade.service.impl;
 
-import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.wade.entity.LoginLog;
+import top.wade.exception.PersistenceException;
 import top.wade.mapper.LoginLogMapper;
 import top.wade.model.dto.UserAgentDTO;
 import top.wade.service.LoginLogService;

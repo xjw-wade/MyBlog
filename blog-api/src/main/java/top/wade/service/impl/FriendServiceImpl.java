@@ -1,11 +1,11 @@
 package top.wade.service.impl;
 
-import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.wade.constant.RedisKeyConstants;
 import top.wade.entity.SiteSetting;
+import top.wade.exception.PersistenceException;
 import top.wade.mapper.FriendMapper;
 import top.wade.mapper.SiteSettingMapper;
 import top.wade.model.vo.Friend;

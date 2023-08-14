@@ -3,6 +3,9 @@ package top.wade.mapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import top.wade.entity.Visitor;
+import top.wade.model.dto.VisitLogUuidTime;
+
+import java.util.List;
 
 /**
  * @Author xjw
@@ -15,4 +18,12 @@ public interface VisitorMapper {
     int hasUUID(String uuid);
 
     int saveVisitor(Visitor visitor);
+
+    int updatePVAndLastTimeByUUID(VisitLogUuidTime dto);
+
+    List<Visitor> getVisitorListByDate(String startDate, String endDate);
+
+    List<String> getNewVisitorIpSourceByYesterday();
+
+    int deleteVisitorById(Long id);
 }

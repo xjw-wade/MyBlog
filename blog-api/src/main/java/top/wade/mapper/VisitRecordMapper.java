@@ -15,4 +15,6 @@ import java.util.List;
 @Repository
 public interface VisitRecordMapper {
     List<VisitRecord> getVisitRecordListByLimit(Integer limit);
+
+    int saveVisitRecord(VisitRecord visitRecord);
 }

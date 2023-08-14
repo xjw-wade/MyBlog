@@ -1,15 +1,20 @@
 package top.wade.service.impl;
 
-import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import top.wade.constant.RedisKeyConstants;
 import top.wade.entity.Visitor;
+import top.wade.exception.PersistenceException;
 import top.wade.mapper.VisitorMapper;
 import top.wade.model.dto.UserAgentDTO;
+import top.wade.model.dto.VisitLogUuidTime;
+import top.wade.service.RedisService;
 import top.wade.service.VisitorService;
 import top.wade.util.IpAddressUtils;
 import top.wade.util.UserAgentUtils;
+
+import java.util.List;
 
 /**
  * @Author xjw
@@ -22,6 +27,8 @@ public class VisitorServiceImpl implements VisitorService {
     VisitorMapper visitorMapper;
     @Autowired
     UserAgentUtils userAgentUtils;
+    @Autowired
+    RedisService redisService;
 
     @Override
     public boolean hasUUID(String uuid) {
@@ -40,5 +47,31 @@ public class VisitorServiceImpl implements VisitorService {
             throw new PersistenceException("访客添加失败");
         }
 
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void updatePVAndLastTimeByUUID(VisitLogUuidTime dto) {
+        visitorMapper.updatePVAndLastTimeByUUID(dto);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void deleteVisitor(Long id, String uuid) {
+        //删除Redis中该访客的uuid
+        redisService.deleteValueBySet(RedisKeyConstants.IDENTIFICATION_SET, uuid);
+        if (visitorMapper.deleteVisitorById(id) != 1) {
+            throw new PersistenceException("删除访客失败");
+        }
+    }
+
+    @Override
+    public List<Visitor> getVisitorListByDate(String startDate, String endDate) {
+        return visitorMapper.getVisitorListByDate(startDate, endDate);
+    }
+
+    @Override
+    public List<String> getNewVisitorIpSourceByYesterday() {
+        return visitorMapper.getNewVisitorIpSourceByYesterday();
     }
 }

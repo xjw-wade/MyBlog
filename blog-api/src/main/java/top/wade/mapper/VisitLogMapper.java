@@ -3,6 +3,9 @@ package top.wade.mapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import top.wade.entity.VisitLog;
+import top.wade.model.dto.VisitLogUuidTime;
+
+import java.util.List;
 
 /**
  * @Author xjw
@@ -15,5 +18,11 @@ public interface VisitLogMapper {
     int saveVisitLog(VisitLog log);
 
     int countVisitLogByToday();
+
+    List<VisitLogUuidTime> getUUIDAndCreateTimeByYesterday();
+
+    List<VisitLog> getVisitLogListByUUIDAndDate(String uuid, String startDate, String endDate);
+
+    int deleteVisitLogById(Long id);
 
 }

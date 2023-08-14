@@ -30,4 +30,34 @@
         select count(*) from visit_log where date(create_time) = curdate()
     </select>
 
+    <resultMap id="logDTO" type="top.wade.model.dto.VisitLogUuidTime">
+        <result property="uuid" column="uuid"/>
+        <result property="time" column="create_time"/>
+    </resultMap>
+
+    <!--查询昨天的所有访问日志-->
+    <select id="getUUIDAndCreateTimeByYesterday" resultMap="logDTO">
+        select uuid, create_time from visit_log where date(create_time) = date_sub(curdate(), interval 1 day) order by create_time
+    </select>
+
+    <!--删除日志-->
+    <delete id="deleteVisitLogById">
+        delete from visit_log where id = #{id}
+    </delete>
+
+    <!--查询日志-->
+    <select id="getVisitLogListByUUIDAndDate" resultMap="log">
+        <bind name="uuidPattern" value="'%' + uuid + '%'"/>
+        select id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time
+        from visit_log
+        <where>
+            <if test="uuid!=null and uuid!=''">
+                uuid like #{uuidPattern}
+            </if>
+            <if test="startDate!=null and startDate!='' and endDate!=null and endDate!=''">
+                and create_time between #{startDate} and #{endDate}
+            </if>
+        </where>
+    </select>
+
 </mapper>

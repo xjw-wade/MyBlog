@@ -45,4 +45,8 @@ public interface RedisService {
 
     void deleteByHashKey(String hash, Object key);
 
+    Map getMapByHash(String hash);
+
+    void deleteValueBySet(String key, Object value);
+
 }

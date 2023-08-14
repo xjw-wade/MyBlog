@@ -53,7 +53,6 @@ public class BlogController {
         }
         List<SearchBlog> searchBlogs = blogService.getSearchBlogListByQueryAndIsPublished(query.trim());
         return Result.ok("获取成功", searchBlogs);
-
     }
 
 }

@@ -22,6 +22,10 @@ public class HashUtils {
         return bCryptPasswordEncoder.matches(rawPassword, encoderPassword);
     }
 
+    public static String getBC(CharSequence rawPassword) {
+        return bCryptPasswordEncoder.encode(rawPassword);
+    }
+
 
 
 }
