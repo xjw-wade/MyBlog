@@ -177,6 +177,45 @@ const routes = [
 		},
 	]
 },
+{
+	path: '/log',
+	name: 'Log',
+	redirect: '/log/job',
+	component: Layout,
+	meta: {title: '日志管理', icon: 'el-icon-document'},
+	children: [
+		{
+			path: 'job',
+			name: 'JobLog',
+			component: () => import('@/views/log/ScheduleJobLog'),
+			meta: {title: '任务日志', icon: 'el-icon-alarm-clock'}
+		},
+		{
+			path: 'login',
+			name: 'LoginLog',
+			component: () => import('@/views/log/LoginLog'),
+			meta: {title: '登录日志', icon: 'el-icon-finished'}
+		},
+		{
+			path: 'operation',
+			name: 'OperationLog',
+			component: () => import('@/views/log/OperationLog'),
+			meta: {title: '操作日志', icon: 'el-icon-document-checked'}
+		},
+		{
+			path: 'exception',
+			name: 'ExceptionLog',
+			component: () => import('@/views/log/ExceptionLog'),
+			meta: {title: '异常日志', icon: 'el-icon-document-delete'}
+		},
+		{
+			path: 'visit',
+			name: 'VisitLog',
+			component: () => import('@/views/log/VisitLog'),
+			meta: {title: '访问日志', icon: 'el-icon-data-line'}
+		},
+	]
+},
 ]
 
 const router = new VueRouter({

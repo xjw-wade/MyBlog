@@ -11,6 +11,8 @@ import top.wade.service.LoginLogService;
 import top.wade.util.IpAddressUtils;
 import top.wade.util.UserAgentUtils;
 
+import java.util.List;
+
 /**
  * @Author xjw
  * @Date 2023/7/27 12:19
@@ -35,6 +37,19 @@ public class LoginLogServiceImpl implements LoginLogService {
         log.setBrowser(userAgentDTO.getBrowser());
         if (loginLogMapper.saveLoginLog(log) != 1) {
             throw new PersistenceException("日志添加失败");
+        }
+    }
+
+    @Override
+    public List<LoginLog> getLoginLogListByDate(String startDate, String endDate) {
+        return loginLogMapper.getLoginLogListByDate(startDate, endDate);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    @Override
+    public void deleteLoginLogById(Long id) {
+        if (loginLogMapper.deleteLoginLogById(id) != 1) {
+            throw new PersistenceException("删除日志失败");
         }
     }
 }
