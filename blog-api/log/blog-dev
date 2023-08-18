@@ -178,3 +178,600 @@
 2023-08-15 20:12:17.169 DEBUG 13632 --- [http-nio-8090-exec-7] t.w.m.E.getExceptionLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM exception_log
 2023-08-15 20:12:17.170 DEBUG 13632 --- [http-nio-8090-exec-7] t.w.m.E.getExceptionLogListByDate_COUNT  : ==> Parameters: 
 2023-08-15 20:12:17.170 DEBUG 13632 --- [http-nio-8090-exec-7] t.w.m.E.getExceptionLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:15:49.571  INFO 12584 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 12584 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
+2023-08-15 20:15:49.574 DEBUG 12584 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2023-08-15 20:15:49.574  INFO 12584 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
+2023-08-15 20:15:49.638  INFO 12584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-15 20:15:49.639  INFO 12584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-15 20:15:50.411  INFO 12584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-15 20:15:50.414  INFO 12584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-15 20:15:50.447  INFO 12584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2023-08-15 20:15:51.249  INFO 12584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-08-15 20:15:51.257  INFO 12584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-15 20:15:51.257  INFO 12584 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2023-08-15 20:15:51.352  INFO 12584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-15 20:15:51.352  INFO 12584 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1713 ms
+2023-08-15 20:15:51.850  INFO 12584 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-08-15 20:15:51.852  INFO 12584 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
+2023-08-15 20:15:51.852  INFO 12584 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
+2023-08-15 20:15:51.853  INFO 12584 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
+2023-08-15 20:15:51.853  INFO 12584 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
+2023-08-15 20:15:51.853  INFO 12584 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
+2023-08-15 20:15:51.853  INFO 12584 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
+2023-08-15 20:15:51.853  INFO 12584 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-08-15 20:15:51.990  INFO 12584 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  133 ms using expression: classpath*:UserAgents/**/*.yaml
+2023-08-15 20:15:52.933  INFO 12584 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
+2023-08-15 20:15:53.474  INFO 12584 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-08-15 20:15:53.483  INFO 12584 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-08-15 20:15:53.483  INFO 12584 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-08-15 20:15:53.484  INFO 12584 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-08-15 20:15:53.485  INFO 12584 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-08-15 20:15:53.485  INFO 12584 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-08-15 20:15:53.485  INFO 12584 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-08-15 20:15:53.485  INFO 12584 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@12cbb732
+2023-08-15 20:15:53.510  INFO 12584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-15 20:15:53.622  INFO 12584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-15 20:15:53.628 DEBUG 12584 --- [restartedMain] t.w.mapper.ScheduleJobMapper.getJobList  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job
+2023-08-15 20:15:53.645 DEBUG 12584 --- [restartedMain] t.w.mapper.ScheduleJobMapper.getJobList  : ==> Parameters: 
+2023-08-15 20:15:53.685 DEBUG 12584 --- [restartedMain] t.w.mapper.ScheduleJobMapper.getJobList  : <==      Total: 2
+2023-08-15 20:15:53.910  INFO 12584 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-15 20:15:54.270  INFO 12584 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e906e12, org.springframework.security.web.context.SecurityContextPersistenceFilter@656d537f, org.springframework.security.web.header.HeaderWriterFilter@53b19cae, org.springframework.web.filter.CorsFilter@65203312, org.springframework.security.web.authentication.logout.LogoutFilter@5f94ef2a, top.wade.config.JwtLoginFilter@dcdf7b3, top.wade.config.JwtFilter@2d91de01, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c948d37, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@561de5db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@dcc55f, org.springframework.security.web.session.SessionManagementFilter@1d1fe442, org.springframework.security.web.access.ExceptionTranslationFilter@36d41dcb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@177ba6ab]
+2023-08-15 20:15:54.330  INFO 12584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-15 20:15:54.349  INFO 12584 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-08-15 20:15:54.349  INFO 12584 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-08-15 20:15:54.382  INFO 12584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2023-08-15 20:15:54.386  INFO 12584 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 5.215 seconds (JVM running for 6.387)
+2023-08-15 20:16:09.101  INFO 12584 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-15 20:16:09.101  INFO 12584 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-15 20:16:09.110  INFO 12584 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-08-15 20:16:09.669 DEBUG 12584 --- [http-nio-8090-exec-1] t.w.m.E.getExceptionLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM exception_log
+2023-08-15 20:16:09.669 DEBUG 12584 --- [http-nio-8090-exec-1] t.w.m.E.getExceptionLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:16:09.670 DEBUG 12584 --- [http-nio-8090-exec-1] t.w.m.E.getExceptionLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:16:11.979 DEBUG 12584 --- [http-nio-8090-exec-2] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:16:11.980 DEBUG 12584 --- [http-nio-8090-exec-2] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:16:11.981 DEBUG 12584 --- [http-nio-8090-exec-2] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:16:11.983 DEBUG 12584 --- [http-nio-8090-exec-2] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:16:11.984 DEBUG 12584 --- [http-nio-8090-exec-2] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:16:11.987 DEBUG 12584 --- [http-nio-8090-exec-2] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:16:28.396 DEBUG 12584 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:16:28.396 DEBUG 12584 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:16:28.397 DEBUG 12584 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:16:28.398 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?, ?
+2023-08-15 20:16:28.398 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 210(Integer), 10(Integer)
+2023-08-15 20:16:28.401 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 5
+2023-08-15 20:16:32.533 DEBUG 12584 --- [http-nio-8090-exec-6] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:16:32.533 DEBUG 12584 --- [http-nio-8090-exec-6] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:16:32.534 DEBUG 12584 --- [http-nio-8090-exec-6] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:16:32.535 DEBUG 12584 --- [http-nio-8090-exec-6] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:16:32.535 DEBUG 12584 --- [http-nio-8090-exec-6] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:16:32.540 DEBUG 12584 --- [http-nio-8090-exec-6] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:16:34.264 DEBUG 12584 --- [http-nio-8090-exec-8] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:16:34.264 DEBUG 12584 --- [http-nio-8090-exec-8] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:16:34.265 DEBUG 12584 --- [http-nio-8090-exec-8] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:16:34.266 DEBUG 12584 --- [http-nio-8090-exec-8] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?, ?
+2023-08-15 20:16:34.267 DEBUG 12584 --- [http-nio-8090-exec-8] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 50(Integer), 10(Integer)
+2023-08-15 20:16:34.268 DEBUG 12584 --- [http-nio-8090-exec-8] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:16:41.577 DEBUG 12584 --- [http-nio-8090-exec-9] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:16:41.578 DEBUG 12584 --- [http-nio-8090-exec-9] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:16:41.579 DEBUG 12584 --- [http-nio-8090-exec-9] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:16:41.580 DEBUG 12584 --- [http-nio-8090-exec-9] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:16:41.580 DEBUG 12584 --- [http-nio-8090-exec-9] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:16:41.583 DEBUG 12584 --- [http-nio-8090-exec-9] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:16:47.797 DEBUG 12584 --- [http-nio-8090-exec-1] t.w.m.C.getCategoryList_COUNT            : ==>  Preparing: SELECT count(0) FROM category
+2023-08-15 20:16:47.797 DEBUG 12584 --- [http-nio-8090-exec-1] t.w.m.C.getCategoryList_COUNT            : ==> Parameters: 
+2023-08-15 20:16:47.798 DEBUG 12584 --- [http-nio-8090-exec-1] t.w.m.C.getCategoryList_COUNT            : <==      Total: 1
+2023-08-15 20:16:47.799 DEBUG 12584 --- [http-nio-8090-exec-1] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: SELECT id, category_name FROM category order by id desc LIMIT ?
+2023-08-15 20:16:47.799 DEBUG 12584 --- [http-nio-8090-exec-1] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 10(Integer)
+2023-08-15 20:16:47.799 DEBUG 12584 --- [http-nio-8090-exec-1] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-15 20:16:49.502 DEBUG 12584 --- [http-nio-8090-exec-3] t.w.m.O.getOperationLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM operation_log
+2023-08-15 20:16:49.503 DEBUG 12584 --- [http-nio-8090-exec-3] t.w.m.O.getOperationLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:16:49.504 DEBUG 12584 --- [http-nio-8090-exec-3] t.w.m.O.getOperationLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:16:49.969 DEBUG 12584 --- [http-nio-8090-exec-2] t.w.m.E.getExceptionLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM exception_log
+2023-08-15 20:16:49.970 DEBUG 12584 --- [http-nio-8090-exec-2] t.w.m.E.getExceptionLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:16:49.972 DEBUG 12584 --- [http-nio-8090-exec-2] t.w.m.E.getExceptionLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:20:27.396 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.V.countVisitLogByToday             : ==>  Preparing: select count(*) from visit_log where date(create_time) = curdate()
+2023-08-15 20:20:27.397 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.V.countVisitLogByToday             : ==> Parameters: 
+2023-08-15 20:20:27.399 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.V.countVisitLogByToday             : <==      Total: 1
+2023-08-15 20:20:27.499  INFO 12584 --- [http-nio-8090-exec-5] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2023-08-15 20:20:27.501  INFO 12584 --- [http-nio-8090-exec-5] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2023-08-15 20:20:28.320 DEBUG 12584 --- [http-nio-8090-exec-5] top.wade.mapper.BlogMapper.countBlog     : ==>  Preparing: select count(*) from blog
+2023-08-15 20:20:28.320 DEBUG 12584 --- [http-nio-8090-exec-5] top.wade.mapper.BlogMapper.countBlog     : ==> Parameters: 
+2023-08-15 20:20:28.321 DEBUG 12584 --- [http-nio-8090-exec-5] top.wade.mapper.BlogMapper.countBlog     : <==      Total: 1
+2023-08-15 20:20:28.321 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.mapper.CommentMapper.countComment    : ==>  Preparing: select count(*) from comment
+2023-08-15 20:20:28.321 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.mapper.CommentMapper.countComment    : ==> Parameters: 
+2023-08-15 20:20:28.322 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.mapper.CommentMapper.countComment    : <==      Total: 1
+2023-08-15 20:20:28.324 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.B.getCategoryBlogCountList         : ==>  Preparing: select category_id, count(category_id) as blog_count from blog group by category_id
+2023-08-15 20:20:28.324 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.B.getCategoryBlogCountList         : ==> Parameters: 
+2023-08-15 20:20:28.325 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.B.getCategoryBlogCountList         : <==      Total: 1
+2023-08-15 20:20:28.326 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-15 20:20:28.326 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-15 20:20:28.327 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-15 20:20:28.327 DEBUG 12584 --- [http-nio-8090-exec-5] t.wade.mapper.TagMapper.getTagBlogCount  : ==>  Preparing: select tag_id, count(tag_id) as blog_count from blog_tag group by tag_id
+2023-08-15 20:20:28.327 DEBUG 12584 --- [http-nio-8090-exec-5] t.wade.mapper.TagMapper.getTagBlogCount  : ==> Parameters: 
+2023-08-15 20:20:28.329 DEBUG 12584 --- [http-nio-8090-exec-5] t.wade.mapper.TagMapper.getTagBlogCount  : <==      Total: 1
+2023-08-15 20:20:28.330 DEBUG 12584 --- [http-nio-8090-exec-5] top.wade.mapper.TagMapper.getTagList     : ==>  Preparing: select id, tag_name, color from tag order by id desc
+2023-08-15 20:20:28.331 DEBUG 12584 --- [http-nio-8090-exec-5] top.wade.mapper.TagMapper.getTagList     : ==> Parameters: 
+2023-08-15 20:20:28.332 DEBUG 12584 --- [http-nio-8090-exec-5] top.wade.mapper.TagMapper.getTagList     : <==      Total: 1
+2023-08-15 20:20:28.333 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.V.getVisitRecordListByLimit        : ==>  Preparing: select pv, uv, date from visit_record order by id desc limit ?
+2023-08-15 20:20:28.333 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.V.getVisitRecordListByLimit        : ==> Parameters: 30(Integer)
+2023-08-15 20:20:28.334 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.V.getVisitRecordListByLimit        : <==      Total: 1
+2023-08-15 20:20:28.335 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.C.getCityVisitorList               : ==>  Preparing: select city, uv from city_visitor order by uv desc
+2023-08-15 20:20:28.335 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.C.getCityVisitorList               : ==> Parameters: 
+2023-08-15 20:20:28.336 DEBUG 12584 --- [http-nio-8090-exec-5] t.w.m.C.getCityVisitorList               : <==      Total: 0
+2023-08-15 20:23:37.145  INFO 20980 --- [restartedMain] top.wade.BlogApiApplication              : Starting BlogApiApplication on DESKTOP-90P38RG with PID 20980 (E:\Projects\my-blog\my-blog\blog-api\target\classes started by xjw in E:\Projects\my-blog\my-blog\blog-api)
+2023-08-15 20:23:37.149 DEBUG 20980 --- [restartedMain] top.wade.BlogApiApplication              : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2023-08-15 20:23:37.149  INFO 20980 --- [restartedMain] top.wade.BlogApiApplication              : The following profiles are active: dev
+2023-08-15 20:23:37.223  INFO 20980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-15 20:23:37.224  INFO 20980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-15 20:23:37.999  INFO 20980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-15 20:23:38.000  INFO 20980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-15 20:23:38.035  INFO 20980 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2023-08-15 20:23:38.739  INFO 20980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2023-08-15 20:23:38.747  INFO 20980 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-15 20:23:38.747  INFO 20980 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2023-08-15 20:23:38.832  INFO 20980 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-15 20:23:38.832  INFO 20980 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1608 ms
+2023-08-15 20:23:39.294  INFO 20980 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-08-15 20:23:39.295  INFO 20980 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : /-----------------------------------------------------------\
+2023-08-15 20:23:39.296  INFO 20980 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Yauaa 7.11.0 (v7.11.0 @ 2023-01-24T21:50:03Z)             |
+2023-08-15 20:23:39.296  INFO 20980 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : +-----------------------------------------------------------+
+2023-08-15 20:23:39.296  INFO 20980 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | For more information: https://yauaa.basjes.nl             |
+2023-08-15 20:23:39.296  INFO 20980 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : | Copyright (C) 2013-2023 Niels Basjes - License Apache 2.0 |
+2023-08-15 20:23:39.296  INFO 20980 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : \-----------------------------------------------------------/
+2023-08-15 20:23:39.296  INFO 20980 --- [restartedMain] n.b.parse.useragent.utils.YauaaVersion   : 
+2023-08-15 20:23:39.427  INFO 20980 --- [restartedMain] n.b.parse.useragent.config.ConfigLoader  : - Loaded 111 files in  126 ms using expression: classpath*:UserAgents/**/*.yaml
+2023-08-15 20:23:40.373  INFO 20980 --- [restartedMain] n.b.p.u.a.UserAgentStringMatchMaker      : Building all needed matchers for the requested 11 fields.
+2023-08-15 20:23:40.944  INFO 20980 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-08-15 20:23:40.955  INFO 20980 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-08-15 20:23:40.955  INFO 20980 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2023-08-15 20:23:40.956  INFO 20980 --- [restartedMain] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-08-15 20:23:40.956  INFO 20980 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-08-15 20:23:40.957  INFO 20980 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-08-15 20:23:40.957  INFO 20980 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2023-08-15 20:23:40.957  INFO 20980 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@385badec
+2023-08-15 20:23:40.986  INFO 20980 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-08-15 20:23:41.110  INFO 20980 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-08-15 20:23:41.117 DEBUG 20980 --- [restartedMain] t.w.mapper.ScheduleJobMapper.getJobList  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job
+2023-08-15 20:23:41.142 DEBUG 20980 --- [restartedMain] t.w.mapper.ScheduleJobMapper.getJobList  : ==> Parameters: 
+2023-08-15 20:23:41.168 DEBUG 20980 --- [restartedMain] t.w.mapper.ScheduleJobMapper.getJobList  : <==      Total: 2
+2023-08-15 20:23:41.435  INFO 20980 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-15 20:23:41.790  INFO 20980 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28da7b17, org.springframework.security.web.context.SecurityContextPersistenceFilter@583bd671, org.springframework.security.web.header.HeaderWriterFilter@57676ec3, org.springframework.web.filter.CorsFilter@4e5890b, org.springframework.security.web.authentication.logout.LogoutFilter@591d268d, top.wade.config.JwtLoginFilter@dcd089d, top.wade.config.JwtFilter@542b0d45, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f6325ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ee75e48, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f52d614, org.springframework.security.web.session.SessionManagementFilter@3d4db3de, org.springframework.security.web.access.ExceptionTranslationFilter@78fcd269, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e17c4a0]
+2023-08-15 20:23:41.857  INFO 20980 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-15 20:23:41.873  INFO 20980 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2023-08-15 20:23:41.874  INFO 20980 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-08-15 20:23:41.904  INFO 20980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2023-08-15 20:23:41.906  INFO 20980 --- [restartedMain] top.wade.BlogApiApplication              : Started BlogApiApplication in 5.194 seconds (JVM running for 6.393)
+2023-08-15 20:24:01.796  INFO 20980 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-15 20:24:01.796  INFO 20980 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-15 20:24:01.804  INFO 20980 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-08-15 20:24:02.360 DEBUG 20980 --- [http-nio-8090-exec-1] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:24:02.360 DEBUG 20980 --- [http-nio-8090-exec-1] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:24:02.362 DEBUG 20980 --- [http-nio-8090-exec-1] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:24:02.366 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:24:02.366 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:24:02.370 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:24:05.232 DEBUG 20980 --- [http-nio-8090-exec-2] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:24:05.233 DEBUG 20980 --- [http-nio-8090-exec-2] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:24:05.235 DEBUG 20980 --- [http-nio-8090-exec-2] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:24:05.238 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:24:05.238 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:24:05.244 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:24:08.629 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate_COUNT       : ==>  Preparing: SELECT count(0) FROM visitor
+2023-08-15 20:24:08.629 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate_COUNT       : ==> Parameters: 
+2023-08-15 20:24:08.638 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate_COUNT       : <==      Total: 1
+2023-08-15 20:24:08.639 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate             : ==>  Preparing: SELECT id, uuid, ip, ip_source, os, browser, create_time, last_time, pv FROM visitor order by create_time desc LIMIT ?
+2023-08-15 20:24:08.640 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate             : ==> Parameters: 10(Integer)
+2023-08-15 20:24:08.641 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate             : <==      Total: 4
+2023-08-15 20:24:10.843 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log WHERE uuid LIKE ?
+2023-08-15 20:24:10.843 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: %f1f9247e-5355-36ac-a774-2b7cd24089d5%(String)
+2023-08-15 20:24:10.847 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:24:10.849 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log WHERE uuid LIKE ? order by create_time desc LIMIT ?
+2023-08-15 20:24:10.850 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: %f1f9247e-5355-36ac-a774-2b7cd24089d5%(String), 10(Integer)
+2023-08-15 20:24:10.851 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 1
+2023-08-15 20:24:21.085 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitorListByDate_COUNT       : ==>  Preparing: SELECT count(0) FROM visitor
+2023-08-15 20:24:21.085 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitorListByDate_COUNT       : ==> Parameters: 
+2023-08-15 20:24:21.086 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitorListByDate_COUNT       : <==      Total: 1
+2023-08-15 20:24:21.087 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitorListByDate             : ==>  Preparing: SELECT id, uuid, ip, ip_source, os, browser, create_time, last_time, pv FROM visitor order by create_time desc LIMIT ?
+2023-08-15 20:24:21.087 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitorListByDate             : ==> Parameters: 10(Integer)
+2023-08-15 20:24:21.088 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitorListByDate             : <==      Total: 4
+2023-08-15 20:24:29.125 DEBUG 20980 --- [http-nio-8090-exec-8] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log WHERE uuid LIKE ?
+2023-08-15 20:24:29.125 DEBUG 20980 --- [http-nio-8090-exec-8] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: %8835a902-87d8-38a2-a60f-cea38cad6e33%(String)
+2023-08-15 20:24:29.127 DEBUG 20980 --- [http-nio-8090-exec-8] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:24:29.132 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log WHERE uuid LIKE ? order by create_time desc LIMIT ?
+2023-08-15 20:24:29.133 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: %8835a902-87d8-38a2-a60f-cea38cad6e33%(String), 10(Integer)
+2023-08-15 20:24:29.136 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:24:31.904 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate_COUNT       : ==>  Preparing: SELECT count(0) FROM visitor
+2023-08-15 20:24:31.904 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate_COUNT       : ==> Parameters: 
+2023-08-15 20:24:31.905 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate_COUNT       : <==      Total: 1
+2023-08-15 20:24:31.906 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate             : ==>  Preparing: SELECT id, uuid, ip, ip_source, os, browser, create_time, last_time, pv FROM visitor order by create_time desc LIMIT ?
+2023-08-15 20:24:31.907 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate             : ==> Parameters: 10(Integer)
+2023-08-15 20:24:31.908 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate             : <==      Total: 4
+2023-08-15 20:24:54.194 DEBUG 20980 --- [http-nio-8090-exec-7] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:24:54.195 DEBUG 20980 --- [http-nio-8090-exec-7] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:24:54.197 DEBUG 20980 --- [http-nio-8090-exec-7] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:24:54.199 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:24:54.200 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:24:54.203 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:24:55.802 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.E.getExceptionLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM exception_log
+2023-08-15 20:24:55.803 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.E.getExceptionLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:24:55.804 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.E.getExceptionLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:24:57.001 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.O.getOperationLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM operation_log
+2023-08-15 20:24:57.001 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.O.getOperationLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:24:57.002 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.O.getOperationLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:24:57.747 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate_COUNT      : ==>  Preparing: SELECT count(0) FROM login_log
+2023-08-15 20:24:57.747 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate_COUNT      : ==> Parameters: 
+2023-08-15 20:24:57.749 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate_COUNT      : <==      Total: 1
+2023-08-15 20:24:57.750 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate            : ==>  Preparing: SELECT id, username, ip, ip_source, os, browser, status, description, create_time FROM login_log order by create_time desc LIMIT ?
+2023-08-15 20:24:57.751 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate            : ==> Parameters: 10(Integer)
+2023-08-15 20:24:57.753 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate            : <==      Total: 7
+2023-08-15 20:24:58.658 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:24:58.658 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:24:58.659 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:24:58.660 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:24:58.661 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:24:58.665 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.S.getJobLogListByDate              : <==      Total: 6
+2023-08-15 20:25:07.130 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitorListByDate_COUNT       : ==>  Preparing: SELECT count(0) FROM visitor
+2023-08-15 20:25:07.130 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitorListByDate_COUNT       : ==> Parameters: 
+2023-08-15 20:25:07.131 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitorListByDate_COUNT       : <==      Total: 1
+2023-08-15 20:25:07.132 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitorListByDate             : ==>  Preparing: SELECT id, uuid, ip, ip_source, os, browser, create_time, last_time, pv FROM visitor order by create_time desc LIMIT ?
+2023-08-15 20:25:07.133 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitorListByDate             : ==> Parameters: 10(Integer)
+2023-08-15 20:25:07.137 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitorListByDate             : <==      Total: 4
+2023-08-15 20:25:08.196 DEBUG 20980 --- [http-nio-8090-exec-6] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log WHERE uuid LIKE ?
+2023-08-15 20:25:08.197 DEBUG 20980 --- [http-nio-8090-exec-6] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: %8835a902-87d8-38a2-a60f-cea38cad6e33%(String)
+2023-08-15 20:25:08.198 DEBUG 20980 --- [http-nio-8090-exec-6] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:25:08.200 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log WHERE uuid LIKE ? order by create_time desc LIMIT ?
+2023-08-15 20:25:08.201 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: %8835a902-87d8-38a2-a60f-cea38cad6e33%(String), 10(Integer)
+2023-08-15 20:25:08.203 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:25:15.678 DEBUG 20980 --- [http-nio-8090-exec-10] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log WHERE uuid LIKE ?
+2023-08-15 20:25:15.679 DEBUG 20980 --- [http-nio-8090-exec-10] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: %8835a902-87d8-38a2-a60f-cea38cad6e33%(String)
+2023-08-15 20:25:15.680 DEBUG 20980 --- [http-nio-8090-exec-10] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:25:15.682 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log WHERE uuid LIKE ? order by create_time desc LIMIT ?
+2023-08-15 20:25:15.683 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: %8835a902-87d8-38a2-a60f-cea38cad6e33%(String), 10(Integer)
+2023-08-15 20:25:15.687 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:25:17.665 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:25:17.666 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:25:17.667 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:25:17.669 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:25:17.669 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:25:17.671 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate              : <==      Total: 6
+2023-08-15 20:25:42.057 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:25:42.058 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:25:42.059 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:25:42.060 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:25:42.061 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:25:42.066 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.S.getJobLogListByDate              : <==      Total: 6
+2023-08-15 20:29:27.893 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.countVisitLogByToday             : ==>  Preparing: select count(*) from visit_log where date(create_time) = curdate()
+2023-08-15 20:29:27.893 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.countVisitLogByToday             : ==> Parameters: 
+2023-08-15 20:29:27.895 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.countVisitLogByToday             : <==      Total: 1
+2023-08-15 20:29:27.997  INFO 20980 --- [http-nio-8090-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2023-08-15 20:29:27.998  INFO 20980 --- [http-nio-8090-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2023-08-15 20:29:28.714 DEBUG 20980 --- [http-nio-8090-exec-1] top.wade.mapper.BlogMapper.countBlog     : ==>  Preparing: select count(*) from blog
+2023-08-15 20:29:28.715 DEBUG 20980 --- [http-nio-8090-exec-1] top.wade.mapper.BlogMapper.countBlog     : ==> Parameters: 
+2023-08-15 20:29:28.716 DEBUG 20980 --- [http-nio-8090-exec-1] top.wade.mapper.BlogMapper.countBlog     : <==      Total: 1
+2023-08-15 20:29:28.717 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.mapper.CommentMapper.countComment    : ==>  Preparing: select count(*) from comment
+2023-08-15 20:29:28.717 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.mapper.CommentMapper.countComment    : ==> Parameters: 
+2023-08-15 20:29:28.718 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.mapper.CommentMapper.countComment    : <==      Total: 1
+2023-08-15 20:29:28.719 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.B.getCategoryBlogCountList         : ==>  Preparing: select category_id, count(category_id) as blog_count from blog group by category_id
+2023-08-15 20:29:28.719 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.B.getCategoryBlogCountList         : ==> Parameters: 
+2023-08-15 20:29:28.720 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.B.getCategoryBlogCountList         : <==      Total: 1
+2023-08-15 20:29:28.721 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-15 20:29:28.721 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-15 20:29:28.721 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-15 20:29:28.722 DEBUG 20980 --- [http-nio-8090-exec-1] t.wade.mapper.TagMapper.getTagBlogCount  : ==>  Preparing: select tag_id, count(tag_id) as blog_count from blog_tag group by tag_id
+2023-08-15 20:29:28.723 DEBUG 20980 --- [http-nio-8090-exec-1] t.wade.mapper.TagMapper.getTagBlogCount  : ==> Parameters: 
+2023-08-15 20:29:28.729 DEBUG 20980 --- [http-nio-8090-exec-1] t.wade.mapper.TagMapper.getTagBlogCount  : <==      Total: 1
+2023-08-15 20:29:28.729 DEBUG 20980 --- [http-nio-8090-exec-1] top.wade.mapper.TagMapper.getTagList     : ==>  Preparing: select id, tag_name, color from tag order by id desc
+2023-08-15 20:29:28.730 DEBUG 20980 --- [http-nio-8090-exec-1] top.wade.mapper.TagMapper.getTagList     : ==> Parameters: 
+2023-08-15 20:29:28.730 DEBUG 20980 --- [http-nio-8090-exec-1] top.wade.mapper.TagMapper.getTagList     : <==      Total: 1
+2023-08-15 20:29:28.731 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.getVisitRecordListByLimit        : ==>  Preparing: select pv, uv, date from visit_record order by id desc limit ?
+2023-08-15 20:29:28.732 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.getVisitRecordListByLimit        : ==> Parameters: 30(Integer)
+2023-08-15 20:29:28.733 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.getVisitRecordListByLimit        : <==      Total: 1
+2023-08-15 20:29:28.734 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.C.getCityVisitorList               : ==>  Preparing: select city, uv from city_visitor order by uv desc
+2023-08-15 20:29:28.734 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.C.getCityVisitorList               : ==> Parameters: 
+2023-08-15 20:29:28.735 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.C.getCityVisitorList               : <==      Total: 0
+2023-08-15 20:29:35.285 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:29:35.286 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:29:35.287 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:29:35.288 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:29:35.289 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:29:35.290 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobLogListByDate              : <==      Total: 6
+2023-08-15 20:29:57.098 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.S.deleteJobLogByLogId              : ==>  Preparing: delete from schedule_job_log where log_id=?
+2023-08-15 20:29:57.098 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.S.deleteJobLogByLogId              : ==> Parameters: 1(Long)
+2023-08-15 20:29:57.112 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.S.deleteJobLogByLogId              : <==    Updates: 1
+2023-08-15 20:29:57.130 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:29:57.130 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:29:57.131 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:29:57.131 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:29:57.132 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:29:57.133 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.S.getJobLogListByDate              : <==      Total: 5
+2023-08-15 20:39:10.426 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.L.getLoginLogListByDate_COUNT      : ==>  Preparing: SELECT count(0) FROM login_log
+2023-08-15 20:39:10.428 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.L.getLoginLogListByDate_COUNT      : ==> Parameters: 
+2023-08-15 20:39:10.430 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.L.getLoginLogListByDate_COUNT      : <==      Total: 1
+2023-08-15 20:39:10.431 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.L.getLoginLogListByDate            : ==>  Preparing: SELECT id, username, ip, ip_source, os, browser, status, description, create_time FROM login_log order by create_time desc LIMIT ?
+2023-08-15 20:39:10.431 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.L.getLoginLogListByDate            : ==> Parameters: 10(Integer)
+2023-08-15 20:39:10.433 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.L.getLoginLogListByDate            : <==      Total: 7
+2023-08-15 20:39:11.547 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.E.getExceptionLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM exception_log
+2023-08-15 20:39:11.547 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.E.getExceptionLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:39:11.548 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.E.getExceptionLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:39:13.378 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate_COUNT       : ==>  Preparing: SELECT count(0) FROM visitor
+2023-08-15 20:39:13.379 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate_COUNT       : ==> Parameters: 
+2023-08-15 20:39:13.379 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate_COUNT       : <==      Total: 1
+2023-08-15 20:39:13.380 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate             : ==>  Preparing: SELECT id, uuid, ip, ip_source, os, browser, create_time, last_time, pv FROM visitor order by create_time desc LIMIT ?
+2023-08-15 20:39:13.380 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate             : ==> Parameters: 10(Integer)
+2023-08-15 20:39:13.381 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.V.getVisitorListByDate             : <==      Total: 4
+2023-08-15 20:39:15.730 DEBUG 20980 --- [http-nio-8090-exec-7] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log WHERE uuid LIKE ?
+2023-08-15 20:39:15.730 DEBUG 20980 --- [http-nio-8090-exec-7] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: %f1f9247e-5355-36ac-a774-2b7cd24089d5%(String)
+2023-08-15 20:39:15.731 DEBUG 20980 --- [http-nio-8090-exec-7] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:39:15.732 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log WHERE uuid LIKE ? order by create_time desc LIMIT ?
+2023-08-15 20:39:15.732 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: %f1f9247e-5355-36ac-a774-2b7cd24089d5%(String), 10(Integer)
+2023-08-15 20:39:15.733 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 1
+2023-08-15 20:39:18.008 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobList_COUNT                 : ==>  Preparing: SELECT count(0) FROM schedule_job
+2023-08-15 20:39:18.008 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobList_COUNT                 : ==> Parameters: 
+2023-08-15 20:39:18.009 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobList_COUNT                 : <==      Total: 1
+2023-08-15 20:39:18.010 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.mapper.ScheduleJobMapper.getJobList  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job LIMIT ?
+2023-08-15 20:39:18.010 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.mapper.ScheduleJobMapper.getJobList  : ==> Parameters: 10(Integer)
+2023-08-15 20:39:18.011 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.mapper.ScheduleJobMapper.getJobList  : <==      Total: 2
+2023-08-15 20:39:21.365 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.O.getOperationLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM operation_log
+2023-08-15 20:39:21.365 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.O.getOperationLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:39:21.365 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.O.getOperationLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:39:22.383 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.E.getExceptionLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM exception_log
+2023-08-15 20:39:22.383 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.E.getExceptionLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:39:22.384 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.E.getExceptionLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:39:24.290 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:39:24.291 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:39:24.292 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:39:24.292 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:39:24.293 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:39:24.294 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:39:31.458 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.VisitLogMapper.deleteVisitLogById  : ==>  Preparing: delete from visit_log where id = ?
+2023-08-15 20:39:31.458 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.VisitLogMapper.deleteVisitLogById  : ==> Parameters: 214(Long)
+2023-08-15 20:39:31.459 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.VisitLogMapper.deleteVisitLogById  : <==    Updates: 1
+2023-08-15 20:39:31.473 DEBUG 20980 --- [http-nio-8090-exec-8] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:39:31.473 DEBUG 20980 --- [http-nio-8090-exec-8] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:39:31.475 DEBUG 20980 --- [http-nio-8090-exec-8] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:39:31.475 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:39:31.476 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:39:31.477 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:39:33.814 DEBUG 20980 --- [http-nio-8090-exec-7] t.wade.mapper.SiteSettingMapper.getList  : ==>  Preparing: select * from site_setting
+2023-08-15 20:39:33.814 DEBUG 20980 --- [http-nio-8090-exec-7] t.wade.mapper.SiteSettingMapper.getList  : ==> Parameters: 
+2023-08-15 20:39:33.824 DEBUG 20980 --- [http-nio-8090-exec-7] t.wade.mapper.SiteSettingMapper.getList  : <==      Total: 32
+2023-08-15 20:39:37.015 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:39:37.016 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:39:37.017 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:39:37.017 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:39:37.018 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:39:37.018 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.S.getJobLogListByDate              : <==      Total: 5
+2023-08-15 20:41:02.748 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate_COUNT      : ==>  Preparing: SELECT count(0) FROM login_log
+2023-08-15 20:41:02.748 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate_COUNT      : ==> Parameters: 
+2023-08-15 20:41:02.749 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate_COUNT      : <==      Total: 1
+2023-08-15 20:41:02.750 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate            : ==>  Preparing: SELECT id, username, ip, ip_source, os, browser, status, description, create_time FROM login_log order by create_time desc LIMIT ?
+2023-08-15 20:41:02.750 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate            : ==> Parameters: 10(Integer)
+2023-08-15 20:41:02.752 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.L.getLoginLogListByDate            : <==      Total: 7
+2023-08-15 20:41:04.926 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.O.getOperationLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM operation_log
+2023-08-15 20:41:04.927 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.O.getOperationLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:41:04.928 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.O.getOperationLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:41:16.286 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:41:16.286 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:41:16.287 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:41:16.288 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:41:16.289 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:41:16.291 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:41:21.611 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:41:21.611 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:41:21.612 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:41:21.613 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:41:21.613 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:41:21.614 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate              : <==      Total: 5
+2023-08-15 20:41:24.698 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.S.getJobList_COUNT                 : ==>  Preparing: SELECT count(0) FROM schedule_job
+2023-08-15 20:41:24.698 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.S.getJobList_COUNT                 : ==> Parameters: 
+2023-08-15 20:41:24.699 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.S.getJobList_COUNT                 : <==      Total: 1
+2023-08-15 20:41:24.700 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.mapper.ScheduleJobMapper.getJobList  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job LIMIT ?
+2023-08-15 20:41:24.700 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.mapper.ScheduleJobMapper.getJobList  : ==> Parameters: 10(Integer)
+2023-08-15 20:41:24.701 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.mapper.ScheduleJobMapper.getJobList  : <==      Total: 2
+2023-08-15 20:41:31.861 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:41:31.862 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:41:31.863 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:41:31.863 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:41:31.864 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:41:31.864 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.S.getJobLogListByDate              : <==      Total: 5
+2023-08-15 20:41:35.542 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.S.getJobList_COUNT                 : ==>  Preparing: SELECT count(0) FROM schedule_job
+2023-08-15 20:41:35.542 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.S.getJobList_COUNT                 : ==> Parameters: 
+2023-08-15 20:41:35.543 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.S.getJobList_COUNT                 : <==      Total: 1
+2023-08-15 20:41:35.544 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.mapper.ScheduleJobMapper.getJobList  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job LIMIT ?
+2023-08-15 20:41:35.544 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.mapper.ScheduleJobMapper.getJobList  : ==> Parameters: 10(Integer)
+2023-08-15 20:41:35.545 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.mapper.ScheduleJobMapper.getJobList  : <==      Total: 2
+2023-08-15 20:41:36.175 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:41:36.175 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:41:36.176 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:41:36.177 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:41:36.177 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:41:36.178 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate              : <==      Total: 5
+2023-08-15 20:41:37.074 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.L.getLoginLogListByDate_COUNT      : ==>  Preparing: SELECT count(0) FROM login_log
+2023-08-15 20:41:37.075 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.L.getLoginLogListByDate_COUNT      : ==> Parameters: 
+2023-08-15 20:41:37.076 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.L.getLoginLogListByDate_COUNT      : <==      Total: 1
+2023-08-15 20:41:37.077 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.L.getLoginLogListByDate            : ==>  Preparing: SELECT id, username, ip, ip_source, os, browser, status, description, create_time FROM login_log order by create_time desc LIMIT ?
+2023-08-15 20:41:37.077 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.L.getLoginLogListByDate            : ==> Parameters: 10(Integer)
+2023-08-15 20:41:37.078 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.L.getLoginLogListByDate            : <==      Total: 7
+2023-08-15 20:41:37.656 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.E.getExceptionLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM exception_log
+2023-08-15 20:41:37.656 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.E.getExceptionLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:41:37.657 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.E.getExceptionLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:41:40.188 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate_COUNT       : ==>  Preparing: SELECT count(0) FROM visitor
+2023-08-15 20:41:40.188 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate_COUNT       : ==> Parameters: 
+2023-08-15 20:41:40.189 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate_COUNT       : <==      Total: 1
+2023-08-15 20:41:40.190 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate             : ==>  Preparing: SELECT id, uuid, ip, ip_source, os, browser, create_time, last_time, pv FROM visitor order by create_time desc LIMIT ?
+2023-08-15 20:41:40.190 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate             : ==> Parameters: 10(Integer)
+2023-08-15 20:41:40.191 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitorListByDate             : <==      Total: 4
+2023-08-15 20:41:58.393 DEBUG 20980 --- [http-nio-8090-exec-5] .w.m.B.getListByTitleAndCategoryId_COUNT : ==>  Preparing: SELECT count(0) FROM blog AS b LEFT JOIN category AS c ON b.category_id = c.id
+2023-08-15 20:41:58.393 DEBUG 20980 --- [http-nio-8090-exec-5] .w.m.B.getListByTitleAndCategoryId_COUNT : ==> Parameters: 
+2023-08-15 20:41:58.395 DEBUG 20980 --- [http-nio-8090-exec-5] .w.m.B.getListByTitleAndCategoryId_COUNT : <==      Total: 1
+2023-08-15 20:41:58.397 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.B.getListByTitleAndCategoryId      : ==>  Preparing: SELECT b.id, b.title, b.first_picture, b.create_time, b.update_time, b.is_published, b.is_recommend, b.is_appreciation, b.is_comment_enabled, b.is_top, b.password, c.id AS category_id, c.category_name FROM blog AS b LEFT JOIN category AS c ON b.category_id = c.id order by create_time desc LIMIT ?
+2023-08-15 20:41:58.397 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.B.getListByTitleAndCategoryId      : ==> Parameters: 10(Integer)
+2023-08-15 20:41:58.400 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.B.getListByTitleAndCategoryId      : <==      Total: 1
+2023-08-15 20:41:58.402 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-15 20:41:58.402 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-15 20:41:58.402 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-15 20:43:05.541 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-15 20:43:05.543 DEBUG 20980 --- [http-nio-8090-exec-9] top.wade.mapper.BlogMapper.getBlogById   : ==>  Preparing: select b.id, b.title, b.first_picture, b.content, b.description, b.is_recommend, b.is_published, b.is_appreciation, b.is_comment_enabled, b.is_top, b.create_time, b.update_time, b.views, b.words, b.read_time, b.password, c.id as category_id, c.category_name, bt.tag_id as tag_id, t.tag_name as tag_name, t.color from (((blog as b left join category as c on b.category_id=c.id) left join blog_tag as bt on b.id=bt.blog_id) left join tag as t on bt.tag_id=t.id) where b.id=?
+2023-08-15 20:43:05.544 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-15 20:43:05.544 DEBUG 20980 --- [http-nio-8090-exec-9] top.wade.mapper.BlogMapper.getBlogById   : ==> Parameters: 1(Long)
+2023-08-15 20:43:05.544 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-15 20:43:05.547 DEBUG 20980 --- [http-nio-8090-exec-7] top.wade.mapper.TagMapper.getTagList     : ==>  Preparing: select id, tag_name, color from tag order by id desc
+2023-08-15 20:43:05.547 DEBUG 20980 --- [http-nio-8090-exec-9] top.wade.mapper.BlogMapper.getBlogById   : <==      Total: 1
+2023-08-15 20:43:05.547 DEBUG 20980 --- [http-nio-8090-exec-7] top.wade.mapper.TagMapper.getTagList     : ==> Parameters: 
+2023-08-15 20:43:05.548 DEBUG 20980 --- [http-nio-8090-exec-7] top.wade.mapper.TagMapper.getTagList     : <==      Total: 1
+2023-08-15 20:43:07.436 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.O.getOperationLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM operation_log
+2023-08-15 20:43:07.437 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.O.getOperationLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:43:07.437 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.O.getOperationLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:43:09.807 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.V.getVisitorListByDate_COUNT       : ==>  Preparing: SELECT count(0) FROM visitor
+2023-08-15 20:43:09.808 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.V.getVisitorListByDate_COUNT       : ==> Parameters: 
+2023-08-15 20:43:09.808 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.V.getVisitorListByDate_COUNT       : <==      Total: 1
+2023-08-15 20:43:09.809 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.V.getVisitorListByDate             : ==>  Preparing: SELECT id, uuid, ip, ip_source, os, browser, create_time, last_time, pv FROM visitor order by create_time desc LIMIT ?
+2023-08-15 20:43:09.809 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.V.getVisitorListByDate             : ==> Parameters: 10(Integer)
+2023-08-15 20:43:09.811 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.V.getVisitorListByDate             : <==      Total: 4
+2023-08-15 20:43:14.711 DEBUG 20980 --- [http-nio-8090-exec-3] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log WHERE uuid LIKE ?
+2023-08-15 20:43:14.712 DEBUG 20980 --- [http-nio-8090-exec-3] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: %f1f9247e-5355-36ac-a774-2b7cd24089d5%(String)
+2023-08-15 20:43:14.712 DEBUG 20980 --- [http-nio-8090-exec-3] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:43:14.713 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log WHERE uuid LIKE ? order by create_time desc LIMIT ?
+2023-08-15 20:43:14.713 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: %f1f9247e-5355-36ac-a774-2b7cd24089d5%(String), 10(Integer)
+2023-08-15 20:43:14.714 DEBUG 20980 --- [http-nio-8090-exec-3] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 1
+2023-08-15 20:43:17.575 DEBUG 20980 --- [http-nio-8090-exec-4] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log WHERE uuid LIKE ?
+2023-08-15 20:43:17.575 DEBUG 20980 --- [http-nio-8090-exec-4] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: %f1f9247e-5355-36ac-a774-2b7cd24089d5%(String)
+2023-08-15 20:43:17.576 DEBUG 20980 --- [http-nio-8090-exec-4] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:43:17.577 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log WHERE uuid LIKE ? order by create_time desc LIMIT ?
+2023-08-15 20:43:17.577 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: %f1f9247e-5355-36ac-a774-2b7cd24089d5%(String), 10(Integer)
+2023-08-15 20:43:17.578 DEBUG 20980 --- [http-nio-8090-exec-4] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 1
+2023-08-15 20:43:19.081 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log WHERE uuid LIKE ?
+2023-08-15 20:43:19.081 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: %f1f9247e-5355-36ac-a774-2b7cd24089d5%(String)
+2023-08-15 20:43:19.082 DEBUG 20980 --- [http-nio-8090-exec-5] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:43:19.083 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log WHERE uuid LIKE ? order by create_time desc LIMIT ?
+2023-08-15 20:43:19.083 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: %f1f9247e-5355-36ac-a774-2b7cd24089d5%(String), 10(Integer)
+2023-08-15 20:43:19.084 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 1
+2023-08-15 20:43:27.302 DEBUG 20980 --- [http-nio-8090-exec-6] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:43:27.302 DEBUG 20980 --- [http-nio-8090-exec-6] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:43:27.304 DEBUG 20980 --- [http-nio-8090-exec-6] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:43:27.304 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:43:27.304 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:43:27.305 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:43:36.411 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.V.getVisitorListByDate_COUNT       : ==>  Preparing: SELECT count(0) FROM visitor
+2023-08-15 20:43:36.411 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.V.getVisitorListByDate_COUNT       : ==> Parameters: 
+2023-08-15 20:43:36.412 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.V.getVisitorListByDate_COUNT       : <==      Total: 1
+2023-08-15 20:43:36.413 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.V.getVisitorListByDate             : ==>  Preparing: SELECT id, uuid, ip, ip_source, os, browser, create_time, last_time, pv FROM visitor order by create_time desc LIMIT ?
+2023-08-15 20:43:36.413 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.V.getVisitorListByDate             : ==> Parameters: 10(Integer)
+2023-08-15 20:43:36.414 DEBUG 20980 --- [http-nio-8090-exec-10] t.w.m.V.getVisitorListByDate             : <==      Total: 4
+2023-08-15 20:43:42.397 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.O.getOperationLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM operation_log
+2023-08-15 20:43:42.397 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.O.getOperationLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:43:42.398 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.O.getOperationLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:43:44.043 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:43:44.044 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:43:44.045 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:43:44.045 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:43:44.045 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:43:44.046 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.S.getJobLogListByDate              : <==      Total: 5
+2023-08-15 20:43:48.425 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.E.getExceptionLogListByDate_COUNT  : ==>  Preparing: SELECT count(0) FROM exception_log
+2023-08-15 20:43:48.425 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.E.getExceptionLogListByDate_COUNT  : ==> Parameters: 
+2023-08-15 20:43:48.426 DEBUG 20980 --- [http-nio-8090-exec-9] t.w.m.E.getExceptionLogListByDate_COUNT  : <==      Total: 1
+2023-08-15 20:43:50.289 DEBUG 20980 --- [http-nio-8090-exec-1] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==>  Preparing: SELECT count(0) FROM visit_log
+2023-08-15 20:43:50.290 DEBUG 20980 --- [http-nio-8090-exec-1] w.m.V.getVisitLogListByUUIDAndDate_COUNT : ==> Parameters: 
+2023-08-15 20:43:50.291 DEBUG 20980 --- [http-nio-8090-exec-1] w.m.V.getVisitLogListByUUIDAndDate_COUNT : <==      Total: 1
+2023-08-15 20:43:50.292 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.getVisitLogListByUUIDAndDate     : ==>  Preparing: SELECT id, uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time FROM visit_log order by create_time desc LIMIT ?
+2023-08-15 20:43:50.293 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.getVisitLogListByUUIDAndDate     : ==> Parameters: 10(Integer)
+2023-08-15 20:43:50.295 DEBUG 20980 --- [http-nio-8090-exec-1] t.w.m.V.getVisitLogListByUUIDAndDate     : <==      Total: 10
+2023-08-15 20:44:01.699 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobList_COUNT                 : ==>  Preparing: SELECT count(0) FROM schedule_job
+2023-08-15 20:44:01.699 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobList_COUNT                 : ==> Parameters: 
+2023-08-15 20:44:01.700 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.m.S.getJobList_COUNT                 : <==      Total: 1
+2023-08-15 20:44:01.700 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.mapper.ScheduleJobMapper.getJobList  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job LIMIT ?
+2023-08-15 20:44:01.700 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.mapper.ScheduleJobMapper.getJobList  : ==> Parameters: 10(Integer)
+2023-08-15 20:44:01.701 DEBUG 20980 --- [http-nio-8090-exec-2] t.w.mapper.ScheduleJobMapper.getJobList  : <==      Total: 2
+2023-08-15 20:44:20.175 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.mapper.ScheduleJobMapper.getJobById  : ==>  Preparing: select job_id, bean_name, method_name, params, cron, status, remark, create_time from schedule_job where job_id=?
+2023-08-15 20:44:20.176 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.mapper.ScheduleJobMapper.getJobById  : ==> Parameters: 2(Long)
+2023-08-15 20:44:20.177 DEBUG 20980 --- [http-nio-8090-exec-5] t.w.mapper.ScheduleJobMapper.getJobById  : <==      Total: 1
+2023-08-15 20:44:20.191  INFO 20980 --- [quartzScheduler_Worker-1] top.wade.util.quartz.ScheduleJob         : 任务准备执行，任务ID:2
+2023-08-15 20:44:20.199 DEBUG 20980 --- [pool-1-thread-1] t.w.m.V.getUUIDAndCreateTimeByYesterday  : ==>  Preparing: select uuid, create_time from visit_log where date(create_time) = date_sub(curdate(), interval 1 day) order by create_time
+2023-08-15 20:44:20.199 DEBUG 20980 --- [pool-1-thread-1] t.w.m.V.getUUIDAndCreateTimeByYesterday  : ==> Parameters: 
+2023-08-15 20:44:20.200 DEBUG 20980 --- [pool-1-thread-1] t.w.m.V.getUUIDAndCreateTimeByYesterday  : <==      Total: 0
+2023-08-15 20:44:20.205 DEBUG 20980 --- [pool-1-thread-1] t.w.m.VisitRecordMapper.saveVisitRecord  : ==>  Preparing: insert into visit_record (pv, uv, date) values (?, ?, ?)
+2023-08-15 20:44:20.205 DEBUG 20980 --- [pool-1-thread-1] t.w.m.VisitRecordMapper.saveVisitRecord  : ==> Parameters: 0(Integer), 0(Integer), 08-14(String)
+2023-08-15 20:44:20.211 DEBUG 20980 --- [pool-1-thread-1] t.w.m.VisitRecordMapper.saveVisitRecord  : <==    Updates: 1
+2023-08-15 20:44:20.218 DEBUG 20980 --- [pool-1-thread-1] t.w.m.V.getNewVisitorIpSourceByYesterday : ==>  Preparing: select ip_source from visitor where date(create_time)=date_sub(curdate(), interval 1 day)
+2023-08-15 20:44:20.218 DEBUG 20980 --- [pool-1-thread-1] t.w.m.V.getNewVisitorIpSourceByYesterday : ==> Parameters: 
+2023-08-15 20:44:20.218 DEBUG 20980 --- [pool-1-thread-1] t.w.m.V.getNewVisitorIpSourceByYesterday : <==      Total: 0
+2023-08-15 20:44:20.219  INFO 20980 --- [quartzScheduler_Worker-1] top.wade.util.quartz.ScheduleJob         : 任务执行成功，任务ID: 2，总共耗时: 28毫秒
+2023-08-15 20:44:20.219 DEBUG 20980 --- [quartzScheduler_Worker-1] t.w.m.ScheduleJobLogMapper.saveJobLog    : ==>  Preparing: insert into schedule_job_log (job_id, bean_name, method_name, params, status, error, times, create_time) values (?, ?, ?, ?, ?, ?, ?, ?)
+2023-08-15 20:44:20.220 DEBUG 20980 --- [quartzScheduler_Worker-1] t.w.m.ScheduleJobLogMapper.saveJobLog    : ==> Parameters: 2(Long), visitorSyncScheduleTask(String), syncVisitInfoToDatabase(String), (String), true(Boolean), null, 28(Integer), 2023-08-15 20:44:20.191(Timestamp)
+2023-08-15 20:44:20.222 DEBUG 20980 --- [quartzScheduler_Worker-1] t.w.m.ScheduleJobLogMapper.saveJobLog    : <==    Updates: 1
+2023-08-15 20:44:29.349 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate_COUNT        : ==>  Preparing: SELECT count(0) FROM schedule_job_log
+2023-08-15 20:44:29.350 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate_COUNT        : ==> Parameters: 
+2023-08-15 20:44:29.351 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate_COUNT        : <==      Total: 1
+2023-08-15 20:44:29.351 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate              : ==>  Preparing: SELECT log_id, job_id, bean_name, method_name, params, status, error, times, create_time FROM schedule_job_log order by create_time desc LIMIT ?
+2023-08-15 20:44:29.352 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate              : ==> Parameters: 10(Integer)
+2023-08-15 20:44:29.353 DEBUG 20980 --- [http-nio-8090-exec-6] t.w.m.S.getJobLogListByDate              : <==      Total: 6
+2023-08-15 20:45:48.451 DEBUG 20980 --- [http-nio-8090-exec-8] .w.m.B.getListByTitleAndCategoryId_COUNT : ==>  Preparing: SELECT count(0) FROM blog AS b LEFT JOIN category AS c ON b.category_id = c.id
+2023-08-15 20:45:48.451 DEBUG 20980 --- [http-nio-8090-exec-8] .w.m.B.getListByTitleAndCategoryId_COUNT : ==> Parameters: 
+2023-08-15 20:45:48.451 DEBUG 20980 --- [http-nio-8090-exec-8] .w.m.B.getListByTitleAndCategoryId_COUNT : <==      Total: 1
+2023-08-15 20:45:48.457 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.B.getListByTitleAndCategoryId      : ==>  Preparing: SELECT b.id, b.title, b.first_picture, b.create_time, b.update_time, b.is_published, b.is_recommend, b.is_appreciation, b.is_comment_enabled, b.is_top, b.password, c.id AS category_id, c.category_name FROM blog AS b LEFT JOIN category AS c ON b.category_id = c.id order by create_time desc LIMIT ?
+2023-08-15 20:45:48.458 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.B.getListByTitleAndCategoryId      : ==> Parameters: 10(Integer)
+2023-08-15 20:45:48.458 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.B.getListByTitleAndCategoryId      : <==      Total: 1
+2023-08-15 20:45:48.458 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-15 20:45:48.458 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-15 20:45:48.458 DEBUG 20980 --- [http-nio-8090-exec-8] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.countVisitLogByToday             : ==>  Preparing: select count(*) from visit_log where date(create_time) = curdate()
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.countVisitLogByToday             : ==> Parameters: 
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.countVisitLogByToday             : <==      Total: 1
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] top.wade.mapper.BlogMapper.countBlog     : ==>  Preparing: select count(*) from blog
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] top.wade.mapper.BlogMapper.countBlog     : ==> Parameters: 
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] top.wade.mapper.BlogMapper.countBlog     : <==      Total: 1
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.mapper.CommentMapper.countComment    : ==>  Preparing: select count(*) from comment
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.mapper.CommentMapper.countComment    : ==> Parameters: 
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.mapper.CommentMapper.countComment    : <==      Total: 1
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.B.getCategoryBlogCountList         : ==>  Preparing: select category_id, count(category_id) as blog_count from blog group by category_id
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.B.getCategoryBlogCountList         : ==> Parameters: 
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.B.getCategoryBlogCountList         : <==      Total: 1
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.CategoryMapper.getCategoryList     : ==>  Preparing: select id, category_name from category order by id desc
+2023-08-15 20:45:48.943 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.CategoryMapper.getCategoryList     : ==> Parameters: 
+2023-08-15 20:45:48.953 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.CategoryMapper.getCategoryList     : <==      Total: 1
+2023-08-15 20:45:48.953 DEBUG 20980 --- [http-nio-8090-exec-7] t.wade.mapper.TagMapper.getTagBlogCount  : ==>  Preparing: select tag_id, count(tag_id) as blog_count from blog_tag group by tag_id
+2023-08-15 20:45:48.953 DEBUG 20980 --- [http-nio-8090-exec-7] t.wade.mapper.TagMapper.getTagBlogCount  : ==> Parameters: 
+2023-08-15 20:45:48.953 DEBUG 20980 --- [http-nio-8090-exec-7] t.wade.mapper.TagMapper.getTagBlogCount  : <==      Total: 1
+2023-08-15 20:45:48.953 DEBUG 20980 --- [http-nio-8090-exec-7] top.wade.mapper.TagMapper.getTagList     : ==>  Preparing: select id, tag_name, color from tag order by id desc
+2023-08-15 20:45:48.953 DEBUG 20980 --- [http-nio-8090-exec-7] top.wade.mapper.TagMapper.getTagList     : ==> Parameters: 
+2023-08-15 20:45:48.953 DEBUG 20980 --- [http-nio-8090-exec-7] top.wade.mapper.TagMapper.getTagList     : <==      Total: 1
+2023-08-15 20:45:48.953 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.getVisitRecordListByLimit        : ==>  Preparing: select pv, uv, date from visit_record order by id desc limit ?
+2023-08-15 20:45:48.953 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.getVisitRecordListByLimit        : ==> Parameters: 30(Integer)
+2023-08-15 20:45:48.953 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.V.getVisitRecordListByLimit        : <==      Total: 2
+2023-08-15 20:45:48.958 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.C.getCityVisitorList               : ==>  Preparing: select city, uv from city_visitor order by uv desc
+2023-08-15 20:45:48.958 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.C.getCityVisitorList               : ==> Parameters: 
+2023-08-15 20:45:48.959 DEBUG 20980 --- [http-nio-8090-exec-7] t.w.m.C.getCityVisitorList               : <==      Total: 0
+2023-08-15 20:46:25.984 DEBUG 20980 --- [http-nio-8090-exec-2] t.wade.mapper.SiteSettingMapper.getList  : ==>  Preparing: select * from site_setting
+2023-08-15 20:46:25.985 DEBUG 20980 --- [http-nio-8090-exec-2] t.wade.mapper.SiteSettingMapper.getList  : ==> Parameters: 
+2023-08-15 20:46:25.987 DEBUG 20980 --- [http-nio-8090-exec-2] t.wade.mapper.SiteSettingMapper.getList  : <==      Total: 32
+2023-08-15 20:46:26.021 DEBUG 20980 --- [http-nio-8090-exec-3] top.wade.mapper.VisitorMapper.hasUUID    : ==>  Preparing: select ifnull((select 1 from visitor where uuid=? limit 1), 0)
+2023-08-15 20:46:26.021 DEBUG 20980 --- [http-nio-8090-exec-3] top.wade.mapper.VisitorMapper.hasUUID    : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String)
+2023-08-15 20:46:26.027 DEBUG 20980 --- [http-nio-8090-exec-3] top.wade.mapper.VisitorMapper.hasUUID    : <==      Total: 1
+2023-08-15 20:46:26.031 DEBUG 20980 --- [http-nio-8090-exec-2] stByLimitNumAndIsPublishedAndIsRecommend : ==>  Preparing: select id, title, password, create_time, first_picture from blog where is_published=true and is_recommend=true order by rand() limit ?
+2023-08-15 20:46:26.031 DEBUG 20980 --- [http-nio-8090-exec-2] stByLimitNumAndIsPublishedAndIsRecommend : ==> Parameters: 5(Integer)
+2023-08-15 20:46:26.034 DEBUG 20980 --- [http-nio-8090-exec-2] stByLimitNumAndIsPublishedAndIsRecommend : <==      Total: 0
+2023-08-15 20:46:26.038  INFO 20980 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Initializing Analyzer data structures
+2023-08-15 20:46:27.348  INFO 20980 --- [task-1] n.b.p.u.a.UserAgentStringMatchMaker      : Built in 1308 msec : Hashmap 192397, Ranges map:2904
+2023-08-15 20:46:27.424 DEBUG 20980 --- [task-1] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-08-15 20:46:27.425 DEBUG 20980 --- [task-1] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /blogs(String), GET(String), {"pageNum":1}(String), 访问页面(String), 首页(String), 第1页(String), 192.168.100.76(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), 39(Integer), 2023-08-15 20:46:26.032(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
+2023-08-15 20:46:27.427 DEBUG 20980 --- [task-1] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1
+2023-08-15 20:47:06.524 DEBUG 20980 --- [http-nio-8090-exec-4] stByLimitNumAndIsPublishedAndIsRecommend : ==>  Preparing: select id, title, password, create_time, first_picture from blog where is_published=true and is_recommend=true order by rand() limit ?
+2023-08-15 20:47:06.524 DEBUG 20980 --- [http-nio-8090-exec-4] stByLimitNumAndIsPublishedAndIsRecommend : ==> Parameters: 5(Integer)
+2023-08-15 20:47:06.525 DEBUG 20980 --- [http-nio-8090-exec-4] stByLimitNumAndIsPublishedAndIsRecommend : <==      Total: 0
+2023-08-15 20:47:06.526 DEBUG 20980 --- [task-2] t.w.mapper.VisitLogMapper.saveVisitLog   : ==>  Preparing: insert into visit_log (uuid, uri, method, param, behavior, content, remark, ip, ip_source, os, browser, times, create_time, user_agent) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-08-15 20:47:06.527 DEBUG 20980 --- [task-2] t.w.mapper.VisitLogMapper.saveVisitLog   : ==> Parameters: 8835a902-87d8-38a2-a60f-cea38cad6e33(String), /blogs(String), GET(String), {"pageNum":1}(String), 访问页面(String), 首页(String), 第1页(String), 192.168.100.76(String), 内网IP|内网IP(String), Windows NT ??(String), Chrome 114(String), 10(Integer), 2023-08-15 20:47:06.525(Timestamp), Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36(String)
+2023-08-15 20:47:06.529 DEBUG 20980 --- [task-2] t.w.mapper.VisitLogMapper.saveVisitLog   : <==    Updates: 1

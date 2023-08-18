@@ -85,6 +85,7 @@
 	import Breadcrumb from "@/components/Breadcrumb";
 	import {getJobLogList, deleteJobLogByLogId} from "@/api/schedule";
 	import DateTimeRangePicker from "@/components/DateTimeRangePicker";
+	import Prism from "prismjs";
 
 	export default {
 		name: "ScheduleJobLog",

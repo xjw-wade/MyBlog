@@ -216,6 +216,25 @@ const routes = [
 		},
 	]
 },
+{
+	path: '/statistics',
+	name: 'Statistics',
+	redirect: '/statistics/visitor',
+	component: Layout,
+	meta: {title: '数据统计', icon: 'el-icon-s-data'},
+	children: [
+		{
+			path: 'visitor',
+			name: 'Visitor',
+			component: () => import('@/views/statistics/Visitor'),
+			meta: {title: '访客统计', icon: 'el-icon-s-marketing'}
+		},
+	]
+},
+
+//在最后添加一个path: * ，优先级从上到下查找路由，都没有的时候全部指向 404页面
+// 404 page must be placed at the end !!!
+{path: '*', redirect: '/404', hidden: true}
 ]
 
 const router = new VueRouter({
