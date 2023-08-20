@@ -2,8 +2,8 @@ package top.wade.util.comment;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.DependsOn;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Component;
 import top.wade.config.properties.BlogProperties;
 import top.wade.constant.PageConstants;
@@ -21,6 +21,7 @@ import top.wade.util.HashUtils;
 import top.wade.util.IpAddressUtils;
 import top.wade.util.MailUtils;
 import top.wade.util.QQInfoUtils;
+import top.wade.util.comment.channel.ChannelFactory;
 import top.wade.util.comment.channel.CommentNotifyChannel;
 
 import javax.servlet.http.HttpServletRequest;
@@ -55,6 +56,21 @@ public class CommentUtils {
 
     private CommentNotifyChannel notifyChannel;
 
+    @Autowired
+    public void setBlogService(BlogService blogService) {
+        CommentUtils.blogService = blogService;
+    }
+
+    @Value("${comment.notify.channel}")
+    public void setNotifyChannel(String channelName) {
+        this.notifyChannel = ChannelFactory.getChannel(channelName);
+    }
+
+    @Value("${comment.default-open}")
+    public void setCommentDefaultOpen(Boolean commentDefaultOpen) {
+        this.commentDefaultOpen = commentDefaultOpen;
+    }
+
     /**
      * 查询对应页面评论是否开启
      *
@@ -66,7 +82,9 @@ public class CommentUtils {
         switch (page) {
             case PageConstants.BLOG:
                 //普通博客
+                System.out.println(blogId);
                 Boolean commentEnabled = blogService.getCommentEnabledByBlogId(blogId);
+                System.out.println(commentEnabled);
                 Boolean published = blogService.getPublishedByBlogId(blogId);
                 if (commentEnabled == null || published == null) {
                     //未查询到此博客
@@ -158,14 +176,16 @@ public class CommentUtils {
      public void setVisitorComment(Comment comment, HttpServletRequest request) {
          String nickname = comment.getNickname();  //qq号
          try {
-             if (QQInfoUtils.isQQNumber(nickname)) {
-                 comment.setQq(nickname);
-                 comment.setNickname(QQInfoUtils.getQQNickname(nickname));
-                 setCommentQQAvatar(comment, nickname);
-             } else {
-                 comment.setNickname(comment.getNickname().trim());
-                 setCommentRandomAvatar(comment);
-             }
+             comment.setNickname(comment.getNickname().trim());
+             setCommentRandomAvatar(comment);
+//             if (QQInfoUtils.isQQNumber(nickname)) {
+//                 comment.setQq(nickname);
+//                 comment.setNickname(QQInfoUtils.getQQNickname(nickname));
+//                 setCommentQQAvatar(comment, nickname);
+//             } else {
+//                 comment.setNickname(comment.getNickname().trim());
+//                 setCommentRandomAvatar(comment);
+//             }
          } catch (Exception e) {
              e.printStackTrace();
              comment.setNickname(comment.getNickname().trim());

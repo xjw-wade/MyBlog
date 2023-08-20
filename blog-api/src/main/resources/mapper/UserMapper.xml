@@ -11,4 +11,9 @@
         update user set username=#{user.username}, password=#{user.password}, update_time=now() where username=#{username}
     </update>
 
+    <!--按id查询User，实际上这个User就应该是博主-->
+    <select id="findById" resultType="top.wade.entity.User">
+        select * from user where id=#{id} limit 1
+    </select>
+
 </mapper>

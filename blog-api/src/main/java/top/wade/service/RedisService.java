@@ -49,4 +49,6 @@ public interface RedisService {
 
     void deleteValueBySet(String key, Object value);
 
+    void incrementByHashKey(String hash, Object key, int increment);
+
 }

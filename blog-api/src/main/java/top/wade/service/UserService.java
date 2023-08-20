@@ -12,4 +12,6 @@ public interface UserService {
     User findUserByUsernameAndPassword(String username, String password);
 
     Boolean changeAccount(User user, String jwt);
+
+    User findUserById(Long id);
 }

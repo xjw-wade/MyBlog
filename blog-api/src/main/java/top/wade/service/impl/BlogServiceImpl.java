@@ -297,6 +297,28 @@ public class BlogServiceImpl implements BlogService {
         }
     }
 
+    @Override
+    public BlogDetail getBlogByIdAndIsPublished(Long id) {
+        BlogDetail blog = blogMapper.getBlogByIdAndIsPublished(id);
+        if (blog == null) {
+            throw new NotFoundException("该博客不存在");
+        }
+        blog.setContent(MarkdownUtils.markdownToHtmlExtensions(blog.getContent()));
+        /**
+         * 将浏览量设置为Redis中的最新值
+         * 这里如果出现异常，查看第 152 行注释说明
+         * @see BlogServiceImpl#setBlogViewsFromRedisToPageResult
+         */
+        int view = (int) redisService.getValueByHashKey(RedisKeyConstants.BLOG_VIEWS_MAP, blog.getId());
+        blog.setViews(view);
+        return blog;
+    }
+
+    @Override
+    public void updateViewsToRedis(Long blogId) {
+        redisService.incrementByHashKey(RedisKeyConstants.BLOG_VIEWS_MAP, blogId, 1);
+    }
+
     /**
      * 删除首页缓存、最新推荐缓存、归档页面缓存、博客浏览量缓存
      */

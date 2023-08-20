@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import top.wade.entity.User;
+import top.wade.exception.NotFoundException;
 import top.wade.mapper.UserMapper;
 import top.wade.service.UserService;
 import top.wade.util.HashUtils;
@@ -52,5 +53,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public User findUserById(Long id) {
+        User user = userMapper.findById(id);
+        if (user == null) {
+            throw new NotFoundException("用户不存在");
+        }
+        return user;
     }
 }

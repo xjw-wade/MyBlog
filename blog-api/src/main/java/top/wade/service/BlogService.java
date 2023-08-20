@@ -63,4 +63,8 @@ public interface BlogService {
 
     void updateViews(Long blogId, Integer views);
 
+    BlogDetail getBlogByIdAndIsPublished(Long id);
+
+    void updateViewsToRedis(Long blogId);
+
 }

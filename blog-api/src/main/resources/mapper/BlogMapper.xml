@@ -144,11 +144,11 @@
 
     <!--查询公开博客年月List-->
     <select id="getGroupYearMonthByIsPublished" resultType="java.lang.String">
-       select date_format(create_time, "%Y年%月")
+       select date_format(create_time, "%Y年%m月")
        from blog
        where is_published=true
-       group by date_format(create_time, "%Y年%月")
-       order by date_format(create_time, "%Y年%月") desc
+       group by date_format(create_time, "%Y年%m月")
+       order by date_format(create_time, "%Y年%m月") desc
     </select>
     
     <resultMap id="archiveBlog" type="top.wade.model.vo.ArchiveBlog">
@@ -279,6 +279,38 @@
     <update id="updateViews">
         update blog set views=#{views} where id=#{blogId}
     </update>
+
+    <resultMap id="blogDetail" type="top.wade.model.vo.BlogDetail">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="appreciation" column="is_appreciation"/>
+        <result property="commentEnabled" column="is_comment_enabled"/>
+        <result property="top" column="is_top"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="views" column="views"/>
+        <result property="words" column="words"/>
+        <result property="readTime" column="read_time"/>
+        <result property="password" column="password"/>
+        <association property="category" javaType="top.wade.entity.Category">
+            <result property="name" column="category_name"/>
+        </association>
+        <collection property="tags" javaType="top.wade.entity.Tag">
+            <result property="name" column="tag_name"/>
+            <result property="color" column="color"/>
+        </collection>
+    </resultMap>
+
+    <!--按id查询公开博客-->
+    <select id="getBlogByIdAndIsPublished" resultMap="blogDetail">
+        select b.id, b.title, b.content, b.is_appreciation, b.is_comment_enabled, b.is_top,
+        b.create_time, b.update_time, b.views, b.words, b.read_time, b.password,
+        c.category_name,
+        t.tag_name as tag_name, t.color
+        from (((blog as b left join category as c on b.category_id=c.id) left join blog_tag as bt on b.id=bt.blog_id) left join tag as t on bt.tag_id=t.id)
+        where b.id=#{id} and b.is_published=true
+    </select>
 
 
 </mapper>

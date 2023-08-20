@@ -58,10 +58,14 @@ public class QQInfoUtils {
         //使用 Spring 的 RestTemplate 发起 GET 请求，并将响应体作为字符串进行接收
         String res = restTemplate.getForObject(QQ_NICKNAME_URL, String.class, qq);
         byte[] bytes = res.getBytes("iso-8859-1");
-        String nickname = new String(bytes, "gb18030").split(",")[6].replace("\"", "");
-        if ("".equals(nickname)) {
-            return "nickname";
-        }
-        return nickname;
+//        String nickname = new String(bytes, "gb18030").split(",")[6].replace("\"", "");
+//        String[] nickname = new String(bytes, "gb18030").split(",");
+//        for (String name : nickname) {
+//            System.out.println(name);
+//        }
+//        if ("".equals(nickname)) {
+//            return "nickname";
+//        }
+        return qq;
     }
 }

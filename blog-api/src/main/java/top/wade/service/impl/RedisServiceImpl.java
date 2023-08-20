@@ -124,4 +124,12 @@ public class RedisServiceImpl implements RedisService {
     public void deleteValueBySet(String key, Object value) {
         jsonRedisTemplate.opsForSet().remove(key, value);
     }
+
+    @Override
+    public void incrementByHashKey(String hash, Object key, int increment) {
+        if (increment < 0) {
+            throw new RuntimeException("递增因子必须大于0");
+        }
+        jsonRedisTemplate.opsForHash().increment(hash, key, increment);
+    }
 }

@@ -72,6 +72,6 @@ public interface BlogMapper {
 
     int updateViews(Long blogId, Integer views);
 
-
+    BlogDetail getBlogByIdAndIsPublished(Long id);
 
 }
